@@ -1,0 +1,41 @@
+{
+  "name": "cannybot",
+  "packageManager": "yarn@3.1.1",
+  "version": "3.0.0",
+  "description": "A Fun Discord Bot in Discord.js v13",
+  "main": "index.js",
+  "scripts": {
+    "start": "yarn node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agam778/CannyBot.git"
+  },
+  "author": "Agampreet Singh",
+  "license": "GNU General Public License v3.0",
+  "bugs": {
+    "url": "https://github.com/agam778/CannyBot/issues"
+  },
+  "homepage": "https://github.com/agam778/CannyBot#readme",
+  "dependencies": {
+    "@discordjs/builders": "^0.x.x",
+    "@vitalets/google-translate-api": "^7.0.0",
+    "axios": "^0.25.0",
+    "deepai": "^1.0.17",
+    "discord-together": "^1.x.x",
+    "discord.js": "^13.6.0",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.1",
+    "figlet": "^1.x.x",
+    "genius-lyrics": "^4.3.5",
+    "google-translate-tts": "^0.4.0-dev",
+    "he": "^1.2.0",
+    "moment": "^2.x.x",
+    "mongoose": "^6.1.5",
+    "nekobot-api": "^2.1.0",
+    "qrcode": "^1.5.0",
+    "randomstring": "^1.2.1",
+    "ws": "^8.2.3",
+    "youtube-search": "^1.1.6"
+  }
+}
