@@ -20,11 +20,6 @@ module.exports = {
     try {
       if (evaled) {
         const evaluated = await eval(evaled, { depth: 0 });
-        if (evaluated.includes(process.env.BOT_TOKEN)) {
-          return message.reply(
-            `:x: I don't think you want to see my token!`
-          );
-        }
         const msg = await message.reply("> Evaluating..");
         const embed = new MessageEmbed()
           .setColor("2f3136")
