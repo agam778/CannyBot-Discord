@@ -1,5 +1,6 @@
-const { MessageEmbed } = require(`discord.js`);
+const { MessageEmbed, splitMessage } = require(`discord.js`);
 const { inspect } = require(`util`);
+const ee = require("../../botconfig/embed.json");
 module.exports = {
   name: `eval`,
   category: `Owner`,
@@ -16,31 +17,51 @@ module.exports = {
   argsmissing_message: "",
   argstoomany_message: "",
   run: async (client, message, args, plusArgs, cmdUser, text, prefix) => {
-    const evaled = args.join(" ");
     try {
-      if (evaled) {
-        const evaluated = await eval(evaled, { depth: 0 });
-        const msg = await message.reply("> Evaluating..");
-        const embed = new MessageEmbed()
-          .setColor("2f3136")
-          .addField(
-            "Input:\n",
-            "```js\n" + `${evaled.substring(0, 1010)}` + "```",
-            false
-          )
-          .addField(
-            "Output:\n",
-            "```js\n" +
-              `${inspect(evaluated, { depth: 0 }).substring(0, 1010)}` +
-              "```",
-            false
-          );
-        return msg.edit({ content: null, embeds: [embed] });
-      } else {
-        return message.reply("You need to specify some code!");
+      let evaled;
+      if (
+        args.join(` `).includes(`token`) ||
+        args.join(` `).includes(`TOKEN`) ||
+        args.join(` `).includes(`BOT_TOKEN`)
+      ) {
+        return message.reply("Yeah, and?");
       }
-    } catch (err) {
-      return message.reply(`An error occured: ${err.message}`);
+      evaled = await eval(args.join(` `));
+      let string = inspect(evaled);
+      if (string.includes(client.token)) {
+        return message.reply("Yeah, and?");
+      }
+      let evalEmbed = new MessageEmbed()
+        .setTitle(`${client.user.username} | Evaluation`)
+        .setColor(ee.color);
+      const splitDescription = splitMessage(string, {
+        maxLength: 2040,
+        char: `\n`,
+        prepend: ``,
+        append: ``,
+      });
+      let embeds = [];
+      await splitDescription.forEach(async (m) => {
+        evalEmbed.setDescription(`\`\`\`` + m + `\`\`\``);
+        embeds.push(evalEmbed);
+      });
+      message.reply({ embeds: embeds });
+    } catch (e) {
+      return message.reply({
+        embeds: [
+          new MessageEmbed()
+            .setColor(ee.wrongcolor)
+            .setFooter(ee.footertext, ee.footericon)
+            .setTitle(`❌ ERROR | An error occurred`)
+            .setDescription(
+              `\`\`\`${
+                e.message
+                  ? String(e.message).substr(0, 2000)
+                  : String(e).substr(0, 2000)
+              }\`\`\``
+            ),
+        ],
+      });
     }
   },
 };
