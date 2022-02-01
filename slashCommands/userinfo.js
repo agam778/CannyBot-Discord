@@ -37,11 +37,11 @@ const statuses = {
   offline: "⚫️",
 };
 module.exports = {
-  name: "userinfo",  
+  name: "userinfo",
   description: "Gives you information about a User", //the command description for Slash Command Overview
   cooldown: 1,
   memberpermissions: [],
-  requiredroles: [], 
+  requiredroles: [],
   alloweduserids: [],
   options: [
     //OPTIONAL OPTIONS, make the array empty / dont add this option if you don't need options!
@@ -205,7 +205,10 @@ module.exports = {
             : "None"
         );
         embeduserinfo.setColor(ee.color);
-        embeduserinfo.setFooter({ text: ee.footertext, iconURL: ee.footericon });
+        embeduserinfo.setFooter({
+          text: ee.footertext,
+          iconURL: ee.footericon,
+        });
         //send the EMBED
         interaction.reply({
           embeds: [embeduserinfo],

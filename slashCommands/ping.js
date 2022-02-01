@@ -3,11 +3,11 @@ const config = require("../botconfig/config.json");
 const ee = require("../botconfig/embed.json");
 const settings = require("../botconfig/settings.json");
 module.exports = {
-  name: "ping",  
+  name: "ping",
   description: "Pings the bot", //the command description for Slash Command Overview
-  cooldown: 1,
+  cooldown: [],
   memberpermissions: [],
-  requiredroles: [], 
+  requiredroles: [],
   alloweduserids: [],
   options: [
     //OPTIONAL OPTIONS, make the array empty / dont add this option if you don't need options!
@@ -49,14 +49,6 @@ module.exports = {
         createdTimestamp,
       } = interaction;
       const { guild } = member;
-      //let IntOption = options.getInteger("OPTIONNAME"); //same as in IntChoices
-      //same as in StringChoices
-      //let UserOption = options.getUser("OPTIONNAME");
-      //let ChannelOption = options.getChannel("OPTIONNAME");
-      //let RoleOption = options.getRole("OPTIONNAME");
-
-      //   if (StringOption == "botping") {
-
       const pingEmbed = new MessageEmbed()
         .setColor("RANDOM")
         .setTitle("Hey! Why ping?")
@@ -72,13 +64,5 @@ module.exports = {
     } catch (e) {
       console.log(String(e.stack));
     }
-    //Other Option is API so we are alright
-    //   else {
-    //     interaction.reply({
-    //       content: `Api Ping: \`${Math.floor(client.ws.ping)} ms\``,
-    //       ephemeral: false,
-    //     });
-    //   }
-    // }
   },
 };

@@ -41,7 +41,7 @@ module.exports = {
         setTimeout(() => {}, 3000);
         kickMember.kick(reason);
       });
-    var embed = new Discord.MessageEmbed()
+    const embed = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setTitle("Member kicked successfully!")
       .setImage(
