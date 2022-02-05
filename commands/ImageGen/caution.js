@@ -22,7 +22,7 @@ module.exports = {
     var randomstring = require("randomstring");
     let randomchar = randomstring.generate(5);
     msg = await message.channel.send(`Please Wait...`);
-    const url = `https://cool-api.xyz/caution?text=${text}`;
+    const url = `https://api.popcat.xyz/caution?text=${text}`;
     https.get(url, (res) => {
       const path = `${__dirname}/../../downloads/${message.author.id}-${randomchar}-caution.png`;
       const filePath = fs.createWriteStream(path);

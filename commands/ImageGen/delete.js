@@ -22,7 +22,7 @@ module.exports = {
     var randomstring = require("randomstring");
     let randomchar = randomstring.generate(5);
     msg = await message.channel.send(`Please Wait...`);
-    const url = `https://api.no-api-key.com/api/v2/delete?image=${mention.displayAvatarURL(
+    const url = `https://pixel-api-production.up.railway.app/image/trash/?image=${mention.displayAvatarURL(
       { format: "png" }
     )}`;
     https.get(url, (res) => {
