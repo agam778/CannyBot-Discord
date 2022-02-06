@@ -20,7 +20,7 @@ module.exports = {
     if (!snipe) return message.reply("There's nothing to snipe!");
 
     const embed = new MessageEmbed()
-      .setAuthor(snipe.author.tag)
+      .setAuthor({ name: snipe.author.tag })
       .setFooter({ text: `#${message.channel.name}` })
       .setTimestamp(snipe.createdAt)
       .setColor("RANDOM");

@@ -56,7 +56,7 @@ module.exports = {
             );
             const embed = new MessageEmbed()
               .setColor("RANDOM")
-              .setAuthor(results[0].channelTitle)
+              .setAuthor({ name: results[0].channelTitle })
               .setTitle(he.decode(results[0].title))
               .setURL(results[0].link)
               .setDescription(

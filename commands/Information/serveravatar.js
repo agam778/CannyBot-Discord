@@ -22,11 +22,10 @@ module.exports = {
       message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setAuthor(
-              `Avatar from: ${message.guild.name}`,
-              message.guild.iconURL({ dynamic: true }),
-              "https://discord.gg/c8aAV4cARB"
-            )
+            .setAuthor({
+              name: `Avatar from: ${message.guild.name}`,
+              iconURL: message.guild.iconURL({ dynamic: true }),
+            })
             .setColor(ee.color)
             .addField(
               "❱ PNG",

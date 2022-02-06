@@ -36,10 +36,10 @@ module.exports = {
       message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setAuthor(
-              `Avatar from: ${user.tag}`,
-              user.displayAvatarURL({ dynamic: true })
-            )
+            .setAuthor({
+              name: `Avatar from: ${user.tag}`,
+              iconURL: user.displayAvatarURL({ dynamic: true }),
+            })
             .setColor(ee.color)
             .addField(
               "-> PNG",

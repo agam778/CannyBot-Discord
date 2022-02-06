@@ -99,16 +99,16 @@ module.exports = {
             size: 512,
           })
         );
-        embeduserinfo.setAuthor(
-          "Information about:   " +
+        embeduserinfo.setAuthor({
+          name:
+            "Information about:   " +
             member.user.username +
             "#" +
             member.user.discriminator,
-          member.user.displayAvatarURL({
+          iconURL: member.user.displayAvatarURL({
             dynamic: true,
           }),
-          "https://discord.gg/c8aAV4cARB"
-        );
+        });
         embeduserinfo.addField(
           "**・ Username:**",
           `<@${member.user.id}>\n\`${member.user.tag}\``,

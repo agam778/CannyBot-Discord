@@ -31,7 +31,10 @@ module.exports = {
 
     const embed1 = new MessageEmbed()
       .setTitle(song_title)
-      .setAuthor(artist, artist_image)
+      .setAuthor({
+        name: artist,
+        iconURL: artist_image,
+      })
       .setColor(ee.color)
       .setDescription(part1)
       .setThumbnail(image);

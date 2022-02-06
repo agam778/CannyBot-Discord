@@ -39,13 +39,14 @@ module.exports = {
         embeduserinfo.setThumbnail(
           member.user.displayAvatarURL({ dynamic: true, size: 512 })
         );
-        embeduserinfo.setAuthor(
-          "Permissions from:   " +
+        embeduserinfo.setAuthor({
+          name:
+            "Permissions from:   " +
             member.user.username +
             "#" +
             member.user.discriminator,
-          member.user.displayAvatarURL({ dynamic: true })
-        );
+          iconURL: member.user.displayAvatarURL({ dynamic: true }),
+        });
         embeduserinfo.addField(
           "**❱ Permissions:**",
           `${message.member.permissions
@@ -67,11 +68,10 @@ module.exports = {
         embeduserinfo.setThumbnail(
           user.displayAvatarURL({ dynamic: true, size: 512 })
         );
-        embeduserinfo.setAuthor(
-          "Permissions from:   " + user.username + "#" + user.discriminator,
-          user.displayAvatarURL({ dynamic: true }),
-          "https://discord.gg/c8aAV4cARB"
-        );
+        embeduserinfo.setAuthor({
+          name: "Permissions from:   " + user.username + "#" + user.discriminator,
+          iconURL: user.displayAvatarURL({ dynamic: true }),
+        });
         embeduserinfo.addField(
           "**❱ Permissions:**",
           `${message.member.permissions

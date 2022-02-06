@@ -38,11 +38,10 @@ module.exports = {
       embeduserinfo.setThumbnail(
         message.guild.iconURL({ dynamic: true, size: 512 })
       );
-      embeduserinfo.setAuthor(
-        "Information about:   " + role.name,
-        message.guild.iconURL({ dynamic: true }),
-        "https://discord.gg/c8aAV4cARB"
-      );
+      embeduserinfo.setAuthor({
+        name: "Information about:   " + role.name,
+        iconURL: message.guild.iconURL({ dynamic: true }),
+      });
       embeduserinfo.addField("**❱ Name:**", `\`${role.name}\``, true);
       embeduserinfo.addField("**❱ ID:**", `\`${role.id}\``, true);
       embeduserinfo.addField("**❱ Color:**", `\`${role.hexColor}\``, true);

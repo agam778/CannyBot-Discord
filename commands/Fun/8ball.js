@@ -38,7 +38,7 @@ module.exports = {
           new MessageEmbed()
             .setColor("RANDOM")
             .setTitle("Here you go:")
-            .setAuthor(client.user.username)
+            .setAuthor({ name: client.user.username })
             .setThumbnail(randomThumbnail)
             .addFields(
               {

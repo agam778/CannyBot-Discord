@@ -79,14 +79,14 @@ module.exports = {
         embeduserinfo.setThumbnail(
           member.user.displayAvatarURL({ dynamic: true, size: 512 })
         );
-        embeduserinfo.setAuthor(
-          "Information about:   " +
+        embeduserinfo.setAuthor({
+          name:
+            "Information about:   " +
             member.user.username +
             "#" +
             member.user.discriminator,
-          member.user.displayAvatarURL({ dynamic: true }),
-          "https://discord.gg/c8aAV4cARB"
-        );
+          iconURL: member.user.displayAvatarURL({ dynamic: true }),
+        });
         embeduserinfo.addField(
           "**・ Username:**",
           `<@${member.user.id}>\n\`${member.user.tag}\``,
@@ -176,11 +176,11 @@ module.exports = {
         embeduserinfo.setThumbnail(
           user.displayAvatarURL({ dynamic: true, size: 512 })
         );
-        embeduserinfo.setAuthor(
-          "Information about:   " + user.username + "#" + user.discriminator,
-          user.displayAvatarURL({ dynamic: true }),
-          "https://discord.gg/c8aAV4cARB"
-        );
+        embeduserinfo.setAuthor({
+          name:
+            "Information about:   " + user.username + "#" + user.discriminator,
+          iconURL: user.displayAvatarURL({ dynamic: true }),
+        });
         embeduserinfo.addField(
           "**・ Username:**",
           `<@${user.id}>\n\`${user.tag}\``,
