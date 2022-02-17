@@ -41,7 +41,7 @@ module.exports = {
             )
             .addField(
               `Author`,
-              `${data.collected.metadata.name}`,
+              `${data.collected.metadata.author.name}`,
               (inline = true)
             )
             .addField(
