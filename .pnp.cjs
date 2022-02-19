@@ -51,6 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mongoose", "npm:6.2.2"],
             ["ms", "npm:2.1.3"],
             ["nekobot-api", "npm:2.1.0"],
+            ["node-tesseract-ocr", "npm:2.2.1"],
             ["qrcode", "npm:1.5.0"],
             ["randomstring", "npm:1.2.2"],
             ["ws", "virtual:c98e78b93fca499aaab4216f181a14d3a09adafce7285119cc4c397668e975448487767e1426964436990b24e11cc657d85ac73ea05502f8ef1de1b0d43bdfe2#npm:8.5.0"],
@@ -459,6 +460,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mongoose", "npm:6.2.2"],
             ["ms", "npm:2.1.3"],
             ["nekobot-api", "npm:2.1.0"],
+            ["node-tesseract-ocr", "npm:2.2.1"],
             ["qrcode", "npm:1.5.0"],
             ["randomstring", "npm:1.2.2"],
             ["ws", "virtual:c98e78b93fca499aaab4216f181a14d3a09adafce7285119cc4c397668e975448487767e1426964436990b24e11cc657d85ac73ea05502f8ef1de1b0d43bdfe2#npm:8.5.0"],
@@ -1636,6 +1638,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [
             "@types/encoding",
             "encoding"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["node-tesseract-ocr", [
+        ["npm:2.2.1", {
+          "packageLocation": "./.yarn/cache/node-tesseract-ocr-npm-2.2.1-1884aa2c2d-641a43d02e.zip/node_modules/node-tesseract-ocr/",
+          "packageDependencies": [
+            ["node-tesseract-ocr", "npm:2.2.1"]
           ],
           "linkType": "HARD",
         }]
