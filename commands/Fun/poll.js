@@ -12,7 +12,7 @@ module.exports = {
   memberpermissions: [],
   requiredroles: [],
   alloweduserids: [],
-  minargs: 0,
+  minargs: 1,
   maxargs: 0,
   minplusargs: 0,
   maxplusargs: 0,
@@ -21,7 +21,7 @@ module.exports = {
   run: async (client, message, args, plusArgs, cmdUser, text, prefix) => {
     const mentionedchannel = message.mentions.channels.first();
     if (!mentionedchannel) {
-      return message.reply("Please mention a channel");
+      return message.reply("Please mention a channel!");
     }
     const polltitle = args.slice(1).join(" ").split("|")[0];
     const polloption1 = args.slice(1).join(" ").split("|")[1];

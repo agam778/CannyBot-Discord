@@ -28,10 +28,9 @@ module.exports = {
     const searchtext = text.replace(/[^\w\s]/gi, "").replace(/\s+/g, "+");
     search(searchtext, opts, function (err, results) {
       if (err) {
-        message.reply("Oops, something went wrong!");
-        console.log(err);
+        message.reply(`Oops, An Error Occured!\n\`\`\`js\n${err}\n\`\`\``);
       } else {
-        deepai.setApiKey(process.env.deepapi_token);
+        deepai.setApiKey(process.env.DEEPAI_TOKEN);
         (async function () {
           var resp = await deepai.callStandardApi("nsfw-detector", {
             image: results[0].thumbnails.high.url,

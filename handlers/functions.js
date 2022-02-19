@@ -666,7 +666,7 @@ function nFormatter(num, digits = 2) {
  * @returns VOID, works by itself
  */
 const { MessageButton, MessageActionRow } = require("discord.js");
-async function swap_pages(client, message, description, TITLE) {
+async function swap_pages(client, message, description, TITLE, sliceamount) {
   const data = mongoprefix.findOne({
     GuildID: message.guild.id,
   });
@@ -701,7 +701,7 @@ async function swap_pages(client, message, description, TITLE) {
     } catch {}
   } else {
     try {
-      let k = 1000;
+      let k = sliceamount || 1000;
       for (let i = 0; i < description.length; i += 1000) {
         const current = description.slice(i, k);
         k += 1000;
@@ -757,7 +757,7 @@ async function swap_pages(client, message, description, TITLE) {
   ];
   //Send message with buttons
   let swapmsg = await message.channel.send({
-    content: `***Click on the __Buttons__ to swap the Pages***`,
+    content: `**Click on the __Buttons__ to swap the Pages**`,
     embeds: [embeds[0]],
     components: allbuttons,
   });
@@ -859,7 +859,7 @@ async function swap_pages2(client, message, embeds) {
   let prefix = client.settings.get(message.guild.id, "prefix");
   //Send message with buttons
   let swapmsg = await message.channel.send({
-    content: `***Click on the __Buttons__ to swap the Pages***`,
+    content: `**Click on the __Buttons__ to swap the Pages**`,
     embeds: [embeds[0]],
     components: allbuttons,
   });

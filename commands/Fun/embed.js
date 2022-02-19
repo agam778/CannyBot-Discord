@@ -6,7 +6,7 @@ module.exports = {
   category: "Fun",
   aliases: [],
   cooldown: "",
-  usage: "embed title | description | imageurl",
+  usage: "embed <title< | [description] | [imageurl]",
   description: "Resends your Text in an embed",
   memberpermissions: [],
   requiredroles: [],
@@ -33,9 +33,7 @@ module.exports = {
       iconURL: message.author.displayAvatarURL(),
     });
     message.channel.send({ embeds: [embed] }).catch((err) => {
-      message.reply(
-        `Oops! An Error Occured!\n\`\`\`js\n${err}\n\`\`\`\nPlease follow this format to create embed: \`${prefix}embed title | description | imageurl\``
-      );
+      message.reply(`Oops! An Error Occured!\n\`\`\`js\n${err}\n\`\`\`\``);
     });
   },
 };

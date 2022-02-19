@@ -29,26 +29,11 @@ module.exports = {
           ],
         });
       const replacedword = replaced(text);
-      message.reply(
+      message.channel.send(
         replacedword.substr(0, 2000) + `\n- Said by ${message.author.tag}`
       );
     } catch (e) {
-      console.log(String(e.stack));
-      return message.reply({
-        embeds: [
-          new MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
-            .setTitle(`❌ ERROR | An error occurred`)
-            .setDescription(
-              `\`\`\`${
-                e.message
-                  ? String(e.message).substr(0, 2000)
-                  : String(e).substr(0, 2000)
-              }\`\`\``
-            ),
-        ],
-      });
+      message.reply(`Oops! An Error Occured!\n\`\`\`js\n" + e + "\n\`\`\``);
     }
   },
 };

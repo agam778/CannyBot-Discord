@@ -26,35 +26,32 @@ module.exports = {
   argsmissing_message: "",
   argstoomany_message: "",
   run: async (client, message, args, plusArgs, cmdUser, text, prefix) => {
+    if (!args[0]) return message.reply("Please ask a question!");
     const randomThumbnail =
       Thumbnail[Math.floor(Math.random() * Thumbnail.length)];
-    msg = await message.channel.send(`Loading a response! Please Wait...`);
-    let url = `https://8ball.delegator.com/magic/JSON/${text}`;
-    axios.get(url).then((response) => {
-      json = response.data;
-      msg.delete();
-      message.reply({
-        embeds: [
-          new MessageEmbed()
-            .setColor("RANDOM")
-            .setTitle("Here you go:")
-            .setAuthor({ name: client.user.username })
-            .setThumbnail(randomThumbnail)
-            .addFields(
-              {
-                name: "Question:",
-                value: `${json.magic.question}`,
-                inline: true,
-              },
-              {
-                name: "Answer:",
-                value: `${json.magic.answer}`,
-                inline: true,
-              },
-              { name: "Type:", value: `${json.magic.type}`, inline: true }
-            )
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
-        ],
+    await message.reply("Loading! Please wait...").then(async (msg) => {
+      let url = `https://8ball.delegator.com/magic/JSON/${args.join("+")}`;
+      await axios.get(url).then(async (res) => {
+        json = res.data;
+        let embed = new MessageEmbed()
+          .setColor("RANDOM")
+          .setTitle("🎱 8ball")
+          .addFields(
+            {
+              name: "Question:",
+              value: `${args.join(" ")}`,
+              inline: true,
+            },
+            {
+              name: "Answer:",
+              value: `${json.magic.answer}`,
+              inline: true,
+            },
+            { name: "Type:", value: `${json.magic.type}`, inline: true }
+          )
+          .setThumbnail(randomThumbnail)
+          .setFooter({ text: ee.footertext, iconURL: ee.footericon });
+        await msg.edit({ content: "​", embeds: [embed] })
       });
     });
   },

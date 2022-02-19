@@ -4,7 +4,7 @@ module.exports = {
   category: "Fun",
   aliases: [],
   cooldown: "",
-  usage: "qrdecode <qrcode_image_link>",
+  usage: "qrdecode <qrcode_image_link/attach_image>",
   description: "Decode the given qrcode",
   memberpermissions: [],
   requiredroles: [],
@@ -19,21 +19,18 @@ module.exports = {
     try {
       const attachment = message.attachments.first();
       const text = attachment ? attachment.url : args[0];
-      msg = await message.channel.send("Decoding...");
-      axios
-        .get(`https://api.qrserver.com/v1/read-qr-code/?fileurl=${text}`)
-        .then(async (response) => {
-          json = response.data;
-          let qr = json[0].symbol[0].data;
-          message.reply("QR Code Decoded: `" + qr + "`");
-        })
-        .catch((err) => {
-          console.log(err);
-          message.reply("An Error Occured!");
-        });
-      setTimeout(function () {
-        msg.delete();
-      }, 5000);
+      await message.reply("Decoding...").then(async (msg) => {
+        axios
+          .get(`https://api.qrserver.com/v1/read-qr-code/?fileurl=${text}`)
+          .then(async (response) => {
+            json = response.data;
+            let qr = json[0].symbol[0].data;
+            msg.edit("QR Code Decoded: `" + qr + "`");
+          })
+          .catch((err) => {
+            msg.edit(`Oops! An Error Occured.\n\`\`\`js\n${err}\n\`\`\``);
+          });
+      });
     } catch (err) {
       message.reply("An Error Occured!");
       console.log(err);

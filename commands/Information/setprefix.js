@@ -6,7 +6,7 @@ module.exports = {
   cooldown: 3,
   usage: "setprefix <new-prefix>",
   description: "Set a custom prefix for your server",
-  memberpermissions: ["ADMINISTRATOR"], 
+  memberpermissions: ["ADMINISTRATOR"],
   requiredroles: [],
   alloweduserids: [],
   minargs: 1,

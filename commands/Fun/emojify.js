@@ -47,7 +47,8 @@ module.exports = {
         return letter;
       })
       .join("");
-
-    message.channel.send(text);
+    message.channel.send(text).catch((err) => {
+      message.reply(`Oops! An Error Occured!\n\`\`\`js\n${err}\n\`\`\`\``);
+    });
   },
 };

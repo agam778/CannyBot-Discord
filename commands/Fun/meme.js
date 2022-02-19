@@ -19,21 +19,22 @@ module.exports = {
   argsmissing_message: "",
   argstoomany_message: "",
   run: async (client, message, args, plusArgs, cmdUser, text, prefix) => {
-    msg = await message.channel.send(`Please Wait...`);
-    let url = `https://meme-api.herokuapp.com/gimme`;
-    axios.get(url).then(async (response) => {
-      json = response.data;
-      msg.delete();
-      message.reply({
-        embeds: [
-          new MessageEmbed()
-            .setColor("RANDOM")
-            .setTitle(`${json.title}`)
-            .setAuthor({ name: `${json.author}` })
-            .setDescription(`Upvotes: ${json.ups}`)
-            .setImage(`${json.url}`)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
-        ],
+    await message.reply("Loading! Please Wait...").then(async (msg) => {
+      let url = `https://meme-api.herokuapp.com/gimme`;
+      axios.get(url).then(async (response) => {
+        json = response.data;
+        msg.edit({
+          content: "​",
+          embeds: [
+            new MessageEmbed()
+              .setColor("RANDOM")
+              .setTitle(`${json.title}`)
+              .setAuthor({ name: `${json.author}` })
+              .setDescription(`Upvotes: ${json.ups}`)
+              .setImage(`${json.url}`)
+              .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+          ],
+        });
       });
     });
   },

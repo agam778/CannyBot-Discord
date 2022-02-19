@@ -18,7 +18,6 @@ module.exports = {
   run: async (client, message, args, plusArgs, cmdUser, text, prefix) => {
     const snipe = client.snipes[message.channel.id];
     if (!snipe) return message.reply("There's nothing to snipe!");
-
     const embed = new MessageEmbed()
       .setAuthor({ name: snipe.author.tag })
       .setFooter({ text: `#${message.channel.name}` })
@@ -31,7 +30,6 @@ module.exports = {
     snipe.newcontent
       ? embed.addField("New Message", `${snipe.newcontent}`, true)
       : null;
-
     await message.reply({ embeds: [embed] });
   },
 };

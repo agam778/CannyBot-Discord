@@ -1,14 +1,16 @@
 const { MessageEmbed } = require("discord.js");
 const ee = require("../../botconfig/embed.json");
 const Genius = require("genius-lyrics");
-const Client = new Genius.Client(process.env.genius_token);
+const Client = new Genius.Client(process.env.GENIUS_TOKEN);
+const { swap_pages } = require("../../handlers/functions");
+
 module.exports = {
   name: "lyrics",
   category: "Fun",
   aliases: [],
   cooldown: "",
   usage: "lyrics <song_name>",
-  description: "Get the lyrics of any song :)",
+  description: "Get the lyrics of any song.",
   memberpermissions: [],
   requiredroles: [],
   alloweduserids: [],
@@ -26,23 +28,6 @@ module.exports = {
     const artist = firstSong.artist.name || "Unknown";
     const artist_image = firstSong.artist.image;
     const lyrics = await firstSong.lyrics();
-    const part1 = lyrics.slice(0, lyrics.length / 2);
-    const part2 = lyrics.slice(lyrics.length / 2);
-
-    const embed1 = new MessageEmbed()
-      .setTitle(song_title)
-      .setAuthor({
-        name: artist,
-        iconURL: artist_image,
-      })
-      .setColor(ee.color)
-      .setDescription(part1)
-      .setThumbnail(image);
-    const embed2 = new MessageEmbed()
-      .setColor(ee.color)
-      .setDescription(part2)
-      .setFooter({ text: ee.footertext, iconURL: ee.footericon });
-
-    message.reply({ embeds: [embed1, embed2] });
+    swap_pages(client, message, lyrics, song_title, 700);
   },
 };
