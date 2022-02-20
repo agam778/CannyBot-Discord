@@ -2,12 +2,12 @@ const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 var ee = require("../../botconfig/embed.json");
 module.exports = {
-  name: "serveravatar",
+  name: "servericon",
   category: "Information",
-  aliases: ["savatar"],
+  aliases: ["serveravatar"],
   cooldown: 5,
-  usage: "serveravatar",
-  description: "Shows the Server Avatar",
+  usage: "servericon",
+  description: "Shows the Server Icon",
   memberpermissions: [],
   requiredroles: [],
   alloweduserids: [],
