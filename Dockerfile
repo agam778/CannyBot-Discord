@@ -12,7 +12,7 @@ RUN apt-get install curl -y
 RUN curl -fsSL https://deb.nodesource.com/setup_17.x | bash - && \
     apt-get update && \
     apt-get install -y nodejs
-RUN apt-get install tesseract-ocr -y
+RUN apt-get install tesseract-ocr-all -y
 RUN corepack enable
 RUN yarn
 RUN yarn install

@@ -8,7 +8,7 @@ module.exports = {
   category: "Fun",
   aliases: [],
   cooldown: "",
-  usage: "ocr <attach_image>",
+  usage: "ocr [lang] <attach_image>",
   description: "Extract text from image",
   memberpermissions: [],
   requiredroles: [],
@@ -21,7 +21,7 @@ module.exports = {
   argstoomany_message: "",
   run: async (client, message, args, plusArgs, cmdUser, prefix) => {
     const config = {
-      lang: "eng",
+      lang: args[0] || "eng",
       oem: 3,
       psm: 3,
     };
