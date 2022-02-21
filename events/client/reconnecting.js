@@ -1,4 +1,3 @@
-//here the event starts
-module.exports = client => {
-    console.log(`Reconnceting at ${new Date()}.`)
-}
+module.exports = (client) => {
+  console.log(`Reconnecting at ${new Date()}.`);
+};

@@ -18,8 +18,8 @@ module.exports = async (client, message) => {
     .then((res) => {
       if (res) return res.Prefix;
       else return process.env.PREFIX;
-    })
-  
+    });
+
   const prefixRegex = new RegExp(
     `^(<@!?${client.user.id}>|${escapeRegex(prefix)})`
   );
@@ -47,7 +47,6 @@ module.exports = async (client, message) => {
   let command = client.commands.get(cmd);
   if (!command) command = client.commands.get(client.aliases.get(cmd));
   if (command) {
-    //Check if user is on cooldown with the cmd, with Tomato#6966's Function from /handlers/functions.js
     if (onCoolDown(message, command)) {
       return message.reply({
         embeds: [
@@ -247,7 +246,7 @@ module.exports = async (client, message) => {
             }, settings.timeout.maxargs);
           })
           .catch((e) => {
-            console.log(String(e) );
+            console.log(String(e));
           });
       }
 
@@ -317,7 +316,7 @@ module.exports = async (client, message) => {
           })
           .catch((e) => {
             console.log(String(e));
-          })
+          });
       }
       //run the command with the parameters:  client, message, args, Cmduser, text, prefix,
       command.run(
@@ -329,6 +328,43 @@ module.exports = async (client, message) => {
         args.join(" "),
         prefix
       );
+      if (process.env.EVENT_LOG_CHANNEL) {
+        const eventlogembed = new Discord.MessageEmbed()
+          .setColor("#22bb33")
+          .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+          .setTitle(":white_check_mark: Command Executed!")
+          .addFields(
+            {
+              name: "Command",
+              value: `\`${prefix + command.name + " " + args.join(" ")}\``,
+              inline: true,
+            },
+            {
+              name: "User",
+              value: `\`${message.author.tag}\``,
+              inline: true,
+            },
+            {
+              name: "Channel",
+              value: `\`#${message.channel.name}\``,
+              inline: false,
+            },
+            {
+              name: "Guild",
+              value: `\`${message.guild.name}\``,
+              inline: true,
+            }
+          )
+          .setTimestamp();
+        const eventlogchannel = client.channels.cache.get(
+          process.env.EVENT_LOG_CHANNEL
+        );
+        try {
+          eventlogchannel.send({ embeds: [eventlogembed] });
+        } catch (error) {
+          console.log(error);
+        }
+      }
     } catch (error) {
       if (settings.somethingwentwrong_cmd) {
         return message
