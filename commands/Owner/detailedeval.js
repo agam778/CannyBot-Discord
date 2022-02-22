@@ -2,11 +2,11 @@ const { MessageEmbed } = require(`discord.js`);
 const { inspect } = require(`util`);
 const ee = require("../../botconfig/embed.json");
 module.exports = {
-  name: `eval`,
+  name: `detailedeval`,
   category: `Owner`,
-  aliases: [`evaluate`, "evaluate", "eval"],
-  description: `Eval a Command!`,
-  usage: `eval <CODE>`,
+  aliases: [`deval`],
+  description: `Eval a Command with Details!`,
+  usage: `detailedeval <CODE>`,
   memberpermissions: [],
   requiredroles: [],
   alloweduserids: process.env.ownerID,
@@ -36,6 +36,15 @@ module.exports = {
       ) {
         return message.reply("Yeah, and?");
       }
+      if (string.length > 2000) {
+        string = string.substring(0, 2000);
+      }
+      const embed = new MessageEmbed()
+        .setColor(ee.color)
+        .setTitle(`${client.user.username} | Eval`)
+        .setDescription(`\`\`\`js\n${string.substring(0, 2000)}\`\`\``)
+        .setFooter({ text: ee.footertext, iconURL: ee.footericon });
+      message.reply({ embeds: [embed] });
     } catch (e) {
       return message.reply({
         embeds: [
