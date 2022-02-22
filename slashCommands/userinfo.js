@@ -39,7 +39,7 @@ const statuses = {
 module.exports = {
   name: "userinfo",
   description: "Gives you information about a User", //the command description for Slash Command Overview
-  cooldown: 1,
+  cooldown: [],
   memberpermissions: [],
   requiredroles: [],
   alloweduserids: [],

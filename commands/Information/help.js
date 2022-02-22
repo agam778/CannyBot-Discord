@@ -5,7 +5,7 @@ module.exports = {
   name: "help",
   category: "Information",
   aliases: ["h", "commandinfo", "cmds", "cmd", "halp"],
-  cooldown: 3,
+  cooldown: "",
   usage: "help [Commandname]",
   description: "Returns all Commmands, or one specific command",
   memberpermissions: [],

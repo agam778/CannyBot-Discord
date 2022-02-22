@@ -5,7 +5,7 @@ module.exports = {
   name: "uptime",
   category: "Information",
   aliases: [],
-  cooldown: 5,
+  cooldown: "",
   usage: "uptime",
   description: "Returns the duration on how long the Bot is online",
   memberpermissions: [],

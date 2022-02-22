@@ -6,7 +6,7 @@ module.exports = {
   name: "about",
   category: "Information",
   aliases: ["info"],
-  cooldown: 5,
+  cooldown: "",
   usage: "about",
   description: "About CannyBot",
   memberpermissions: [],

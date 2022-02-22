@@ -4,7 +4,7 @@ module.exports = {
   name: "purge",
   category: "Moderation",
   aliases: ["delete", "clean"],
-  cooldown: 5,
+  cooldown: "",
   usage: "purge <NO_OF_MESSAGES>",
   description: "Purges the number of messages given in the channel.",
   memberpermissions: ["MANAGE_MESSAGES"],

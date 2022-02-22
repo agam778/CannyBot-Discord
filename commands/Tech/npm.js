@@ -7,7 +7,7 @@ module.exports = {
   name: "npm",
   category: "Tech",
   aliases: [],
-  cooldown: 2,
+  cooldown: "",
   usage: "npm <package>",
   description: "Get info about a npm package",
   memberpermissions: [],

@@ -6,7 +6,7 @@ module.exports = {
   name: "logo",
   category: "Tech",
   aliases: [],
-  cooldown: 2,
+  cooldown: "",
   usage: "logo google.com (or other domain)",
   description: "Get the logo of mentioned company",
   memberpermissions: [],

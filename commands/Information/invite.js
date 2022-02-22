@@ -4,7 +4,7 @@ module.exports = {
   name: "invite",
   category: "Information",
   aliases: ["add"],
-  cooldown: 5,
+  cooldown: "",
   usage: "invite",
   description: "Sends you an invite link",
   memberpermissions: [],

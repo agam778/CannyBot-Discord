@@ -4,7 +4,7 @@ module.exports = {
   name: "support",
   category: "Information",
   aliases: {},
-  cooldown: 5,
+  cooldown: "",
   usage: "support",
   description: "Sends a Link of the Support Server",
   memberpermissions: [],

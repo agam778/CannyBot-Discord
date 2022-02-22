@@ -5,7 +5,7 @@ module.exports = {
   name: "source",
   category: "Information",
   aliases: ["sourcecode"],
-  cooldown: 5,
+  cooldown: "",
   usage: "source",
   description: "Get the Source Code of CannyBot",
   memberpermissions: [],

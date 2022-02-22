@@ -5,7 +5,7 @@ module.exports = {
   name: "permissions",
   category: "Information",
   aliases: ["perms"],
-  cooldown: 5,
+  cooldown: "",
   usage: "permissions [@USER]",
   description: "Shows the Permissions of a Member",
   memberpermissions: [],

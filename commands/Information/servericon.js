@@ -5,7 +5,7 @@ module.exports = {
   name: "servericon",
   category: "Information",
   aliases: ["serveravatar"],
-  cooldown: 5,
+  cooldown: "",
   usage: "servericon",
   description: "Shows the Server Icon",
   memberpermissions: [],

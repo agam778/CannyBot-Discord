@@ -4,7 +4,7 @@ module.exports = {
   name: "commandcount",
   category: "Information",
   aliases: ["cmdcount", "commandamount", "cmdamount"],
-  cooldown: 5,
+  cooldown: "",
   usage: "commandcount",
   description: "Shows the Amount of Commands an Categories",
   memberpermissions: [],

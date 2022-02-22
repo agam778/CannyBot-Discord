@@ -6,7 +6,7 @@ module.exports = {
   name: "webshot",
   category: "Tech",
   aliases: [],
-  cooldown: 2,
+  cooldown: "",
   usage: "webshot google.com (or other website)",
   description: "Get a screenshot of a website",
   memberpermissions: [],

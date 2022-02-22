@@ -5,7 +5,7 @@ module.exports = {
   name: "timeout",
   category: "Moderation",
   aliases: ["mute"],
-  cooldown: 5,
+  cooldown: "",
   usage: "timeout <@USER> [TIME] [REASON]",
   description: "Timeout a user for a specified time",
   memberpermissions: ["BAN_MEMBERS"],

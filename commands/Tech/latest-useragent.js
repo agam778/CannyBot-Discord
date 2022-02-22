@@ -6,7 +6,7 @@ module.exports = {
   name: "latest-useragent",
   category: "Tech",
   aliases: ["latest-ua", "l-useragent", "l-ua", "useragent", "ua"],
-  cooldown: 2,
+  cooldown: "",
   usage: "latest-useragent windows/macos/linux/android/chromos/ios",
   description: "Shows the latest user agent of different browsers and devices",
   memberpermissions: [],

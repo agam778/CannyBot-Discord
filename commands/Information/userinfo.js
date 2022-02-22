@@ -38,7 +38,7 @@ module.exports = {
   name: "userinfo",
   category: "Information",
   aliases: ["uinfo", "whoami"],
-  cooldown: 5,
+  cooldown: "",
   usage: "userinfo [@USER] [global]",
   description: "Shows Information of a User",
   memberpermissions: [],

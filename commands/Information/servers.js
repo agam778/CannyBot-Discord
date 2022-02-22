@@ -4,7 +4,7 @@ module.exports = {
   name: "servers",
   category: "Information",
   aliases: ["servername"],
-  cooldown: 5,
+  cooldown: "",
   usage: "avatar [@USER] [global]",
   description: "Shows the Avatar of a User",
   memberpermissions: [],

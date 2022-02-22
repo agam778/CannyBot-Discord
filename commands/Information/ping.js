@@ -4,7 +4,7 @@ module.exports = {
   name: "ping",
   category: "Information",
   aliases: ["latency"],
-  cooldown: 5,
+  cooldown: "",
   usage: "ping",
   description: "Gives u information on how fast the Bot is",
   memberpermissions: [],

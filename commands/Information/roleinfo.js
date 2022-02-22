@@ -6,7 +6,7 @@ module.exports = {
   name: "roleinfo",
   category: "Information",
   aliases: ["rinfo"],
-  cooldown: 5,
+  cooldown: "",
   usage: "roleinfo <@ROLE>",
   description: "Shows Information about a role",
   memberpermissions: [],

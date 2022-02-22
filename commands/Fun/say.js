@@ -4,7 +4,7 @@ module.exports = {
   name: "say",
   category: "Fun",
   aliases: [],
-  cooldown: 2,
+  cooldown: "",
   usage: "say <TEXT>",
   description: "Resends your Text",
   memberpermissions: [],

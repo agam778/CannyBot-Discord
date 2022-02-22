@@ -4,7 +4,7 @@ module.exports = {
   name: "ban",
   category: "Moderation",
   aliases: [],
-  cooldown: 5,
+  cooldown: "",
   usage: "ban <@USER> [REASON]",
   description: "Bans a user from the server",
   memberpermissions: ["BAN_MEMBERS"],

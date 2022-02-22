@@ -4,7 +4,7 @@ module.exports = {
   name: "kick",
   category: "Moderation",
   aliases: [],
-  cooldown: 5,
+  cooldown: "",
   usage: "kick <@USER> [REASON]",
   description: "Kicks a user from the server",
   memberpermissions: ["KICK_MEMBERS"],

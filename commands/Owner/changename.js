@@ -4,7 +4,7 @@ module.exports = {
   name: "changename",
   category: "Owner",
   aliases: ["changebotname", "botname"],
-  cooldown: 5,
+  cooldown: "",
   usage: "changename <NEW BOT NAME>",
   description: "Changes the Name of the BOT",
   memberpermissions: [],

@@ -3,7 +3,7 @@ module.exports = {
   name: "showprefix",
   category: "Information",
   aliases: [],
-  cooldown: 3,
+  cooldown: "",
   usage: "showprefix",
   description: "Show the current prefix of your server",
   memberpermissions: [],

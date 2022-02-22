@@ -3,7 +3,7 @@ module.exports = {
   name: "setprefix",
   category: "Information",
   aliases: [],
-  cooldown: 3,
+  cooldown: "",
   usage: "setprefix <new-prefix>",
   description: "Set a custom prefix for your server",
   memberpermissions: ["ADMINISTRATOR"],

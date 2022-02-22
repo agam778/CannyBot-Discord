@@ -5,7 +5,7 @@ module.exports = {
   name: "write",
   category: "ImageGen",
   aliases: [],
-  cooldown: 5,
+  cooldown: "",
   usage: "write <text>",
   description: "Write text on an image [Use '%0A' for a new line]",
   memberpermissions: [],
