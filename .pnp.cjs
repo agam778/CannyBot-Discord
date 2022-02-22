@@ -48,10 +48,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["google-translate-tts", "npm:0.4.0-dev"],
             ["he", "npm:1.2.0"],
             ["moment", "npm:2.29.1"],
-            ["mongoose", "npm:6.2.2"],
+            ["mongoose", "npm:6.2.3"],
             ["ms", "npm:2.1.3"],
             ["nekobot-api", "npm:2.1.0"],
             ["node-tesseract-ocr", "npm:2.2.1"],
+            ["popcat-wrapper", "npm:1.5.1"],
             ["qrcode", "npm:1.5.0"],
             ["randomstring", "npm:1.2.2"],
             ["ws", "virtual:c98e78b93fca499aaab4216f181a14d3a09adafce7285119cc4c397668e975448487767e1426964436990b24e11cc657d85ac73ea05502f8ef1de1b0d43bdfe2#npm:8.5.0"],
@@ -457,10 +458,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["google-translate-tts", "npm:0.4.0-dev"],
             ["he", "npm:1.2.0"],
             ["moment", "npm:2.29.1"],
-            ["mongoose", "npm:6.2.2"],
+            ["mongoose", "npm:6.2.3"],
             ["ms", "npm:2.1.3"],
             ["nekobot-api", "npm:2.1.0"],
             ["node-tesseract-ocr", "npm:2.2.1"],
+            ["popcat-wrapper", "npm:1.5.1"],
             ["qrcode", "npm:1.5.0"],
             ["randomstring", "npm:1.2.2"],
             ["ws", "virtual:c98e78b93fca499aaab4216f181a14d3a09adafce7285119cc4c397668e975448487767e1426964436990b24e11cc657d85ac73ea05502f8ef1de1b0d43bdfe2#npm:8.5.0"],
@@ -1544,17 +1546,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["mongoose", [
-        ["npm:6.2.2", {
-          "packageLocation": "./.yarn/cache/mongoose-npm-6.2.2-a61636cc3b-1de9b053b8.zip/node_modules/mongoose/",
+        ["npm:6.2.3", {
+          "packageLocation": "./.yarn/cache/mongoose-npm-6.2.3-db94f4d7b7-d18ff711bf.zip/node_modules/mongoose/",
           "packageDependencies": [
-            ["mongoose", "npm:6.2.2"],
+            ["mongoose", "npm:6.2.3"],
             ["bson", "npm:4.6.1"],
             ["kareem", "npm:2.3.4"],
             ["mongodb", "npm:4.3.1"],
             ["mpath", "npm:0.8.4"],
             ["mquery", "npm:4.0.2"],
-            ["ms", "npm:2.1.2"],
-            ["sift", "npm:13.5.2"]
+            ["ms", "npm:2.1.3"],
+            ["sift", "npm:16.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -1793,6 +1795,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/pngjs-npm-5.0.0-e8ba79f838-04e912cc45.zip/node_modules/pngjs/",
           "packageDependencies": [
             ["pngjs", "npm:5.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["popcat-wrapper", [
+        ["npm:1.5.1", {
+          "packageLocation": "./.yarn/cache/popcat-wrapper-npm-1.5.1-1da69e0bda-b41576da76.zip/node_modules/popcat-wrapper/",
+          "packageDependencies": [
+            ["popcat-wrapper", "npm:1.5.1"],
+            ["mongoose", "npm:6.2.3"],
+            ["node-fetch", "virtual:16615f7fc361427eac573d69be41603e0935a3985d1ea3627fcb8d6c900c39e68871725ae1b0ae54fdda9881d6d52cfb805e1d1d6a2e4a9560a23556e11086a1#npm:2.6.7"]
           ],
           "linkType": "HARD",
         }]
@@ -2055,10 +2068,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["sift", [
-        ["npm:13.5.2", {
-          "packageLocation": "./.yarn/cache/sift-npm-13.5.2-5c93d55c77-31951836c4.zip/node_modules/sift/",
+        ["npm:16.0.0", {
+          "packageLocation": "./.yarn/cache/sift-npm-16.0.0-c5d447b898-88d5754afe.zip/node_modules/sift/",
           "packageDependencies": [
-            ["sift", "npm:13.5.2"]
+            ["sift", "npm:16.0.0"]
           ],
           "linkType": "HARD",
         }]
