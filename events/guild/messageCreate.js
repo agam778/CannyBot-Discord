@@ -328,6 +328,7 @@ module.exports = async (client, message) => {
         args.join(" "),
         prefix
       );
+      // send the log to event log channel
       if (process.env.EVENT_LOG_CHANNEL) {
         const eventlogembed = new Discord.MessageEmbed()
           .setColor("#22bb33")
@@ -356,11 +357,10 @@ module.exports = async (client, message) => {
             }
           )
           .setTimestamp();
-        const eventlogchannel = client.channels.cache.get(
-          process.env.EVENT_LOG_CHANNEL
-        );
         try {
-          eventlogchannel.send({ embeds: [eventlogembed] });
+          client.channels.cache
+            .get(process.env.EVENT_LOG_CHANNEL)
+            .send({ embeds: [eventlogembed] });
         } catch (error) {
           console.log(error);
         }
