@@ -25,14 +25,16 @@ module.exports = {
     if (!website) {
       return message.channel.send(`Please specify a website!`);
     }
-    await message.channel.send(`Loading! Please Wait...`).then(async (msg) => {
-      const webshot = await pop.screenshot(website);
-      const attachment = new MessageAttachment(
-        webshot,
-        `${randomchar}-webshot.png`
-      );
-      msg.delete();
-      message.reply({ files: [attachment] });
-    });
+    await message.channel
+      .send(`<a:WindowsLoading:855012778251124776> Please Wait...`)
+      .then(async (msg) => {
+        const webshot = await pop.screenshot(website);
+        const attachment = new MessageAttachment(
+          webshot,
+          `${randomchar}-webshot.png`
+        );
+        message.reply({ files: [attachment] });
+        msg.delete();
+      });
   },
 };

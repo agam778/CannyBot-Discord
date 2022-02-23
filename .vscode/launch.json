@@ -6,7 +6,7 @@
       "request": "launch",
       "name": "Discord Bot",
       "runtimeExecutable": "yarn",
-      "args": ["run", "develop"],
+      "args": ["run", "start"],
       "stopOnEntry": false,
       "cwd": "${workspaceFolder}",
       "envFile": "${workspaceFolder}/.env"
