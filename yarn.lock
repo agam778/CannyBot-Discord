@@ -5,6 +5,19 @@ __metadata:
   version: 5
   cacheKey: 8
 
+"@discordjs/builders@npm:0.12.0":
+  version: 0.12.0
+  resolution: "@discordjs/builders@npm:0.12.0"
+  dependencies:
+    "@sindresorhus/is": ^4.3.0
+    discord-api-types: ^0.26.1
+    ts-mixer: ^6.0.0
+    tslib: ^2.3.1
+    zod: ^3.11.6
+  checksum: 3c4ef256371121938d5d75571e19f0697b1575dd9fb31a7ca47337d00a1ec45b2c1ce19a1261650a5f6393ac4116f8ed9e82120ce5de534be562dde919a2a6d7
+  languageName: node
+  linkType: hard
+
 "@discordjs/builders@npm:^0.11.0":
   version: 0.11.0
   resolution: "@discordjs/builders@npm:0.11.0"
@@ -15,19 +28,6 @@ __metadata:
     tslib: ^2.3.1
     zod: ^3.11.6
   checksum: 7a25b59bb52d2e3695bca27946a99cf2de95b7edd5be424ea9f4707a465524be21263e25e532e12438e99f9f55fb98b033885c760aeb96424b8c12f663f50760
-  languageName: node
-  linkType: hard
-
-"@discordjs/builders@npm:^0.x.x":
-  version: 0.12.0
-  resolution: "@discordjs/builders@npm:0.12.0"
-  dependencies:
-    "@sindresorhus/is": ^4.3.0
-    discord-api-types: ^0.26.1
-    ts-mixer: ^6.0.0
-    tslib: ^2.3.1
-    zod: ^3.11.6
-  checksum: 3c4ef256371121938d5d75571e19f0697b1575dd9fb31a7ca47337d00a1ec45b2c1ce19a1261650a5f6393ac4116f8ed9e82120ce5de534be562dde919a2a6d7
   languageName: node
   linkType: hard
 
@@ -157,7 +157,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitalets/google-translate-api@npm:^7.0.0":
+"@vitalets/google-translate-api@npm:7.0.0":
   version: 7.0.0
   resolution: "@vitalets/google-translate-api@npm:7.0.0"
   dependencies:
@@ -223,21 +223,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:0.26.0":
+  version: 0.26.0
+  resolution: "axios@npm:0.26.0"
+  dependencies:
+    follow-redirects: ^1.14.8
+  checksum: d7a8b898f4157bedeb2e06c03b16133b91b354c041205bea732ce58b7a21f373d22057b0eea0d482838145ce6ff482b359750d9bcb8dd19d45e3928e3c65c280
+  languageName: node
+  linkType: hard
+
 "axios@npm:^0.21.1":
   version: 0.21.4
   resolution: "axios@npm:0.21.4"
   dependencies:
     follow-redirects: ^1.14.0
   checksum: 44245f24ac971e7458f3120c92f9d66d1fc695e8b97019139de5b0cc65d9b8104647db01e5f46917728edfc0cfd88eb30fc4c55e6053eef4ace76768ce95ff3c
-  languageName: node
-  linkType: hard
-
-"axios@npm:^0.26.0":
-  version: 0.26.0
-  resolution: "axios@npm:0.26.0"
-  dependencies:
-    follow-redirects: ^1.14.8
-  checksum: d7a8b898f4157bedeb2e06c03b16133b91b354c041205bea732ce58b7a21f373d22057b0eea0d482838145ce6ff482b359750d9bcb8dd19d45e3928e3c65c280
   languageName: node
   linkType: hard
 
@@ -347,28 +347,28 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cannybot@workspace:."
   dependencies:
-    "@discordjs/builders": ^0.x.x
-    "@vitalets/google-translate-api": ^7.0.0
-    axios: ^0.26.0
-    deepai: ^1.0.21
-    discord-together: ^1.3.3
-    discord.js: ^13.6.0
-    dotenv: ^16.0.0
-    express: ^4.17.3
-    figlet: ^1.5.2
-    genius-lyrics: ^4.3.5
-    google-translate-tts: ^0.4.0-dev
-    he: ^1.2.0
-    moment: ^2.29.1
-    mongoose: ^6.2.3
-    ms: ^2.1.3
-    nekobot-api: ^2.1.0
-    node-tesseract-ocr: ^2.2.1
-    popcat-wrapper: ^1.5.1
-    qrcode: ^1.5.0
-    randomstring: ^1.2.2
-    ws: ^8.5.0
-    youtube-search: ^1.1.6
+    "@discordjs/builders": 0.12.0
+    "@vitalets/google-translate-api": 7.0.0
+    axios: 0.26.0
+    deepai: 1.0.21
+    discord-together: 1.3.3
+    discord.js: 13.6.0
+    dotenv: 16.0.0
+    express: 4.17.3
+    figlet: 1.5.2
+    genius-lyrics: 4.3.5
+    google-translate-tts: 0.4.0-dev
+    he: 1.2.0
+    moment: 2.29.1
+    mongoose: 6.2.3
+    ms: 2.1.3
+    nekobot-api: 2.1.0
+    node-tesseract-ocr: 2.2.1
+    popcat-wrapper: 1.5.1
+    qrcode: 1.5.0
+    randomstring: 1.2.2
+    ws: 8.5.0
+    youtube-search: 1.1.6
   languageName: unknown
   linkType: soft
 
@@ -562,7 +562,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepai@npm:^1.0.21":
+"deepai@npm:1.0.21":
   version: 1.0.21
   resolution: "deepai@npm:1.0.21"
   dependencies:
@@ -628,17 +628,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord-together@npm:^1.3.3":
-  version: 1.3.25
-  resolution: "discord-together@npm:1.3.25"
+"discord-together@npm:1.3.3":
+  version: 1.3.3
+  resolution: "discord-together@npm:1.3.3"
   dependencies:
     discord.js: ^13.1.0
     node-fetch: ^2.6.1
-  checksum: 6648f24edeb240fd6548055bd0247cabd60a1118c2e768cf7afb904f293b9edfce6ec49e1e6f9db755a4aa4716e6a61eacab082aa8e9d9aabfb8d4d094d4f85a
+  checksum: d23567ca51ffac8bfb73345c0b60479f037fd6a071f3e405d7586e2238f4fed98d4ece9be99bda9531780abf0bcfa27d4563ff303520cbadd4683205fd4b4143
   languageName: node
   linkType: hard
 
-"discord.js@npm:^13.1.0, discord.js@npm:^13.6.0":
+"discord.js@npm:13.6.0, discord.js@npm:^13.1.0":
   version: 13.6.0
   resolution: "discord.js@npm:13.6.0"
   dependencies:
@@ -702,7 +702,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^16.0.0":
+"dotenv@npm:16.0.0":
   version: 16.0.0
   resolution: "dotenv@npm:16.0.0"
   checksum: 664cebb51f0a9a1d1b930f51f0271e72e26d62feaecc9dc03df39453dd494b4e724809ca480fb3ec3213382b1ed3f791aaeb83569a137f9329ce58efd4853dbf
@@ -774,7 +774,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express@npm:^4.17.3":
+"express@npm:4.17.3":
   version: 4.17.3
   resolution: "express@npm:4.17.3"
   dependencies:
@@ -812,7 +812,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"figlet@npm:^1.5.2":
+"figlet@npm:1.5.2":
   version: 1.5.2
   resolution: "figlet@npm:1.5.2"
   checksum: cc860391669b44e119871d589e09a2814aa86351726a5791e0d3e2d098e4fc37171c85fcfed13f4e9000995bd004dc6dbf848da5fe458cf1477e776b7318986f
@@ -900,7 +900,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"genius-lyrics@npm:^4.3.5":
+"genius-lyrics@npm:4.3.5":
   version: 4.3.5
   resolution: "genius-lyrics@npm:4.3.5"
   dependencies:
@@ -935,7 +935,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"google-translate-tts@npm:^0.4.0-dev":
+"google-translate-tts@npm:0.4.0-dev":
   version: 0.4.0-dev
   resolution: "google-translate-tts@npm:0.4.0-dev"
   checksum: 2f06101b969d44fc351a782781e19a6776e8d6df0416b1d1e507916ff428944b4796635e21f1a9f8fdf1d4163b9973bd3a37b7af6cf860c19911c814ccc9930b
@@ -987,7 +987,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"he@npm:^1.2.0":
+"he@npm:1.2.0":
   version: 1.2.0
   resolution: "he@npm:1.2.0"
   bin:
@@ -1241,7 +1241,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moment@npm:^2.29.1":
+"moment@npm:2.29.1":
   version: 2.29.1
   resolution: "moment@npm:2.29.1"
   checksum: 1e14d5f422a2687996be11dd2d50c8de3bd577c4a4ca79ba5d02c397242a933e5b941655de6c8cb90ac18f01cc4127e55b4a12ae3c527a6c0a274e455979345e
@@ -1274,7 +1274,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongoose@npm:^6.0.13, mongoose@npm:^6.2.3":
+"mongoose@npm:6.2.3, mongoose@npm:^6.0.13":
   version: 6.2.3
   resolution: "mongoose@npm:6.2.3"
   dependencies:
@@ -1319,7 +1319,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ms@npm:2.1.3, ms@npm:^2.1.3":
+"ms@npm:2.1.3":
   version: 2.1.3
   resolution: "ms@npm:2.1.3"
   checksum: aa92de608021b242401676e35cfa5aa42dd70cbdc082b916da7fb925c542173e36bce97ea3e804923fe92c0ad991434e4a38327e15a1b5b5f945d66df615ae6d
@@ -1333,7 +1333,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nekobot-api@npm:^2.1.0":
+"nekobot-api@npm:2.1.0":
   version: 2.1.0
   resolution: "nekobot-api@npm:2.1.0"
   checksum: d8e61e77067c0f76567fec946054b5f14e395efaee0eeebba131b01542ff1252e6a601742110867f70a12de9a50d81724e34c1303ce481daf4cd69d2ea39f6eb
@@ -1354,7 +1354,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-tesseract-ocr@npm:^2.2.1":
+"node-tesseract-ocr@npm:2.2.1":
   version: 2.2.1
   resolution: "node-tesseract-ocr@npm:2.2.1"
   checksum: 641a43d02ee2a357c9b3d301737bfc50dd7923d052a2938d807a3778abb0e2a03ff0ccb0911291347822bec620b51e21f986903762e35977247cbef0dc60b860
@@ -1485,7 +1485,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"popcat-wrapper@npm:^1.5.1":
+"popcat-wrapper@npm:1.5.1":
   version: 1.5.1
   resolution: "popcat-wrapper@npm:1.5.1"
   dependencies:
@@ -1529,7 +1529,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"qrcode@npm:^1.5.0":
+"qrcode@npm:1.5.0":
   version: 1.5.0
   resolution: "qrcode@npm:1.5.0"
   dependencies:
@@ -1564,7 +1564,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"randomstring@npm:^1.2.2":
+"randomstring@npm:1.2.2":
   version: 1.2.2
   resolution: "randomstring@npm:1.2.2"
   dependencies:
@@ -1960,6 +1960,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ws@npm:8.5.0":
+  version: 8.5.0
+  resolution: "ws@npm:8.5.0"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ^5.0.2
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 76f2f90e40344bf18fd544194e7067812fb1372b2a37865678d8f12afe4b478ff2ebc0c7c0aff82cd5e6b66fc43d889eec0f1865c2365d8f7a66d92da7744a77
+  languageName: node
+  linkType: hard
+
 "ws@npm:^8.4.0":
   version: 8.4.2
   resolution: "ws@npm:8.4.2"
@@ -1972,21 +1987,6 @@ __metadata:
     utf-8-validate:
       optional: true
   checksum: 4369caaac8d1092a73871f5cf1d87fcbb995dc4183a1bc48e4f451bc2d02d0a8bf7c17edf1da18e2be3c773b09262275356b256d1c55bc7ca096154293ba2a8c
-  languageName: node
-  linkType: hard
-
-"ws@npm:^8.5.0":
-  version: 8.5.0
-  resolution: "ws@npm:8.5.0"
-  peerDependencies:
-    bufferutil: ^4.0.1
-    utf-8-validate: ^5.0.2
-  peerDependenciesMeta:
-    bufferutil:
-      optional: true
-    utf-8-validate:
-      optional: true
-  checksum: 76f2f90e40344bf18fd544194e7067812fb1372b2a37865678d8f12afe4b478ff2ebc0c7c0aff82cd5e6b66fc43d889eec0f1865c2365d8f7a66d92da7744a77
   languageName: node
   linkType: hard
 
@@ -2042,7 +2042,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"youtube-search@npm:^1.1.6":
+"youtube-search@npm:1.1.6":
   version: 1.1.6
   resolution: "youtube-search@npm:1.1.6"
   dependencies:

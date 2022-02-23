@@ -39,7 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@vitalets/google-translate-api", "npm:7.0.0"],
             ["axios", "npm:0.26.0"],
             ["deepai", "npm:1.0.21"],
-            ["discord-together", "npm:1.3.25"],
+            ["discord-together", "npm:1.3.3"],
             ["discord.js", "npm:13.6.0"],
             ["dotenv", "npm:16.0.0"],
             ["express", "npm:4.17.3"],
@@ -449,7 +449,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@vitalets/google-translate-api", "npm:7.0.0"],
             ["axios", "npm:0.26.0"],
             ["deepai", "npm:1.0.21"],
-            ["discord-together", "npm:1.3.25"],
+            ["discord-together", "npm:1.3.3"],
             ["discord.js", "npm:13.6.0"],
             ["dotenv", "npm:16.0.0"],
             ["express", "npm:4.17.3"],
@@ -789,10 +789,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["discord-together", [
-        ["npm:1.3.25", {
-          "packageLocation": "./.yarn/cache/discord-together-npm-1.3.25-6f2d258c81-6648f24ede.zip/node_modules/discord-together/",
+        ["npm:1.3.3", {
+          "packageLocation": "./.yarn/cache/discord-together-npm-1.3.3-1ce2c94f10-d23567ca51.zip/node_modules/discord-together/",
           "packageDependencies": [
-            ["discord-together", "npm:1.3.25"],
+            ["discord-together", "npm:1.3.3"],
             ["discord.js", "npm:13.6.0"],
             ["node-fetch", "virtual:16615f7fc361427eac573d69be41603e0935a3985d1ea3627fcb8d6c900c39e68871725ae1b0ae54fdda9881d6d52cfb805e1d1d6a2e4a9560a23556e11086a1#npm:2.6.7"]
           ],

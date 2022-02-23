@@ -2,12 +2,12 @@ const { MessageEmbed } = require("discord.js");
 const ee = require("../../botconfig/embed.json");
 
 module.exports = {
-  name: "awkword",
+  name: "sketchheads",
   category: "Activities",
   aliases: [],
   cooldown: "",
-  usage: "awkword",
-  description: 'Play "Awkword" together with your friends on Discord!',
+  usage: "sketchheads",
+  description: 'Play "Sketchheads" together with your friends on Discord!',
   memberpermissions: [],
   requiredroles: [],
   alloweduserids: [],
@@ -21,7 +21,7 @@ module.exports = {
     const channel = message.member.voice.channel;
     if (!channel)
       return message.channel.send(
-        "You must join a voice channel to play Awkword!"
+        "You must join a voice channel to play Sketchheads!"
       );
 
     if (!channel.permissionsFor(message.client.user).has("CONNECT"))
@@ -36,14 +36,14 @@ module.exports = {
 
     const msg = await message.channel.send("Please Wait...");
     client.discordTogether
-      .createTogetherCode(channel.id, "awkword")
+      .createTogetherCode(channel.id, "sketchheads")
       .then(async (invite) => {
         msg.delete();
         return message.reply({
           embeds: [
             new MessageEmbed()
               .setColor("RED")
-              .setTitle("Awkword!")
+              .setTitle("Sketchheads!")
               .setDescription(
                 `[Click Here to start the activity!](${invite.code})`
               )
