@@ -38,6 +38,7 @@
     "popcat-wrapper": "1.5.1",
     "qrcode": "1.5.0",
     "randomstring": "1.2.2",
+    "validate-image-type": "^1.1.1",
     "ws": "8.5.0",
     "youtube-search": "1.1.6"
   }
