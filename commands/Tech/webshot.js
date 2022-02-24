@@ -29,7 +29,7 @@ module.exports = {
       length: 5,
       charset: "alphabetic",
     });
-    const url = `https://capture-website-api.herokuapp.com/capture?url=${website}`;
+    const url = `https://api.popcat.xyz/screenshot?url=${website}`;
     const path = `${__dirname}/../../downloads/${randomchar}-webshot.png`;
     await message
       .reply(`<a:WindowsLoading:855012778251124776> Please Wait...`)

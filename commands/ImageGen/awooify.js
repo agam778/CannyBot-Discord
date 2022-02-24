@@ -26,21 +26,21 @@ module.exports = {
       length: 5,
       charset: "alphabetic",
     });
-    await axios
-      .get(
-        `https://nekobot.xyz/api/imagegen?type=awooify&url=${mention.displayAvatarURL(
-          {
-            format: "png",
-            size: 1024,
-          }
-        )}`
-      )
-      .then(async (res) => {
-        const url = res.data.message;
-        const path = `${__dirname}/../../downloads/${mention.id}-${randomchar}-awooify.png`;
-        await message
-          .reply(`<a:WindowsLoading:855012778251124776> Please Wait...`)
-          .then(async (msg) => {
+    await message
+      .reply(`<a:WindowsLoading:855012778251124776> Please Wait...`)
+      .then(async (msg) => {
+        await axios
+          .get(
+            `https://nekobot.xyz/api/imagegen?type=awooify&url=${mention.displayAvatarURL(
+              {
+                format: "png",
+                size: 1024,
+              }
+            )}`
+          )
+          .then(async (res) => {
+            const url = res.data.message;
+            const path = `${__dirname}/../../downloads/${mention.id}-${randomchar}-awooify.png`;
             const writer = fs.createWriteStream(path);
             const download = await axios({
               url: url,
@@ -70,12 +70,6 @@ module.exports = {
                 if (!result.ok) {
                   msg.edit({
                     content: `<a:wrong:946005824327786547> An error occured!`,
-                    files: [
-                      new MessageAttachment(
-                        `${__dirname}/../../downloads/${mention.id}-${randomchar}-awooify.png`,
-                        `error.txt`
-                      ),
-                    ],
                   });
                   fs.unlinkSync(path);
                   return;

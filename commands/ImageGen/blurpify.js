@@ -70,12 +70,6 @@ module.exports = {
                 if (!result.ok) {
                   msg.edit({
                     content: `<a:wrong:946005824327786547> An error occured!`,
-                    files: [
-                      new MessageAttachment(
-                        `${__dirname}/../../downloads/${mention.id}-${randomchar}-blurpify.png`,
-                        `error.txt`
-                      ),
-                    ],
                   });
                   fs.unlinkSync(path);
                   return;
