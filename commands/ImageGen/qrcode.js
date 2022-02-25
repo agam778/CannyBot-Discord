@@ -7,7 +7,7 @@ module.exports = {
   category: "ImageGen",
   aliases: [],
   cooldown: "",
-  usage: "Qrcode <text>",
+  usage: "qrcode <text>",
   description: "Generate a qrcode of the given text.",
   memberpermissions: [],
   requiredroles: [],
@@ -19,25 +19,29 @@ module.exports = {
   argsmissing_message: "",
   argstoomany_message: "",
   run: async (client, message, args, plusArgs, cmdUser, text, prefix) => {
-    msg = await message.channel.send("Generating QR Code...");
-    QRCode.toDataURL(`${text}`, { width: "200" }, function (err, url) {
-      let base64Image = url.split(";base64,").pop();
-      fs.writeFile(
-        `./downloads/${message.author.id}-qrcode.png`,
-        base64Image,
-        { encoding: "base64" },
-        function (err) {
-          if (err) throw err;
-          const attachment = new MessageAttachment(
-            `${__dirname}/../../downloads/${message.author.id}-qrcode.png`
+    const path = `${__dirname}/../../downloads/${message.author.id}-qrcode.png`;
+    await message
+      .reply("<a:WindowsLoading:855012778251124776> Generating QR Code...")
+      .then(async (msg) => {
+        QRCode.toDataURL(`${text}`, { width: "200" }, function (err, url) {
+          let base64Image = url.split(";base64,").pop();
+          fs.writeFile(
+            path,
+            base64Image,
+            { encoding: "base64" },
+            function (err) {
+              if (err) throw err;
+              const attachment = new MessageAttachment(path);
+              msg.edit({
+                content: "Here is the QR Code.",
+                files: [attachment],
+              });
+            }
           );
-          message.reply({ files: [attachment] });
-        }
-      );
-      setTimeout(function () {
-        msg.delete();
-        fs.unlinkSync(`./downloads/${message.author.id}-qrcode.png`);
-      }, 5000);
-    });
+          setTimeout(function () {
+            fs.unlinkSync(path);
+          }, 5000);
+        });
+      });
   },
 };
