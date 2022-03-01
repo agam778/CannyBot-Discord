@@ -41,7 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["deepai", "npm:1.0.21"],
             ["discord-together", "npm:1.3.25"],
             ["discord.js", "npm:13.6.0"],
-            ["dotenv", "npm:14.3.2"],
+            ["dotenv", "npm:16.0.0"],
             ["express", "npm:4.17.3"],
             ["figlet", "npm:1.5.2"],
             ["genius-lyrics", "npm:4.3.5"],
@@ -452,7 +452,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["deepai", "npm:1.0.21"],
             ["discord-together", "npm:1.3.25"],
             ["discord.js", "npm:13.6.0"],
-            ["dotenv", "npm:14.3.2"],
+            ["dotenv", "npm:16.0.0"],
             ["express", "npm:4.17.3"],
             ["figlet", "npm:1.5.2"],
             ["genius-lyrics", "npm:4.3.5"],
@@ -873,10 +873,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["dotenv", [
-        ["npm:14.3.2", {
-          "packageLocation": "./.yarn/cache/dotenv-npm-14.3.2-08998c870b-86c0675891.zip/node_modules/dotenv/",
+        ["npm:16.0.0", {
+          "packageLocation": "./.yarn/cache/dotenv-npm-16.0.0-ef4a5ccded-664cebb51f.zip/node_modules/dotenv/",
           "packageDependencies": [
-            ["dotenv", "npm:14.3.2"]
+            ["dotenv", "npm:16.0.0"]
           ],
           "linkType": "HARD",
         }]
