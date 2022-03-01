@@ -22,10 +22,10 @@ jobs:
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3.1.0
+        env: ACTIONS_ALLOW_UNSECURE_COMMANDS=true
         with:
           commit-message: Update all dependencies
           title: Update all dependencies
-          head: master
           body: |
             This PR was created by the yarn_bump workflow.
             It has updated all dependencies using yarn up '*' command.
