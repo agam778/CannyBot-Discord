@@ -39,7 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@vitalets/google-translate-api", "npm:7.0.0"],
             ["axios", "npm:0.26.0"],
             ["deepai", "npm:1.0.21"],
-            ["discord-together", "npm:1.3.3"],
+            ["discord-together", "npm:1.3.25"],
             ["discord.js", "npm:13.6.0"],
             ["dotenv", "npm:16.0.0"],
             ["express", "npm:4.17.3"],
@@ -48,7 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["google-translate-tts", "npm:0.4.0-dev"],
             ["he", "npm:1.2.0"],
             ["moment", "npm:2.29.1"],
-            ["mongoose", "npm:6.2.3"],
+            ["mongoose", "npm:6.2.4"],
             ["ms", "npm:2.1.3"],
             ["nekobot-api", "npm:2.1.0"],
             ["node-tesseract-ocr", "npm:2.2.1"],
@@ -450,7 +450,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@vitalets/google-translate-api", "npm:7.0.0"],
             ["axios", "npm:0.26.0"],
             ["deepai", "npm:1.0.21"],
-            ["discord-together", "npm:1.3.3"],
+            ["discord-together", "npm:1.3.25"],
             ["discord.js", "npm:13.6.0"],
             ["dotenv", "npm:16.0.0"],
             ["express", "npm:4.17.3"],
@@ -459,7 +459,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["google-translate-tts", "npm:0.4.0-dev"],
             ["he", "npm:1.2.0"],
             ["moment", "npm:2.29.1"],
-            ["mongoose", "npm:6.2.3"],
+            ["mongoose", "npm:6.2.4"],
             ["ms", "npm:2.1.3"],
             ["nekobot-api", "npm:2.1.0"],
             ["node-tesseract-ocr", "npm:2.2.1"],
@@ -791,10 +791,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["discord-together", [
-        ["npm:1.3.3", {
-          "packageLocation": "./.yarn/cache/discord-together-npm-1.3.3-1ce2c94f10-d23567ca51.zip/node_modules/discord-together/",
+        ["npm:1.3.25", {
+          "packageLocation": "./.yarn/cache/discord-together-npm-1.3.25-6f2d258c81-6648f24ede.zip/node_modules/discord-together/",
           "packageDependencies": [
-            ["discord-together", "npm:1.3.3"],
+            ["discord-together", "npm:1.3.25"],
             ["discord.js", "npm:13.6.0"],
             ["node-fetch", "virtual:16615f7fc361427eac573d69be41603e0935a3985d1ea3627fcb8d6c900c39e68871725ae1b0ae54fdda9881d6d52cfb805e1d1d6a2e4a9560a23556e11086a1#npm:2.6.7"]
           ],
@@ -1591,6 +1591,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/mongoose-npm-6.2.3-db94f4d7b7-d18ff711bf.zip/node_modules/mongoose/",
           "packageDependencies": [
             ["mongoose", "npm:6.2.3"],
+            ["bson", "npm:4.6.1"],
+            ["kareem", "npm:2.3.4"],
+            ["mongodb", "npm:4.3.1"],
+            ["mpath", "npm:0.8.4"],
+            ["mquery", "npm:4.0.2"],
+            ["ms", "npm:2.1.3"],
+            ["sift", "npm:16.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:6.2.4", {
+          "packageLocation": "./.yarn/cache/mongoose-npm-6.2.4-307303f5b8-7f163e4ced.zip/node_modules/mongoose/",
+          "packageDependencies": [
+            ["mongoose", "npm:6.2.4"],
             ["bson", "npm:4.6.1"],
             ["kareem", "npm:2.3.4"],
             ["mongodb", "npm:4.3.1"],
