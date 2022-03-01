@@ -1,25 +1,33 @@
-name: Bumping dependencies
+name: Bump Yarn Dependencies
 
 on: push
 
 jobs:
-  bump-all:
+  yarn_bump:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: "Checkout Repository"
         uses: actions/checkout@v2
-        with:
-          ref: main
 
-      - name: Bump up Yarn dependencies
-        uses: cometkim/yarn-plugin-bump@master
+      - name: "Setup nodejs"
+        uses: actions/setup-node@v1
         with:
-          branch: dependencies/all
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          node-version: "16.x"
 
-      - name: Sync dependency update branch with Pull Request
-        uses: vsoch/pull-request-action@1.0.5
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PULL_REQUEST_FROM_BRANCH: dependencies/all
+      - name: "Enable Yarn"
+        run: "corepack enable"
+
+      - name: "Update Yarn Dependencies"
+        run: "yarn up '*'"
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v3.1.0
+        with:
+          commit-message: Update all dependencies
+          title: Update all dependencies
+          head: master
+          body: |
+            This PR was created by the yarn_bump workflow.
+            It has updated all dependencies using yarn up '*' command.
+            Please review the changes and merge the PR if everything looks good.
+          labels: "dependencies"
