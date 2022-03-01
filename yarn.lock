@@ -39,9 +39,9 @@ __metadata:
   linkType: hard
 
 "@sapphire/async-queue@npm:^1.1.9":
-  version: 1.1.9
-  resolution: "@sapphire/async-queue@npm:1.1.9"
-  checksum: 8a4cb79e01948ee9f99f47e9fdfdfd509353d267f9e18bb8fe8e813b5d45f1fb6de08297b4557eb9a76b95bea59abaab67819175238068cc4cbc808d1d183e9d
+  version: 1.2.0
+  resolution: "@sapphire/async-queue@npm:1.2.0"
+  checksum: 9959c91fe031e9350134740b68e64798eff1f72f1417f312a4f7bebbd875035a406ba5ae1e71640c3819dec10d0f86a0588b494088f353f85701f2f1196e4560
   languageName: node
   linkType: hard
 
@@ -53,9 +53,9 @@ __metadata:
   linkType: hard
 
 "@sindresorhus/is@npm:^4.0.0, @sindresorhus/is@npm:^4.2.0, @sindresorhus/is@npm:^4.3.0":
-  version: 4.3.0
-  resolution: "@sindresorhus/is@npm:4.3.0"
-  checksum: 27dc822fd6962eb174de128fa5212e9a0b4b0672d810d6d5226e922db65ea779143e6cfda8ee10a3e5be7f744af0a65d69a761f3fb3d11ce83587ed1b19c9bf8
+  version: 4.6.0
+  resolution: "@sindresorhus/is@npm:4.6.0"
+  checksum: 83839f13da2c29d55c97abc3bc2c55b250d33a0447554997a85c539e058e57b8da092da396e252b11ec24a0279a0bed1f537fa26302209327060643e327f81d2
   languageName: node
   linkType: hard
 
@@ -106,19 +106,19 @@ __metadata:
   linkType: hard
 
 "@types/node-fetch@npm:^2.5.12":
-  version: 2.5.12
-  resolution: "@types/node-fetch@npm:2.5.12"
+  version: 2.6.1
+  resolution: "@types/node-fetch@npm:2.6.1"
   dependencies:
     "@types/node": "*"
     form-data: ^3.0.0
-  checksum: ad63c85ba6a9477b8e057ec8682257738130d98e8ece4e31141789bd99df9d9147985cc8bc0cb5c8983ed5aa6bb95d46df23d1e055f4ad5cf8b82fc69cf626c7
+  checksum: a3e5d7f413d1638d795dff03f7b142b1b0e0c109ed210479000ce7b3ea11f9a6d89d9a024c96578d9249570c5fe5287a5f0f4aaba98199222230196ff2d6b283
   languageName: node
   linkType: hard
 
 "@types/node@npm:*":
-  version: 17.0.12
-  resolution: "@types/node@npm:17.0.12"
-  checksum: f7e4c384b72648550391c2c8bd42560dfccf5b7a0506fb5842f326f8b176286be279dd63f62af621fe6d409d474ea5d312855061f512132e999f4e902a22e4db
+  version: 17.0.21
+  resolution: "@types/node@npm:17.0.21"
+  checksum: 89dcd2fe82f21d3634266f8384e9c865cf8af49685639fbdbd799bdd1040480fb1e8eeda2d3b9fce41edbe704d2a4be9f427118c4ae872e8d9bb7cbeb3c41a94
   languageName: node
   linkType: hard
 
@@ -149,11 +149,11 @@ __metadata:
   linkType: hard
 
 "@types/ws@npm:^8.2.2":
-  version: 8.2.2
-  resolution: "@types/ws@npm:8.2.2"
+  version: 8.5.1
+  resolution: "@types/ws@npm:8.5.1"
   dependencies:
     "@types/node": "*"
-  checksum: 308957864b9a5a0378ac82f1b084fa31b1bbe85106fb0d84ed2b392e4829404f21ab6ab2c1eb782d556e59cd33d57c75ad2d0cedc4b9b9d0ca3b2311bc915578
+  checksum: 4f06ff8b9e61201b28e7f4bbd0b30c5eeb32ed4d2c091554efc3b3b63ab56b4630c316a394be6bd6cc36bab87d0e5225ba55d0f7b170767175c26f7c14086bf9
   languageName: node
   linkType: hard
 
@@ -362,7 +362,7 @@ __metadata:
     moment: ^2.29.1
     mongoose: ^6.2.4
     ms: ^2.1.3
-    nekobot-api: ^2.1.0
+    nekobot-api: 2.0.0
     node-tesseract-ocr: ^2.2.1
     popcat-wrapper: ^1.5.1
     qrcode: ^1.5.0
@@ -863,23 +863,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.14.0, follow-redirects@npm:^1.14.7":
-  version: 1.14.7
-  resolution: "follow-redirects@npm:1.14.7"
+"follow-redirects@npm:^1.14.0, follow-redirects@npm:^1.14.7, follow-redirects@npm:^1.14.8":
+  version: 1.14.9
+  resolution: "follow-redirects@npm:1.14.9"
   peerDependenciesMeta:
     debug:
       optional: true
-  checksum: f6d03e5e30877431065bca0d1b2e3db93949eb799d368a5c07ea8a4b71205f0349a3f8f0191bf13a07c93885522834dca1dc8e527dc99a772c6911fba24edc5f
-  languageName: node
-  linkType: hard
-
-"follow-redirects@npm:^1.14.8":
-  version: 1.14.8
-  resolution: "follow-redirects@npm:1.14.8"
-  peerDependenciesMeta:
-    debug:
-      optional: true
-  checksum: 40c67899c2e3149a27e8b6498a338ff27f39fe138fde8d7f0756cb44b073ba0bfec3d52af28f20c5bdd67263d564d0d8d7b5efefd431de95c18c42f7b4aef457
+  checksum: f5982e0eb481818642492d3ca35a86989c98af1128b8e1a62911a3410621bc15d2b079e8170b35b19d3bdee770b73ed431a257ed86195af773771145baa57845
   languageName: node
   linkType: hard
 
@@ -1171,11 +1161,11 @@ __metadata:
   linkType: hard
 
 "keyv@npm:^4.0.0":
-  version: 4.0.5
-  resolution: "keyv@npm:4.0.5"
+  version: 4.1.1
+  resolution: "keyv@npm:4.1.1"
   dependencies:
     json-buffer: 3.0.1
-  checksum: 968ec062e66a660bd1c403b2932f602948ea76b17f8419bb04166491c1f186da1c3b39db4ccd1fdb6a19a4dcb374334455dd3ac31e13a70000c81e2daa866117
+  checksum: b141fe29405413e7ca4ea0dfd19a48e25d909834f032aafdf4b0c6be177087cc1177b9c0ffdabd41ac8a65c13b92dcd2ec8688f540fbb458efdb9c8730bbd102
   languageName: node
   linkType: hard
 
@@ -1286,12 +1276,12 @@ __metadata:
   linkType: hard
 
 "mongodb-connection-string-url@npm:^2.4.1":
-  version: 2.4.2
-  resolution: "mongodb-connection-string-url@npm:2.4.2"
+  version: 2.5.2
+  resolution: "mongodb-connection-string-url@npm:2.5.2"
   dependencies:
     "@types/whatwg-url": ^8.2.1
     whatwg-url: ^11.0.0
-  checksum: aed2718840c79f8d6be35309e308bf4466a009256da6b02e6212abeef39ae27bf6101273580696e246e51ee4f7471e2d938c44e8f8a5194982092f692b37c571
+  checksum: bd13af7d62d33e2d6e5217692961e34b2dafbbba5f41d361417257592754df3e925efc00fa8a5e038624e284245dab39e913d5f06ff962feede86d5f58fc5827
   languageName: node
   linkType: hard
 
@@ -1311,22 +1301,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongoose@npm:^6.0.13":
-  version: 6.2.3
-  resolution: "mongoose@npm:6.2.3"
-  dependencies:
-    bson: ^4.2.2
-    kareem: 2.3.4
-    mongodb: 4.3.1
-    mpath: 0.8.4
-    mquery: 4.0.2
-    ms: 2.1.3
-    sift: 16.0.0
-  checksum: d18ff711bf2174255143641a8d37f9a536aa7d445754d9befa461f2bd12b78d29e0cf6ef65f5d8b8ec87959594be541c7cc565227230ae0a3c3a0fe708f62123
-  languageName: node
-  linkType: hard
-
-"mongoose@npm:^6.2.4":
+"mongoose@npm:^6.0.13, mongoose@npm:^6.2.4":
   version: 6.2.4
   resolution: "mongoose@npm:6.2.4"
   dependencies:
@@ -1385,10 +1360,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nekobot-api@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "nekobot-api@npm:2.1.0"
-  checksum: d8e61e77067c0f76567fec946054b5f14e395efaee0eeebba131b01542ff1252e6a601742110867f70a12de9a50d81724e34c1303ce481daf4cd69d2ea39f6eb
+"nekobot-api@npm:2.0.0":
+  version: 2.0.0
+  resolution: "nekobot-api@npm:2.0.0"
+  checksum: 312992d94e3e36ea9ffee839a7e5d4006264f19f67054997b1b69edeaabaa19f7e8e400c8a204ef83724a10fb0460f8b8c3cadb0892273e28e5e4d44cf3d29b6
   languageName: node
   linkType: hard
 
@@ -1804,9 +1779,9 @@ __metadata:
   linkType: hard
 
 "signal-exit@npm:^3.0.2":
-  version: 3.0.6
-  resolution: "signal-exit@npm:3.0.6"
-  checksum: b819ac81ba757af559dad0804233ae31bf6f054591cd8a671e9cbcf09f21c72ec3076fe87d1e04861f5b33b47d63f0694b568de99c99cd733ee2060515beb6d5
+  version: 3.0.7
+  resolution: "signal-exit@npm:3.0.7"
+  checksum: a2f098f247adc367dffc27845853e9959b9e88b01cb301658cfe4194352d8d2bb32e18467c786a7fe15f1d44b233ea35633d076d5e737870b7139949d1ab6318
   languageName: node
   linkType: hard
 
@@ -2065,22 +2040,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.4.0":
-  version: 8.4.2
-  resolution: "ws@npm:8.4.2"
-  peerDependencies:
-    bufferutil: ^4.0.1
-    utf-8-validate: ^5.0.2
-  peerDependenciesMeta:
-    bufferutil:
-      optional: true
-    utf-8-validate:
-      optional: true
-  checksum: 4369caaac8d1092a73871f5cf1d87fcbb995dc4183a1bc48e4f451bc2d02d0a8bf7c17edf1da18e2be3c773b09262275356b256d1c55bc7ca096154293ba2a8c
-  languageName: node
-  linkType: hard
-
-"ws@npm:^8.5.0":
+"ws@npm:^8.4.0, ws@npm:^8.5.0":
   version: 8.5.0
   resolution: "ws@npm:8.5.0"
   peerDependencies:
@@ -2158,8 +2118,8 @@ __metadata:
   linkType: hard
 
 "zod@npm:^3.11.6":
-  version: 3.11.6
-  resolution: "zod@npm:3.11.6"
-  checksum: 044ac416450f179a0c88240f27849d2886c777cebade42df10e5f04125b0265cec82d9bd741a7dcb11796b2ea88b32c86be7d36932a4bed6af57002560359db1
+  version: 3.12.0
+  resolution: "zod@npm:3.12.0"
+  checksum: b753d9bf5f3518873a4f98119a79b1401e3933e164caa1621b901e01778deb4a9b35cb9230d0d7acc5e7c81cf3198352db040095904b619998a3c4de3d5a68ae
   languageName: node
   linkType: hard
