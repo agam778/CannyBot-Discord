@@ -29,9 +29,6 @@ jobs:
         with:
           token: ${{ secrets.WORKFLOW_TOKEN }}
           commit-message: 'style: auto format'
-          committer: 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
-          author: 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
-
           title: Format Code
           body: |
             This PR was created by the `format` workflow.
