@@ -51,7 +51,7 @@ module.exports = {
           )
           .setThumbnail(randomThumbnail)
           .setFooter({ text: ee.footertext, iconURL: ee.footericon });
-        await msg.edit({ content: "​", embeds: [embed] })
+        await msg.edit({ content: "​", embeds: [embed] });
       });
     });
   },
