@@ -69,7 +69,8 @@ module.exports = {
           user.displayAvatarURL({ dynamic: true, size: 512 })
         );
         embeduserinfo.setAuthor({
-          name: "Permissions from:   " + user.username + "#" + user.discriminator,
+          name:
+            "Permissions from:   " + user.username + "#" + user.discriminator,
           iconURL: user.displayAvatarURL({ dynamic: true }),
         });
         embeduserinfo.addField(
