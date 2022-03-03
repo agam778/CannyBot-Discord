@@ -14,4 +14,5 @@ jobs:
         with:
           prettier_options: --write .
           commit_message: "style: prettify code"
-          github_token: ${{ secrets.WORKFLOW_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
