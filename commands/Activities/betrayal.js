@@ -2,22 +2,21 @@ const { MessageEmbed } = require("discord.js");
 const ee = require("../../botconfig/embed.json");
 
 module.exports = {
-
-  name: "betrayal", 
-  category: "Activities", 
+  name: "betrayal",
+  category: "Activities",
   aliases: [],
-  cooldown: "", 
-  usage: "betrayal", 
+  cooldown: "",
+  usage: "betrayal",
   description: "Play betrayal with your friends on Discord!",
   memberpermissions: [],
-  requiredroles: [], 
+  requiredroles: [],
   alloweduserids: [],
-  minargs: 0, 
+  minargs: 0,
   maxargs: 0,
   minplusargs: 0,
-  maxplusargs: 0, 
-  argsmissing_message: "", 
-  argstoomany_message: "", 
+  maxplusargs: 0,
+  argsmissing_message: "",
+  argstoomany_message: "",
   run: async (client, message, args, plusArgs, cmdUser, text, prefix) => {
     const channel = message.member.voice.channel;
     if (!channel)
@@ -43,14 +42,16 @@ module.exports = {
         return message.reply({
           embeds: [
             new MessageEmbed()
-            .setColor("RED")
-            .setTitle("Betrayal!")
-            .setDescription(`[Click Here to start the activity!](${invite.code})`)
-            .setThumbnail(
-              "https://images.crazygames.com/games/betrayal-io/cover-1615286192675.png"
-            )
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
-          ]
+              .setColor("RED")
+              .setTitle("Betrayal!")
+              .setDescription(
+                `[Click Here to start the activity!](${invite.code})`
+              )
+              .setThumbnail(
+                "https://images.crazygames.com/games/betrayal-io/cover-1615286192675.png"
+              )
+              .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+          ],
         });
       });
   },
