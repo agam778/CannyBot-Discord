@@ -1,35 +1,35 @@
 //Import Modules
-const mongoose = require("mongoose");
-const mongoprefix = require("../../models/prefix");
-const config = require(`../../botconfig/config.json`);
-const ee = require(`../../botconfig/embed.json`);
-const settings = require(`../../botconfig/settings.json`);
-const { onCoolDown, replacemsg } = require("../../handlers/functions");
-const Discord = require("discord.js");
+const mongoose = require('mongoose')
+const mongoprefix = require('../../models/prefix')
+const config = require(`../../botconfig/config.json`)
+const ee = require(`../../botconfig/embed.json`)
+const settings = require(`../../botconfig/settings.json`)
+const { onCoolDown, replacemsg } = require('../../handlers/functions')
+const Discord = require('discord.js')
 module.exports = async (client, interaction) => {
   const prefix = await mongoprefix
     .findOne({
       GuildID: interaction.guild.id,
     })
     .then((res) => {
-      if (res) return res.Prefix;
-      else return process.env.PREFIX;
-    });
-  const CategoryName = interaction.commandName;
-  let command = false;
+      if (res) return res.Prefix
+      else return process.env.PREFIX
+    })
+  const CategoryName = interaction.commandName
+  let command = false
   try {
     if (
       client.slashCommands.has(
-        CategoryName + interaction.options.getSubcommand()
+        CategoryName + interaction.options.getSubcommand(),
       )
     ) {
       command = client.slashCommands.get(
-        CategoryName + interaction.options.getSubcommand()
-      );
+        CategoryName + interaction.options.getSubcommand(),
+      )
     }
   } catch {
-    if (client.slashCommands.has("normal" + CategoryName)) {
-      command = client.slashCommands.get("normal" + CategoryName);
+    if (client.slashCommands.has('normal' + CategoryName)) {
+      command = client.slashCommands.get('normal' + CategoryName)
     }
   }
   if (command) {
@@ -45,10 +45,10 @@ module.exports = async (client, interaction) => {
                 prefix: prefix,
                 command: command,
                 timeLeft: onCoolDown(interaction, command),
-              })
+              }),
             ),
         ],
-      });
+      })
     }
     //if Command has specific permission return error
     if (
@@ -63,7 +63,7 @@ module.exports = async (client, interaction) => {
             .setColor(ee.wrongcolor)
             .setFooter({ text: ee.footertext, iconURL: ee.footericon })
             .setTitle(
-              replacemsg(settings.messages.notallowed_to_exec_cmd.title)
+              replacemsg(settings.messages.notallowed_to_exec_cmd.title),
             )
             .setDescription(
               replacemsg(
@@ -72,11 +72,11 @@ module.exports = async (client, interaction) => {
                 {
                   command: command,
                   prefix: prefix,
-                }
-              )
+                },
+              ),
             ),
         ],
-      });
+      })
     }
     //if Command has specific needed roles return error
     if (
@@ -84,7 +84,7 @@ module.exports = async (client, interaction) => {
       command.requiredroles.length > 0 &&
       interaction.member.roles.cache.size > 0 &&
       !interaction.member.roles.cache.some((r) =>
-        command.requiredroles.includes(r.id)
+        command.requiredroles.includes(r.id),
       )
     ) {
       return interaction.reply({
@@ -94,7 +94,7 @@ module.exports = async (client, interaction) => {
             .setColor(ee.wrongcolor)
             .setFooter({ text: ee.footertext, iconURL: ee.footericon })
             .setTitle(
-              replacemsg(settings.messages.notallowed_to_exec_cmd.title)
+              replacemsg(settings.messages.notallowed_to_exec_cmd.title),
             )
             .setDescription(
               replacemsg(
@@ -103,11 +103,11 @@ module.exports = async (client, interaction) => {
                 {
                   command: command,
                   prefix: prefix,
-                }
-              )
+                },
+              ),
             ),
         ],
-      });
+      })
     }
     //if Command has specific users return error
     if (
@@ -122,7 +122,7 @@ module.exports = async (client, interaction) => {
             .setColor(ee.wrongcolor)
             .setFooter({ text: ee.footertext, iconURL: ee.footericon })
             .setTitle(
-              replacemsg(settings.messages.notallowed_to_exec_cmd.title)
+              replacemsg(settings.messages.notallowed_to_exec_cmd.title),
             )
             .setDescription(
               replacemsg(
@@ -131,13 +131,13 @@ module.exports = async (client, interaction) => {
                 {
                   command: command,
                   prefix: prefix,
-                }
-              )
+                },
+              ),
             ),
         ],
-      });
+      })
     }
     //execute the Command
-    command.run(client, interaction, interaction.member, interaction.guild);
+    command.run(client, interaction, interaction.member, interaction.guild)
   }
-};
+}

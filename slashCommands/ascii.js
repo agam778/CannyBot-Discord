@@ -1,8 +1,8 @@
-const axios = require("axios");
+const axios = require('axios')
 
 module.exports = {
-  name: "ascii",
-  description: "Convert text to ascii", //the command description for Slash Command Overview
+  name: 'ascii',
+  description: 'Convert text to ascii', //the command description for Slash Command Overview
   cooldown: [],
   memberpermissions: [],
   requiredroles: [],
@@ -10,8 +10,8 @@ module.exports = {
   options: [
     {
       String: {
-        name: "text",
-        description: "The text to convert.",
+        name: 'text',
+        description: 'The text to convert.',
         required: true,
       },
     },
@@ -30,33 +30,33 @@ module.exports = {
         options,
         id,
         createdTimestamp,
-      } = interaction;
-      const text = interaction.options.getString("text");
+      } = interaction
+      const text = interaction.options.getString('text')
       const encoded = text
         .replace(/[\u00A0-\u9999<>\&]/gim, function (i) {
-          return "&#" + i.charCodeAt(0) + ";";
+          return '&#' + i.charCodeAt(0) + ';'
         })
-        .replace(/\s/g, "&nbsp;");
+        .replace(/\s/g, '&nbsp;')
       axios
         .get(`https://api.dhravya.me/ascii?font=standard&text=${encoded}`)
         .then((res) => {
-          json = res.data;
-          let textcontent = "";
+          json = res.data
+          let textcontent = ''
           if (res.data.error) {
             return interaction.reply({
               content: `An error occured!\n\`\`\`js\n${json.data.errorMessage}\`\`\``,
               ephemeral: true,
-            });
+            })
           }
           interaction.reply({
             content: `${textcontent}\`\`\`${json.data.Ascii}\`\`\``,
-          });
-        });
+          })
+        })
     } catch (err) {
       return interaction.reply({
         content: `An error occured!\n\`\`\`js\n${err}\`\`\``,
         ephemeral: true,
-      });
+      })
     }
   },
-};
+}

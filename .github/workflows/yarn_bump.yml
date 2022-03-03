@@ -2,25 +2,25 @@ name: Bump Yarn Dependencies
 
 on:
   schedule:
-    - cron: "0 9 * * *"
+    - cron: '0 9 * * *'
   workflow_dispatch:
 
 jobs:
   yarn_bump:
     runs-on: ubuntu-latest
     steps:
-      - name: "Checkout Repository"
+      - name: 'Checkout Repository'
         uses: actions/checkout@v2
 
-      - name: "Setup nodejs"
+      - name: 'Setup nodejs'
         uses: actions/setup-node@v1
         with:
-          node-version: "16.x"
+          node-version: '16.x'
 
-      - name: "Enable Yarn"
-        run: "corepack enable"
+      - name: 'Enable Yarn'
+        run: 'corepack enable'
 
-      - name: "Update Yarn Dependencies"
+      - name: 'Update Yarn Dependencies'
         run: "yarn up '*'"
 
       - name: Create pull request
@@ -34,4 +34,4 @@ jobs:
             This PR was created by the yarn_bump workflow.
             It has updated all dependencies using yarn up '*' command.
             Please review the changes and merge the PR if everything looks good.
-          labels: "dependencies"
+          labels: 'dependencies'
