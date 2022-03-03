@@ -1,12 +1,12 @@
-const { MessageEmbed } = require("discord.js");
-const ee = require("../../botconfig/embed.json");
+const { MessageEmbed } = require('discord.js')
+const ee = require('../../botconfig/embed.json')
 
 module.exports = {
-  name: "checkers",
-  category: "Activities",
-  aliases: ["checkersinthepark"],
-  cooldown: "",
-  usage: "checkers",
+  name: 'checkers',
+  category: 'Activities',
+  aliases: ['checkersinthepark'],
+  cooldown: '',
+  usage: 'checkers',
   description:
     'Play "Checkers together in the park" together with your friends on Discord!',
   memberpermissions: [],
@@ -16,44 +16,44 @@ module.exports = {
   maxargs: 0,
   minplusargs: 0,
   maxplusargs: 0,
-  argsmissing_message: "",
-  argstoomany_message: "",
+  argsmissing_message: '',
+  argstoomany_message: '',
   run: async (client, message, args, plusArgs, cmdUser, text, prefix) => {
-    const channel = message.member.voice.channel;
+    const channel = message.member.voice.channel
     if (!channel)
       return message.channel.send(
-        'You must join a voice channel to play "Checkers in the park"!'
-      );
+        'You must join a voice channel to play "Checkers in the park"!',
+      )
 
-    if (!channel.permissionsFor(message.client.user).has("CONNECT"))
+    if (!channel.permissionsFor(message.client.user).has('CONNECT'))
       return message.channel.send(
-        "I don't have permission to join the voice channel"
-      );
+        "I don't have permission to join the voice channel",
+      )
 
-    if (!channel.permissionsFor(message.client.user).has("SPEAK"))
+    if (!channel.permissionsFor(message.client.user).has('SPEAK'))
       return message.channel.send(
-        "I don't have permission to speak in the voice channel"
-      );
+        "I don't have permission to speak in the voice channel",
+      )
 
-    const msg = await message.channel.send("Please Wait...");
+    const msg = await message.channel.send('Please Wait...')
     client.discordTogether
-      .createTogetherCode(channel.id, "checkers")
+      .createTogetherCode(channel.id, 'checkers')
       .then(async (invite) => {
-        msg.delete();
+        msg.delete()
         return message.reply({
           embeds: [
             new MessageEmbed()
-              .setColor("RED")
-              .setTitle("Checkers in the Park!")
+              .setColor('RED')
+              .setTitle('Checkers in the Park!')
               .setDescription(
-                `[Click Here to start the activity!](${invite.code})`
+                `[Click Here to start the activity!](${invite.code})`,
               )
               .setThumbnail(
-                "https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/SamCopeland/phpmeXx6V.png"
+                'https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/SamCopeland/phpmeXx6V.png',
               )
               .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
           ],
-        });
-      });
+        })
+      })
   },
-};
+}

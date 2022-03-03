@@ -1,10 +1,10 @@
-const { MessageEmbed } = require(`discord.js`);
-const { inspect } = require(`util`);
-const ee = require("../../botconfig/embed.json");
+const { MessageEmbed } = require(`discord.js`)
+const { inspect } = require(`util`)
+const ee = require('../../botconfig/embed.json')
 module.exports = {
   name: `eval`,
   category: `Owner`,
-  aliases: [`evaluate`, "evaluate", "eval"],
+  aliases: [`evaluate`, 'evaluate', 'eval'],
   description: `Eval a Command!`,
   usage: `eval <CODE>`,
   memberpermissions: [],
@@ -14,27 +14,27 @@ module.exports = {
   maxargs: 0,
   minplusargs: 0,
   maxplusargs: 0,
-  argsmissing_message: "",
-  argstoomany_message: "",
+  argsmissing_message: '',
+  argstoomany_message: '',
   run: async (client, message, args, plusArgs, cmdUser, text, prefix) => {
     try {
-      let evaled;
+      let evaled
       if (
         args.join(` `).includes(`token`) ||
         args.join(` `).includes(`TOKEN`) ||
         args.join(` `).includes(`BOT_TOKEN`)
       ) {
-        return message.reply("Yeah, and?");
+        return message.reply('Yeah, and?')
       }
-      evaled = await eval(args.join(` `));
-      let string = inspect(evaled);
+      evaled = await eval(args.join(` `))
+      let string = inspect(evaled)
       if (
         string.includes(client.token) ||
         string.includes(`BOT_TOKEN`) ||
         string.includes(`TOKEN`) ||
         string.includes(`token`)
       ) {
-        return message.reply("Yeah, and?");
+        return message.reply('Yeah, and?')
       }
     } catch (e) {
       return message.reply({
@@ -48,10 +48,10 @@ module.exports = {
                 e.message
                   ? String(e.message).substr(0, 2000)
                   : String(e).substr(0, 2000)
-              }\`\`\``
+              }\`\`\``,
             ),
         ],
-      });
+      })
     }
   },
-};
+}

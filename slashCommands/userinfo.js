@@ -1,44 +1,44 @@
-const Discord = require("discord.js");
-const { MessageEmbed } = require("discord.js");
-const config = require("../botconfig/config.json");
-var ee = require("../botconfig/embed.json");
-const moment = require("moment");
+const Discord = require('discord.js')
+const { MessageEmbed } = require('discord.js')
+const config = require('../botconfig/config.json')
+var ee = require('../botconfig/embed.json')
+const moment = require('moment')
 const flags = {
-  DISCORD_EMPLOYEE: "Discord Employee",
-  DISCORD_PARTNER: "Discord Partner",
-  BUGHUNTER_LEVEL_1: "Bug Hunter (Level 1)",
-  BUGHUNTER_LEVEL_2: "Bug Hunter (Level 2)",
-  HYPESQUAD_EVENTS: "HypeSquad Events",
-  HOUSE_BRAVERY: "House of Bravery",
-  HOUSE_BRILLIANCE: "House of Brilliance",
-  HOUSE_BALANCE: "House of Balance",
-  EARLY_SUPPORTER: "Early Supporter",
-  TEAM_USER: "Team User",
-  SYSTEM: "System",
-  VERIFIED_BOT: "Verified Bot",
-  VERIFIED_DEVELOPER: "Verified Bot Developer",
-};
+  DISCORD_EMPLOYEE: 'Discord Employee',
+  DISCORD_PARTNER: 'Discord Partner',
+  BUGHUNTER_LEVEL_1: 'Bug Hunter (Level 1)',
+  BUGHUNTER_LEVEL_2: 'Bug Hunter (Level 2)',
+  HYPESQUAD_EVENTS: 'HypeSquad Events',
+  HOUSE_BRAVERY: 'House of Bravery',
+  HOUSE_BRILLIANCE: 'House of Brilliance',
+  HOUSE_BALANCE: 'House of Balance',
+  EARLY_SUPPORTER: 'Early Supporter',
+  TEAM_USER: 'Team User',
+  SYSTEM: 'System',
+  VERIFIED_BOT: 'Verified Bot',
+  VERIFIED_DEVELOPER: 'Verified Bot Developer',
+}
 
 function trimArray(arr, maxLen = 25) {
   if (Array.from(arr.values()).length > maxLen) {
-    const len = Array.from(arr.values()).length - maxLen;
+    const len = Array.from(arr.values()).length - maxLen
     arr = Array.from(arr.values())
       .sort((a, b) => b.rawPosition - a.rawPosition)
-      .slice(0, maxLen);
-    arr.map((role) => `<&${role.id}>`);
-    arr.push(`${len} more...`);
+      .slice(0, maxLen)
+    arr.map((role) => `<&${role.id}>`)
+    arr.push(`${len} more...`)
   }
-  return arr.join(", ");
+  return arr.join(', ')
 }
 const statuses = {
-  online: "🟢",
-  idle: "🟠",
-  dnd: "🔴",
-  offline: "⚫️",
-};
+  online: '🟢',
+  idle: '🟠',
+  dnd: '🔴',
+  offline: '⚫️',
+}
 module.exports = {
-  name: "userinfo",
-  description: "Gives you information about a User", //the command description for Slash Command Overview
+  name: 'userinfo',
+  description: 'Gives you information about a User', //the command description for Slash Command Overview
   cooldown: [],
   memberpermissions: [],
   requiredroles: [],
@@ -50,8 +50,8 @@ module.exports = {
     //{"String": { name: "ping_amount", description: "How many times do you want to ping?", required: true }}, //to use in the code: interacton.getString("ping_amount")
     {
       User: {
-        name: "which_user",
-        description: "From Which User do you want to get Information from?",
+        name: 'which_user',
+        description: 'From Which User do you want to get Information from?',
         required: false,
       },
     }, //to use in the code: interacton.getUser("ping_a_user")
@@ -77,147 +77,147 @@ module.exports = {
         options,
         id,
         createdTimestamp,
-      } = interaction;
-      const { guild } = member;
+      } = interaction
+      const { guild } = member
       //let IntOption = options.getInteger("OPTIONNAME"); //same as in IntChoices
       //const StringOption = options.getString("what_ping"); //same as in StringChoices
-      let UserOption = options.getUser("which_user");
-      if (!UserOption) UserOption = member.user;
+      let UserOption = options.getUser('which_user')
+      if (!UserOption) UserOption = member.user
       //let ChannelOption = options.getChannel("OPTIONNAME");
       //let RoleOption = options.getRole("OPTIONNAME");
       try {
-        await guild.members.fetch();
-        const member = guild.members.cache.get(UserOption.id);
-        const roles = member.roles;
-        const userFlags = UserOption.flags.toArray();
-        const activity = UserOption.presence?.activities[0];
+        await guild.members.fetch()
+        const member = guild.members.cache.get(UserOption.id)
+        const roles = member.roles
+        const userFlags = UserOption.flags.toArray()
+        const activity = UserOption.presence?.activities[0]
         //create the EMBED
-        const embeduserinfo = new MessageEmbed();
+        const embeduserinfo = new MessageEmbed()
         embeduserinfo.setThumbnail(
           member.user.displayAvatarURL({
             dynamic: true,
             size: 512,
-          })
-        );
+          }),
+        )
         embeduserinfo.setAuthor({
           name:
-            "Information about:   " +
+            'Information about:   ' +
             member.user.username +
-            "#" +
+            '#' +
             member.user.discriminator,
           iconURL: member.user.displayAvatarURL({
             dynamic: true,
           }),
-        });
+        })
         embeduserinfo.addField(
-          "**・ Username:**",
+          '**・ Username:**',
           `<@${member.user.id}>\n\`${member.user.tag}\``,
-          true
-        );
-        embeduserinfo.addField("**❱ ID:**", `\`${member.id}\``, true);
+          true,
+        )
+        embeduserinfo.addField('**❱ ID:**', `\`${member.id}\``, true)
         embeduserinfo.addField(
-          "**・ Avatar:**",
+          '**・ Avatar:**',
           `[\`Link to avatar\`](${member.user.displayAvatarURL({
-            format: "png",
+            format: 'png',
           })})`,
-          true
-        );
+          true,
+        )
         embeduserinfo.addField(
-          "**・ Date Join DC:**",
-          "`" +
-            moment(member.user.createdTimestamp).format("DD/MM/YYYY") +
-            "`\n" +
-            "`" +
-            moment(member.user.createdTimestamp).format("hh:mm:ss") +
-            "`",
-          true
-        );
+          '**・ Date Join DC:**',
+          '`' +
+            moment(member.user.createdTimestamp).format('DD/MM/YYYY') +
+            '`\n' +
+            '`' +
+            moment(member.user.createdTimestamp).format('hh:mm:ss') +
+            '`',
+          true,
+        )
         embeduserinfo.addField(
-          "**・ Date Join Guild:**",
-          "`" +
-            moment(member.joinedTimestamp).format("DD/MM/YYYY") +
-            "`\n" +
-            "`" +
-            moment(member.joinedTimestamp).format("hh:mm:ss") +
-            "`",
-          true
-        );
+          '**・ Date Join Guild:**',
+          '`' +
+            moment(member.joinedTimestamp).format('DD/MM/YYYY') +
+            '`\n' +
+            '`' +
+            moment(member.joinedTimestamp).format('hh:mm:ss') +
+            '`',
+          true,
+        )
         embeduserinfo.addField(
-          "**・ Flags:**",
+          '**・ Flags:**',
           `\`${
             userFlags.length
-              ? userFlags.map((flag) => flags[flag]).join(", ")
-              : "None"
+              ? userFlags.map((flag) => flags[flag]).join(', ')
+              : 'None'
           }\``,
-          true
-        );
+          true,
+        )
         embeduserinfo.addField(
-          "**・ Highest Role:**",
+          '**・ Highest Role:**',
           `${
-            member.roles.highest.id === guild.id ? "None" : member.roles.highest
+            member.roles.highest.id === guild.id ? 'None' : member.roles.highest
           }`,
-          true
-        );
+          true,
+        )
         embeduserinfo.addField(
-          "**・ Is a Bot:**",
-          `\`${member.user.bot ? "Yes 🤖" : "No 🧍"}\``,
-          true
-        );
-        var userstatus = "Not having an activity";
+          '**・ Is a Bot:**',
+          `\`${member.user.bot ? 'Yes 🤖' : 'No 🧍'}\``,
+          true,
+        )
+        var userstatus = 'Not having an activity'
         if (activity) {
-          if (activity.type === "CUSTOM_STATUS") {
+          if (activity.type === 'CUSTOM_STATUS') {
             let emoji = `${
               activity.emoji
                 ? activity.emoji.id
-                  ? `<${activity.emoji.animated ? "a" : ""}:${
+                  ? `<${activity.emoji.animated ? 'a' : ''}:${
                       activity.emoji.name
                     }:${activity.emoji.id}>`
                   : activity.emoji.name
-                : ""
-            }`;
+                : ''
+            }`
             userstatus = `${emoji} \`${
-              activity.state || "Not having an activity."
-            }\``;
+              activity.state || 'Not having an activity.'
+            }\``
           } else {
             userstatus = `\`${
               activity.type.toLowerCase().charAt(0).toUpperCase() +
               activity.type.toLowerCase().slice(1)
-            } ${activity.name}\``;
+            } ${activity.name}\``
           }
         }
-        embeduserinfo.addField("**❱ Activity:**", `${userstatus}`);
+        embeduserinfo.addField('**❱ Activity:**', `${userstatus}`)
         embeduserinfo.addField(
-          "**・ Permissions:**",
+          '**・ Permissions:**',
           `${member.permissions
             .toArray()
             .map((p) => `\`${p}\``)
-            .join(", ")}`
-        );
+            .join(', ')}`,
+        )
         embeduserinfo.addField(
           `・ [${roles.cache.size}] Roles: `,
           roles.cache.size < 25
             ? Array.from(roles.cache.values())
                 .sort((a, b) => b.rawPosition - a.rawPosition)
                 .map((role) => `<@&${role.id}>`)
-                .join(", ")
+                .join(', ')
             : roles.cache.size > 25
             ? trimArray(roles.cache)
-            : "None"
-        );
-        embeduserinfo.setColor(ee.color);
+            : 'None',
+        )
+        embeduserinfo.setColor(ee.color)
         embeduserinfo.setFooter({
           text: ee.footertext,
           iconURL: ee.footericon,
-        });
+        })
         //send the EMBED
         interaction.reply({
           embeds: [embeduserinfo],
-        });
+        })
       } catch (e) {
-        console.log(e);
+        console.log(e)
       }
     } catch (e) {
-      console.log(String(e.stack));
+      console.log(String(e.stack))
     }
   },
-};
+}

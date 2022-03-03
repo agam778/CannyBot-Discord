@@ -1,10 +1,10 @@
-const { MessageEmbed } = require("discord.js");
-const config = require("../botconfig/config.json");
-const ee = require("../botconfig/embed.json");
-const settings = require("../botconfig/settings.json");
+const { MessageEmbed } = require('discord.js')
+const config = require('../botconfig/config.json')
+const ee = require('../botconfig/embed.json')
+const settings = require('../botconfig/settings.json')
 module.exports = {
-  name: "ping",
-  description: "Pings the bot", //the command description for Slash Command Overview
+  name: 'ping',
+  description: 'Pings the bot', //the command description for Slash Command Overview
   cooldown: [],
   memberpermissions: [],
   requiredroles: [],
@@ -47,22 +47,22 @@ module.exports = {
         options,
         id,
         createdTimestamp,
-      } = interaction;
-      const { guild } = member;
+      } = interaction
+      const { guild } = member
       const pingEmbed = new MessageEmbed()
-        .setColor("RANDOM")
-        .setTitle("Hey! Why ping?")
-        .setThumbnail("https://i.gifer.com/8158.gif")
+        .setColor('RANDOM')
+        .setTitle('Hey! Why ping?')
+        .setThumbnail('https://i.gifer.com/8158.gif')
         .addFields({
-          name: "Btw Pong!",
+          name: 'Btw Pong!',
           value: `\`${client.ws.ping}ms\``,
           inline: true,
         })
-        .setFooter({ text: ee.footertext, iconURL: ee.footericon });
+        .setFooter({ text: ee.footertext, iconURL: ee.footericon })
 
-      interaction.reply({ embeds: [pingEmbed] });
+      interaction.reply({ embeds: [pingEmbed] })
     } catch (e) {
-      console.log(String(e.stack));
+      console.log(String(e.stack))
     }
   },
-};
+}
