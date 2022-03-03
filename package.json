@@ -5,7 +5,9 @@
   "description": "A Fun Discord Bot in Discord.js v13",
   "main": "index.js",
   "scripts": {
-    "start": "yarn node index.js"
+    "start": "yarn node index.js",
+    "dev": "nodemon --exec yarn node index.js",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -41,5 +43,9 @@
     "validate-image-type": "^1.1.1",
     "ws": "^8.5.0",
     "youtube-search": "^1.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
   }
 }
