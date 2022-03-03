@@ -1,9 +1,9 @@
-const { MessageEmbed } = require("discord.js");
-const ee = require("../botconfig/embed.json");
-const translate = require("@vitalets/google-translate-api");
+const { MessageEmbed } = require('discord.js')
+const ee = require('../botconfig/embed.json')
+const translate = require('@vitalets/google-translate-api')
 module.exports = {
-  name: "translate",
-  description: "Translate text to specified language", //the command description for Slash Command Overview
+  name: 'translate',
+  description: 'Translate text to specified language', //the command description for Slash Command Overview
   cooldown: [],
   memberpermissions: [],
   requiredroles: [],
@@ -11,16 +11,16 @@ module.exports = {
   options: [
     {
       String: {
-        name: "lang",
+        name: 'lang',
         description:
-          "The language code to translate to. For example: en, es, fr, etc.",
+          'The language code to translate to. For example: en, es, fr, etc.',
         required: true,
       },
     },
     {
       String: {
-        name: "text",
-        description: "The text to translate.",
+        name: 'text',
+        description: 'The text to translate.',
         required: true,
       },
     },
@@ -39,24 +39,24 @@ module.exports = {
         options,
         id,
         createdTimestamp,
-      } = interaction;
+      } = interaction
 
-      const langcode = interaction.options.getString("lang");
-      const text = interaction.options.getString("text");
+      const langcode = interaction.options.getString('lang')
+      const text = interaction.options.getString('text')
       translate(`${text}`, { to: `${langcode}` }).then((res) => {
         const embed = new MessageEmbed()
           .setColor(ee.color)
           .setTitle(`Translated Text`)
           .addField(`Original Text (${res.from.language.iso})`, `${text}`)
           .addField(`Translated Text (${langcode}) `, `${res.text}`)
-          .setFooter({ text: ee.footertext, iconURL: ee.footericon });
-        interaction.reply({ embeds: [embed] });
-      });
+          .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+        interaction.reply({ embeds: [embed] })
+      })
     } catch (err) {
       interaction.reply({
         content: `An error occured!\n\`\`\`js\n${err}\`\`\``,
         ephemeral: true,
-      });
+      })
     }
   },
-};
+}

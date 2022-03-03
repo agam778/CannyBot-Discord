@@ -1,13 +1,13 @@
-const { MessageEmbed } = require("discord.js");
-const ee = require("../../botconfig/embed.json");
-const { duration } = require("../../handlers/functions");
+const { MessageEmbed } = require('discord.js')
+const ee = require('../../botconfig/embed.json')
+const { duration } = require('../../handlers/functions')
 module.exports = {
-  name: "uptime",
-  category: "Information",
+  name: 'uptime',
+  category: 'Information',
   aliases: [],
-  cooldown: "",
-  usage: "uptime",
-  description: "Returns the duration on how long the Bot is online",
+  cooldown: '',
+  usage: 'uptime',
+  description: 'Returns the duration on how long the Bot is online',
   memberpermissions: [],
   requiredroles: [],
   alloweduserids: [],
@@ -15,8 +15,8 @@ module.exports = {
   maxargs: 0,
   minplusargs: 0,
   maxplusargs: 0,
-  argsmissing_message: "",
-  argstoomany_message: "",
+  argsmissing_message: '',
+  argstoomany_message: '',
   run: async (client, message, args, plusArgs, cmdUser, text, prefix) => {
     try {
       message.reply({
@@ -27,12 +27,12 @@ module.exports = {
             .setTitle(
               `:white_check_mark: **${
                 client.user.username
-              }** is online since:\n \`${duration(client.uptime)}\``
+              }** is online since:\n \`${duration(client.uptime)}\``,
             ),
         ],
-      });
+      })
     } catch (e) {
-      console.log(String(e.stack));
+      console.log(String(e.stack))
       return message.reply({
         embeds: [
           new MessageEmbed()
@@ -44,10 +44,10 @@ module.exports = {
                 e.message
                   ? String(e.message).substr(0, 2000)
                   : String(e).substr(0, 2000)
-              }\`\`\``
+              }\`\`\``,
             ),
         ],
-      });
+      })
     }
   },
-};
+}

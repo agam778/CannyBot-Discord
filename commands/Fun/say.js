@@ -1,12 +1,12 @@
-const { MessageEmbed } = require("discord.js");
-const ee = require("../../botconfig/embed.json");
+const { MessageEmbed } = require('discord.js')
+const ee = require('../../botconfig/embed.json')
 module.exports = {
-  name: "say",
-  category: "Fun",
+  name: 'say',
+  category: 'Fun',
   aliases: [],
-  cooldown: "",
-  usage: "say <TEXT>",
-  description: "Resends your Text",
+  cooldown: '',
+  usage: 'say <TEXT>',
+  description: 'Resends your Text',
   memberpermissions: [],
   requiredroles: [],
   alloweduserids: [],
@@ -14,8 +14,8 @@ module.exports = {
   maxargs: 0,
   minplusargs: 0,
   maxplusargs: 0,
-  argsmissing_message: "You are missing the text you wanna add to the message!",
-  argstoomany_message: "You are having too many arguments for this Command!",
+  argsmissing_message: 'You are missing the text you wanna add to the message!',
+  argstoomany_message: 'You are having too many arguments for this Command!',
   run: async (client, message, args, plusArgs, cmdUser, text, prefix) => {
     try {
       if (!args[0])
@@ -27,26 +27,26 @@ module.exports = {
               .setTitle(`❌ ERROR | You didn't provided a Text`)
               .setDescription(`Usage: \`${prefix}say <Your Text>\``),
           ],
-        });
-      const replacedword = replaced(text);
+        })
+      const replacedword = replaced(text)
       message.channel.send(
-        replacedword.substr(0, 2000) + `\n- Said by ${message.author.tag}`
-      );
+        replacedword.substr(0, 2000) + `\n- Said by ${message.author.tag}`,
+      )
     } catch (e) {
-      message.reply(`Oops! An Error Occured!\n\`\`\`js\n" + e + "\n\`\`\``);
+      message.reply(`Oops! An Error Occured!\n\`\`\`js\n" + e + "\n\`\`\``)
     }
   },
-};
+}
 
 function replaced(string) {
   return string
     .replace(
       /(?<![A-Z])@everyone(?![A-Z])/gi,
-      "<:attherate:899514552029438012>everyone"
+      '<:attherate:899514552029438012>everyone',
     )
     .replace(
       /(?<![A-Z])@here(?![A-Z])/gi,
-      "<:attherate:899514552029438012>here"
+      '<:attherate:899514552029438012>here',
     )
-    .replace(/(?<![A-Z])@(?![A-Z])/gi, "<:attherate:899514552029438012>");
+    .replace(/(?<![A-Z])@(?![A-Z])/gi, '<:attherate:899514552029438012>')
 }

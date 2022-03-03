@@ -15,30 +15,30 @@ module.exports = async (client, oldState, newState) => {
   )
     if (!oldState.channelId && newState.channelId) {
       if (
-        newState.channel.type == "GUILD_STAGE_VOICE" &&
+        newState.channel.type == 'GUILD_STAGE_VOICE' &&
         newState.guild.me.voice.suppress
       ) {
         try {
-          await newState.guild.me.voice.setSuppressed(false);
+          await newState.guild.me.voice.setSuppressed(false)
         } catch (e) {
-          console.log(String(e));
+          console.log(String(e))
         }
       }
-      return;
+      return
     }
   if (oldState.channelId && !newState.channelId) {
-    return;
+    return
   }
   if (oldState.channelId && newState.channelId) {
     if (
-      newState.channel.type == "GUILD_STAGE_VOICE" &&
+      newState.channel.type == 'GUILD_STAGE_VOICE' &&
       newState.guild.me.voice.suppress
     ) {
       try {
-        await newState.guild.me.voice.setSuppressed(false);
+        await newState.guild.me.voice.setSuppressed(false)
       } catch (e) {
-        console.log(String(e));
+        console.log(String(e))
       }
     }
   }
-};
+}
