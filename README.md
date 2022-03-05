@@ -29,9 +29,11 @@ If you don't want to customize the bot and deploy it yourself, you can invite th
 ## Deploy It Online:
 
 ### Quick Deploy
+
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?code=Imo6qY&referralCode=agam778)
 
 ### Manual Deploy
+
 Install Dependencies: Run `yarn; yarn install`<br>
 Run the Bot: Run `yarn start`
 
