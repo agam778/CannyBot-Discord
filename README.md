@@ -28,14 +28,12 @@ If you don't want to customize the bot and deploy it yourself, you can invite th
 
 ## Deploy It Online:
 
-VPS: To run the bot, run `yarn; yarn install` and then `yarn node index.js`
+### Quick Deploy
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?code=Imo6qY&referralCode=agam778)
 
-Online Hosting Services:
-Here are some hosting services I would recommend to use:
-
-- [Railway.app](https://railway.app) - A free hosting which offers 24/7 uptime, fast network speeds, and more!
-- [Heroku](https://heroku.com) - Also a free hosting but with only 550 hours per month without a cc, and bot will sleep after some time of inactivity.
-- [Koyeb](https://koyeb.com) - A free hosting service with 24/7 uptime, and kinda same like Railway.app
+### Manual Deploy
+Install Dependencies: Run `yarn; yarn install`<br>
+Run the Bot: Run `yarn start`
 
 # License
 
