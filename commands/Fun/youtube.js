@@ -3,7 +3,7 @@ const ee = require('../../botconfig/embed.json')
 const search = require('youtube-search')
 const opts = {
   maxResults: 1,
-  key: process.env.youtube_token,
+  key: process.env.YOUTUBE_TOKEN,
   type: 'video',
 }
 const deepai = require('deepai')
