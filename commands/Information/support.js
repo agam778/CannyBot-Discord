@@ -1,5 +1,5 @@
 const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js')
-var ee = require('../../botconfig/embed.json')
+
 module.exports = {
   name: 'support',
   category: 'Information',
@@ -32,8 +32,11 @@ module.exports = {
             .setDescription(
               'Looks like you want support. You can join my server and ask support from the developer directly! Click the button below to Join',
             )
-            .setThumbnail(ee.footericon)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+            .setThumbnail(`${client.user.displayAvatarURL()}`)
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            }),
         ],
         components: [invitelinks],
       })
@@ -42,8 +45,11 @@ module.exports = {
       return message.reply({
         embeds: [
           new MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(`❌ ERROR | An error occurred`)
             .setDescription(
               `\`\`\`${

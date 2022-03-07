@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
+
 const axios = require('axios')
 
 module.exports = {
@@ -32,7 +32,10 @@ module.exports = {
               .setAuthor({ name: `${json.author}` })
               .setDescription(`Upvotes: ${json.ups}`)
               .setImage(`${json.url}`)
-              .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+              .setFooter({
+                text: `Requested by ${message.author.tag}`,
+                iconURL: `${client.user.displayAvatarURL()}`,
+              }),
           ],
         })
       })

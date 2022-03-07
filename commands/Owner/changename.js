@@ -1,5 +1,5 @@
 var { MessageEmbed } = require(`discord.js`)
-var ee = require(`../../botconfig/embed.json`)
+
 module.exports = {
   name: 'changename',
   category: 'Owner',
@@ -22,8 +22,11 @@ module.exports = {
         return message.reply({
           embeds: [
             new MessageEmbed()
-              .setColor(ee.wrongcolor)
-              .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+              .setColor('#e01e01')
+              .setFooter({
+                text: `Requested by ${message.author.tag}`,
+                iconURL: `${client.user.displayAvatarURL()}`,
+              })
               .setTitle(
                 `:x: Bot Name too long, can't have more then 32 Letters!`,
               ),
@@ -36,8 +39,11 @@ module.exports = {
           return message.reply({
             embeds: [
               new MessageEmbed()
-                .setColor(ee.color)
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+                .setColor('RANDOM')
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                })
                 .setTitle(`Changed my Name to: \`${user.username}\``),
             ],
           })
@@ -46,8 +52,11 @@ module.exports = {
           return message.reply({
             embeds: [
               new MessageEmbed()
-                .setColor(ee.wrongcolor)
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+                .setColor('#e01e01')
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                })
                 .setTitle(`:x: Something went Wrong`)
                 .setDescription(
                   `\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``,
@@ -60,8 +69,11 @@ module.exports = {
       return message.reply({
         embeds: [
           new MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(`❌ ERROR | An error occurred`)
             .setDescription(
               `\`\`\`${

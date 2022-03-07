@@ -1,5 +1,4 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
 
 module.exports = {
   name: 'fishington',
@@ -50,7 +49,10 @@ module.exports = {
               .setThumbnail(
                 'https://images.crazygames.com/games/fishington-io/cover-1615371400662.png',
               )
-              .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+              .setFooter({
+                text: `Requested by ${message.author.tag}`,
+                iconURL: `${client.user.displayAvatarURL()}`,
+              }),
           ],
         })
       })

@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-var ee = require('../../botconfig/embed.json')
+
 module.exports = {
   name: 'ban',
   category: 'Moderation',
@@ -47,7 +47,10 @@ module.exports = {
       .setDescription(
         `**${banMember.user.username}** has been banned for - ${reason}`,
       )
-      .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+      .setFooter({
+        text: `Requested by ${message.author.tag}`,
+        iconURL: `${client.user.displayAvatarURL()}`,
+      })
     message.channel.send({ embeds: [embed] })
   },
 }

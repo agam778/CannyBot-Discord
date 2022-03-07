@@ -1,5 +1,4 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
 
 module.exports = {
   name: 'chess',
@@ -50,7 +49,10 @@ module.exports = {
               .setThumbnail(
                 'https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/SamCopeland/phpmeXx6V.png',
               )
-              .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+              .setFooter({
+                text: `Requested by ${message.author.tag}`,
+                iconURL: `${client.user.displayAvatarURL()}`,
+              }),
           ],
         })
       })

@@ -1,5 +1,4 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
 
 module.exports = {
   name: 'poll',
@@ -46,7 +45,7 @@ module.exports = {
     if (polloption5) option5 = '🇪'
 
     const embed = new MessageEmbed()
-      .setColor(ee.color)
+      .setColor('RANDOM')
       .setAuthor({
         name: `${message.author.username}`,
         iconURL: message.author.displayAvatarURL(),
@@ -60,8 +59,8 @@ module.exports = {
         } ${polloption5}`,
       )
       .setFooter({
-        text: ee.footertext,
-        iconURL: ee.footericon,
+        text: `Requested by ${message.author.tag}`,
+        iconURL: `${client.user.displayAvatarURL()}`,
       })
 
     mentionedchannel.send({ embeds: [embed] }).then(async (msg) => {

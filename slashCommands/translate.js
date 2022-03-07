@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../botconfig/embed.json')
+
 const translate = require('@vitalets/google-translate-api')
 module.exports = {
   name: 'translate',
@@ -45,11 +45,14 @@ module.exports = {
       const text = interaction.options.getString('text')
       translate(`${text}`, { to: `${langcode}` }).then((res) => {
         const embed = new MessageEmbed()
-          .setColor(ee.color)
+          .setColor('RANDOM')
           .setTitle(`Translated Text`)
           .addField(`Original Text (${res.from.language.iso})`, `${text}`)
           .addField(`Translated Text (${langcode}) `, `${res.text}`)
-          .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+          .setFooter({
+            text: `Requested by ${message.author.tag}`,
+            iconURL: `${client.user.displayAvatarURL()}`,
+          })
         interaction.reply({ embeds: [embed] })
       })
     } catch (err) {

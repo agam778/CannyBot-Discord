@@ -21,7 +21,7 @@ If you don't want to customize the bot and deploy it yourself, you can invite th
 ## Customize the bot:
 
 - Env Vars: Rename `.env.sample` to `.env` and fill accordingly/add environment variables wherever you are hosting your bot.
-- Bot's settings: Change the bot's settings in [`config.json`](./botconfig/config.json), [`embed.json`](./botconfig/embed.json) and [`settings.json`](./botconfig/settings.json) accordingly.
+- Bot's settings: Change the bot's settings in [`config.json`](./botconfig/config.json) and [`settings.json`](./botconfig/settings.json) accordingly.
 - Bot's Status: Change the bot's status in [`functions.js`](./handlers/functions.js#L940)
 - Package.json File: Customize the [`package.json`](package.json) file accordingly
 - Other Things: Change whatever you want, as this is an open source bot 😂

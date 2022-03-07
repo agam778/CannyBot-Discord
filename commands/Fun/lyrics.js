@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
+
 const Genius = require('genius-lyrics')
 const Client = new Genius.Client(process.env.GENIUS_TOKEN)
 const { swap_pages } = require('../../handlers/functions')

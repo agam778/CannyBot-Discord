@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-var ee = require('../../botconfig/embed.json')
+
 const { GetUser } = require('../../handlers/functions')
 module.exports = {
   name: 'permissions',
@@ -54,10 +54,10 @@ module.exports = {
             .map((p) => `\`${p}\``)
             .join(', ')}`,
         )
-        embeduserinfo.setColor(ee.color)
+        embeduserinfo.setColor('RANDOM')
         embeduserinfo.setFooter({
-          text: ee.footertext,
-          iconURL: ee.footericon,
+          text: `Requested by ${message.author.tag}`,
+          iconURL: `${client.user.displayAvatarURL()}`,
         })
         //send the EMBED
         message.reply({ embeds: [embeduserinfo] })
@@ -80,10 +80,10 @@ module.exports = {
             .map((p) => `\`${p}\``)
             .join(', ')}`,
         )
-        embeduserinfo.setColor(ee.color)
+        embeduserinfo.setColor('RANDOM')
         embeduserinfo.setFooter({
-          text: ee.footertext,
-          iconURL: ee.footericon,
+          text: `Requested by ${message.author.tag}`,
+          iconURL: `${client.user.displayAvatarURL()}`,
         })
         //send the EMBED
         message.reply({ embeds: [embeduserinfo] })
@@ -93,8 +93,11 @@ module.exports = {
       return message.reply({
         embeds: [
           new MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(`❌ ERROR | An error occurred`)
             .setDescription(
               `\`\`\`${

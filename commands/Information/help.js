@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
+
 const settings = require('../../botconfig/settings.json')
 module.exports = {
   name: 'help',
@@ -28,7 +28,7 @@ module.exports = {
           return message.reply({
             embeds: [
               embed
-                .setColor(ee.wrongcolor)
+                .setColor('#e01e01')
                 .setDescription(
                   `No Information found for command **${args[0].toLowerCase()}**`,
                 ),
@@ -56,10 +56,10 @@ module.exports = {
           embed.addField('**Usage**', `\`${prefix}${cmd.usage}\``)
           embed.setFooter({ text: 'Syntax: <> = required, [] = optional' })
         }
-        return message.reply({ embeds: [embed.setColor(ee.color)] })
+        return message.reply({ embeds: [embed.setColor('RANDOM')] })
       } else {
         const embed = new MessageEmbed()
-          .setColor(ee.color)
+          .setColor('RANDOM')
           .setThumbnail(
             'https://cdn.discordapp.com/emojis/748654505029009479.png',
           )
@@ -92,8 +92,11 @@ module.exports = {
       return message.reply({
         embeds: [
           new MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(`❌ ERROR | An error occurred`)
             .setDescription(
               `\`\`\`${

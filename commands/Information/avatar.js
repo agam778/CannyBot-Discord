@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const { MessageEmbed } = require('discord.js')
 const config = require('../../botconfig/config.json')
-var ee = require('../../botconfig/embed.json')
+
 const { GetUser, GetGlobalUser } = require('../../handlers/functions')
 const settings = require('../../botconfig/settings.json')
 module.exports = {
@@ -40,7 +40,7 @@ module.exports = {
               name: `Avatar from: ${user.tag}`,
               iconURL: user.displayAvatarURL({ dynamic: true }),
             })
-            .setColor(ee.color)
+            .setColor('RANDOM')
             .addField(
               '-> PNG',
               `[\`LINK\`](${user.displayAvatarURL({ format: 'png' })})`,
@@ -61,7 +61,10 @@ module.exports = {
                 dynamic: true,
               }),
             )
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setImage(
               user.displayAvatarURL({
                 dynamic: true,
@@ -75,8 +78,11 @@ module.exports = {
       return message.reply({
         embeds: [
           new MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(`❌ ERROR | An error occurred`)
             .setDescription(
               `\`\`\`${

@@ -1,7 +1,6 @@
 const { MessageEmbed } = require('discord.js')
 const axios = require('axios')
 const fs = require('fs')
-const ee = require('../../botconfig/embed.json')
 
 module.exports = {
   name: 'npm',
@@ -54,7 +53,10 @@ module.exports = {
               `${data.collected.metadata.links.repository}`,
               (inline = true),
             )
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setThumbnail(
               'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/540px-Npm-logo.svg.png',
             )

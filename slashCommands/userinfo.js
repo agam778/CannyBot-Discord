@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const { MessageEmbed } = require('discord.js')
 const config = require('../botconfig/config.json')
-var ee = require('../botconfig/embed.json')
+
 const moment = require('moment')
 const flags = {
   DISCORD_EMPLOYEE: 'Discord Employee',
@@ -204,10 +204,10 @@ module.exports = {
             ? trimArray(roles.cache)
             : 'None',
         )
-        embeduserinfo.setColor(ee.color)
+        embeduserinfo.setColor('RANDOM')
         embeduserinfo.setFooter({
-          text: ee.footertext,
-          iconURL: ee.footericon,
+          text: `Requested by ${message.author.tag}`,
+          iconURL: `${client.user.displayAvatarURL()}`,
         })
         //send the EMBED
         interaction.reply({

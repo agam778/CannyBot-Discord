@@ -1,12 +1,14 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
 
 module.exports = (client, message) => {
   if (process.env.EVENT_LOG_CHANNEL) {
     client.on('guildCreate', async (guild) => {
       const guildcreateembed = new MessageEmbed()
         .setColor('#22bb33')
-        .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+        .setFooter({
+          text: `Requested by ${message.author.tag}`,
+          iconURL: `${client.user.displayAvatarURL()}`,
+        })
         .setTitle(`${client.user.username} has been added to a new guild!`)
         .addFields(
           {

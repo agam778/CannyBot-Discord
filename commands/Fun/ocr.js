@@ -2,7 +2,7 @@ const tesseract = require('node-tesseract-ocr')
 const https = require('https')
 const fs = require('fs')
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
+
 module.exports = {
   name: 'ocr',
   category: 'Fun',
@@ -49,8 +49,8 @@ module.exports = {
               .setTitle('Extracted Text Successfully!')
               .setDescription(`\`\`\`${text}\`\`\``)
               .setFooter({
-                text: ee.footertext,
-                iconURL: ee.footericon,
+                text: `Requested by ${message.author.tag}`,
+                iconURL: `${client.user.displayAvatarURL()}`,
               })
             message.reply({ embeds: [embed] })
             setTimeout(function () {

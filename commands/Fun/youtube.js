@@ -1,5 +1,5 @@
 const { MessageEmbed, MessageButton, MessageActionRow } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
+
 const search = require('youtube-search')
 const opts = {
   maxResults: 1,
@@ -62,7 +62,10 @@ module.exports = {
                 `${results[0].description}\n\nPublished on: ${results[0].publishedAt}`,
               )
               .setImage(results[0].thumbnails.high.url)
-              .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+              .setFooter({
+                text: `Requested by ${message.author.tag}`,
+                iconURL: `${client.user.displayAvatarURL()}`,
+              })
             message.reply({ embeds: [embed], components: [ytlinks] })
           }
         })()

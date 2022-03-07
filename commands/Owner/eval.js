@@ -1,6 +1,6 @@
 const { MessageEmbed } = require(`discord.js`)
 const { inspect } = require(`util`)
-const ee = require('../../botconfig/embed.json')
+
 module.exports = {
   name: `eval`,
   category: `Owner`,
@@ -40,8 +40,11 @@ module.exports = {
       return message.reply({
         embeds: [
           new MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter(ee.footertext, ee.footericon)
+            .setColor('#e01e01')
+            .setFooter(
+              `Requested by ${message.author.tag}`,
+              `${client.user.displayAvatarURL()}`,
+            )
             .setTitle(`❌ ERROR | An error occurred`)
             .setDescription(
               `\`\`\`${

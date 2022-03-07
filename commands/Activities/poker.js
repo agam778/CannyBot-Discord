@@ -1,5 +1,4 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
 
 module.exports = {
   name: 'poker',
@@ -50,7 +49,10 @@ module.exports = {
               .setThumbnail(
                 'https://logos.textgiraffe.com/logos/logo-name/Poker-designstyle-poker-m.png',
               )
-              .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+              .setFooter({
+                text: `Requested by ${message.author.tag}`,
+                iconURL: `${client.user.displayAvatarURL()}`,
+              }),
           ],
         })
       })

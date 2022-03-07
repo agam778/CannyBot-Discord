@@ -1,6 +1,6 @@
 const { MessageEmbed, Collection } = require('discord.js')
 const config = require('../botconfig/config.json')
-const ee = require('../botconfig/embed.json')
+
 const settings = require('../botconfig/settings.json')
 const mongoose = require('mongoose')
 const mongoprefix = require('../models/prefix')
@@ -695,8 +695,11 @@ async function swap_pages(client, message, description, TITLE, sliceamount) {
         const embed = new MessageEmbed()
           .setDescription(current)
           .setTitle(TITLE)
-          .setColor(ee.color)
-          .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+          .setColor('RANDOM')
+          .setFooter({
+            text: `Requested by ${message.author.tag}`,
+            iconURL: `${client.user.displayAvatarURL()}`,
+          })
         embeds.push(embed)
       }
       embeds
@@ -710,8 +713,11 @@ async function swap_pages(client, message, description, TITLE, sliceamount) {
         const embed = new MessageEmbed()
           .setDescription(current)
           .setTitle(TITLE)
-          .setColor(ee.color)
-          .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+          .setColor('RANDOM')
+          .setFooter({
+            text: `Requested by ${message.author.tag}`,
+            iconURL: `${client.user.displayAvatarURL()}`,
+          })
         embeds.push(embed)
       }
       embeds
@@ -725,8 +731,11 @@ async function swap_pages(client, message, description, TITLE, sliceamount) {
             .setTitle(
               `${emoji.msg.ERROR} No Content added to the SWAP PAGES Function`,
             )
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            }),
         ],
       })
       .catch((e) => console.log('THIS IS TO PREVENT A CRASH'))

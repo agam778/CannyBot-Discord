@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
+
 const axios = require('axios')
 
 module.exports = {
@@ -52,7 +52,10 @@ module.exports = {
                     value: `\`${json.windows.vivaldi}\``,
                   },
                 )
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                }),
             ],
           })
         } else if (text === 'macos') {
@@ -87,7 +90,10 @@ module.exports = {
                     value: `\`${json.macos.vivaldi}\``,
                   },
                 )
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                }),
             ],
           })
         } else if (text === 'linux') {
@@ -114,7 +120,10 @@ module.exports = {
                     value: `\`${json.linux.vivaldi}\``,
                   },
                 )
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                }),
             ],
           })
         } else if (text === 'android') {
@@ -141,7 +150,10 @@ module.exports = {
                     value: `\`${json.android.android12.opera}\``,
                   },
                 )
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                }),
             ],
           })
         } else if (text === 'chromeos') {
@@ -164,7 +176,10 @@ module.exports = {
                     value: `\`${json.chromeos.aarch64}\``,
                   },
                 )
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                }),
             ],
           })
         } else if (text === 'ios') {
@@ -187,7 +202,10 @@ module.exports = {
                     value: `\`${json.ios.safari}\``,
                   },
                 )
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                }),
             ],
           })
         }

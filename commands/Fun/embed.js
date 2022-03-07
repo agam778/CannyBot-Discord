@@ -1,5 +1,4 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
 
 module.exports = {
   name: 'embed',
@@ -23,7 +22,7 @@ module.exports = {
     embed.setTitle(embed_args[0])
     embed_args[1] ? embed.setDescription(embed_args[1]) : null
     embed_args[2] ? embed.setImage(embed_args[2]) : null
-    embed.setColor(ee.color)
+    embed.setColor('RANDOM')
     embed.setFooter({
       text: `${message.guild.name}`,
       iconURL: `${message.guild.iconURL()}`,

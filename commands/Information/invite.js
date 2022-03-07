@@ -1,5 +1,5 @@
 const { MessageEmbed, MessageButton, MessageActionRow } = require('discord.js')
-var ee = require('../../botconfig/embed.json')
+
 module.exports = {
   name: 'invite',
   category: 'Information',
@@ -42,9 +42,12 @@ module.exports = {
             .setDescription(
               'Wow! Looks like you want to invite me ❤️, To do so, click the button below accordingly',
             )
-            .setThumbnail(ee.footericon)
-            .setColor(ee.color)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+            .setThumbnail(`${client.user.displayAvatarURL()}`)
+            .setColor('RANDOM')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            }),
         ],
         components: [invitelinks],
       })
@@ -53,8 +56,11 @@ module.exports = {
       return message.reply({
         embeds: [
           new MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(`❌ ERROR | An error occurred`)
             .setDescription(
               `\`\`\`${

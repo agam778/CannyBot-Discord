@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
+
 module.exports = {
   name: 'say',
   category: 'Fun',
@@ -22,8 +22,11 @@ module.exports = {
         return message.reply({
           embeds: [
             new MessageEmbed()
-              .setColor(ee.wrongcolor)
-              .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+              .setColor('#e01e01')
+              .setFooter({
+                text: `Requested by ${message.author.tag}`,
+                iconURL: `${client.user.displayAvatarURL()}`,
+              })
               .setTitle(`❌ ERROR | You didn't provided a Text`)
               .setDescription(`Usage: \`${prefix}say <Your Text>\``),
           ],
