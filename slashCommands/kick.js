@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../botconfig/embed.json')
+
 module.exports = {
   name: 'kick',
   description: 'Kicks a user',
@@ -88,7 +88,10 @@ module.exports = {
         .setDescription(
           `**${Target.user.username}** has been kick for - ${Reason}`,
         )
-        .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+        .setFooter({
+          text: `Requested by ${message.author.tag}`,
+          iconURL: `${client.user.displayAvatarURL()}`,
+        })
 
       interaction.reply({ embeds: [embed] })
     } catch (e) {

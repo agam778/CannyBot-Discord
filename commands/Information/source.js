@@ -1,5 +1,5 @@
 const { MessageEmbed, MessageButton, MessageActionRow } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
+
 const package = require('../../package.json')
 module.exports = {
   name: 'source',
@@ -7,7 +7,7 @@ module.exports = {
   aliases: ['sourcecode'],
   cooldown: '',
   usage: 'source',
-  description: 'Get the Source Code of CannyBot',
+  description: 'Get the Source Code of the bot',
   memberpermissions: [],
   requiredroles: [],
   alloweduserids: [],
@@ -27,11 +27,16 @@ module.exports = {
     )
     const embed = new MessageEmbed()
       .setTitle('Source Code')
-      .setDescription('You can get the Source Code of CannyBot here:')
+      .setDescription(
+        `You can get the Source Code of ${client.user.username} here:`,
+      )
       .setThumbnail(
         client.user.displayAvatarURL({ format: 'png', dynamic: true }),
       )
-      .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+      .setFooter({
+        text: `Requested by ${message.author.tag}`,
+        iconURL: `${client.user.displayAvatarURL()}`,
+      })
     message.reply({ embeds: [embed], components: [sourcecode] })
   },
 }

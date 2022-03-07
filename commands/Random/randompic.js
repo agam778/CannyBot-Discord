@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
+
 const axios = require('axios')
 
 module.exports = {
@@ -28,10 +28,13 @@ module.exports = {
       .then(async (response) => {
         json = response.data
         const embed = new MessageEmbed()
-          .setColor(ee.color)
+          .setColor('RANDOM')
           .setTitle(`Random Image`)
           .setImage(json[0].download_url)
-          .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+          .setFooter({
+            text: `Requested by ${message.author.tag}`,
+            iconURL: `${client.user.displayAvatarURL()}`,
+          })
         message.reply({ embeds: [embed] })
       })
   },

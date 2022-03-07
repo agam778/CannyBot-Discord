@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
+
 const { duration } = require('../../handlers/functions')
 module.exports = {
   name: 'uptime',
@@ -22,8 +22,11 @@ module.exports = {
       message.reply({
         embeds: [
           new MessageEmbed()
-            .setColor(ee.color)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('RANDOM')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(
               `:white_check_mark: **${
                 client.user.username
@@ -36,8 +39,11 @@ module.exports = {
       return message.reply({
         embeds: [
           new MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(`❌ ERROR | An error occurred`)
             .setDescription(
               `\`\`\`${

@@ -1,5 +1,4 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
 
 module.exports = {
   name: 'puttparty',
@@ -50,7 +49,10 @@ module.exports = {
               .setThumbnail(
                 'https://www.graphicsprings.com/filestorage/stencils/084a905bb0bb38fedf776f5f0c5f66b8.png',
               )
-              .setFooter({ text: ee.footertext, iconURL: ee.footericon }),
+              .setFooter({
+                text: `Requested by ${message.author.tag}`,
+                iconURL: `${client.user.displayAvatarURL()}`,
+              }),
           ],
         })
       })

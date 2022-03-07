@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../botconfig/embed.json')
+
 module.exports = {
   name: 'embed',
   description: 'Generate an Embed', //the command description for Slash Command Overview
@@ -62,7 +62,7 @@ module.exports = {
       })
     }
     imageurl ? embed.setImage(imageurl) : null
-    embed.setColor(ee.color)
+    embed.setColor('RANDOM')
     embed.setFooter({
       text: `${interaction.guild.name}`,
       iconURL: `${interaction.guild.iconURL()}`,

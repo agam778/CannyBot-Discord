@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-var ee = require('../../botconfig/embed.json')
+
 const package = require('../../package.json')
 const os = require('os')
 module.exports = {
@@ -8,7 +8,7 @@ module.exports = {
   aliases: ['info'],
   cooldown: '',
   usage: 'about',
-  description: 'About CannyBot',
+  description: 'About the Bot',
   memberpermissions: [],
   requiredroles: [],
   alloweduserids: [],
@@ -20,13 +20,15 @@ module.exports = {
   argstoomany_message: '',
   run: async (client, message, args, plusArgs, cmdUser, text, prefix) => {
     const embed = new Discord.MessageEmbed()
-      .setColor(ee.color)
-      .setTitle('CannyBot')
+      .setColor('RANDOM')
+      .setTitle(`${client.user.username}`)
       .setThumbnail(
         client.user.avatarURL({ format: 'png', dynamic: true, size: 1024 }),
       )
       .setDescription(
-        'Canny bot is a nice and cool bot which has many features like Image Generation, Fun commands, Tech commands, Some Moderation commands and many more! More commands are being added daily and its in continuous development! Coded in discord.js v13 with hardwork of a single developer. This bot is being improved a lot and suggestions always accepted :D',
+        `${
+          client.user.username ? client.user.username : 'CannyBot'
+        } is a nice and cool bot which has many features like Image Generation, Fun commands, Tech commands, Some Moderation commands and many more! More commands are being added daily and its in continuous development! Coded in discord.js v13 with hardwork of a single developer, \`agam778#9486\`.`,
       )
       .addField('Version', package.version, true)
       .addField('Author', 'agam778#9486', true)
@@ -44,7 +46,11 @@ module.exports = {
         true,
       )
       .addField('Hostname', `${os.hostname()}`, true)
-      .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+      .addField('Source Code', 'https://github.com/agam778/CannyBot')
+      .setFooter({
+        text: `Requested by ${message.author.tag}`,
+        iconURL: `${client.user.displayAvatarURL()}`,
+      })
     message.reply({ embeds: [embed] })
   },
 }

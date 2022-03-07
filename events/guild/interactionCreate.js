@@ -2,7 +2,7 @@
 const mongoose = require('mongoose')
 const mongoprefix = require('../../models/prefix')
 const config = require(`../../botconfig/config.json`)
-const ee = require(`../../botconfig/embed.json`)
+
 const settings = require(`../../botconfig/settings.json`)
 const { onCoolDown, replacemsg } = require('../../handlers/functions')
 const Discord = require('discord.js')
@@ -38,8 +38,11 @@ module.exports = async (client, interaction) => {
         ephemeral: true,
         embeds: [
           new Discord.MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(
               replacemsg(settings.messages.cooldown, {
                 prefix: prefix,
@@ -60,8 +63,11 @@ module.exports = async (client, interaction) => {
         ephemeral: true,
         embeds: [
           new Discord.MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(
               replacemsg(settings.messages.notallowed_to_exec_cmd.title),
             )
@@ -91,8 +97,11 @@ module.exports = async (client, interaction) => {
         ephemeral: true,
         embeds: [
           new Discord.MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(
               replacemsg(settings.messages.notallowed_to_exec_cmd.title),
             )
@@ -119,8 +128,11 @@ module.exports = async (client, interaction) => {
         ephemeral: true,
         embeds: [
           new Discord.MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(
               replacemsg(settings.messages.notallowed_to_exec_cmd.title),
             )

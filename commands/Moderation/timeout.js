@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
+
 const ms = require('ms')
 module.exports = {
   name: 'timeout',
@@ -46,7 +46,10 @@ module.exports = {
           time,
         )}!\nReason: ${reason}`,
       )
-      .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+      .setFooter({
+        text: `Requested by ${message.author.tag}`,
+        iconURL: `${client.user.displayAvatarURL()}`,
+      })
     return message.reply({
       embeds: [embed],
     })

@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-var ee = require('../../botconfig/embed.json')
+
 module.exports = {
   name: 'commandcount',
   category: 'Information',
@@ -21,8 +21,11 @@ module.exports = {
       message.reply({
         embeds: [
           new MessageEmbed()
-            .setColor(ee.color)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('RANDOM')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(`:gear: **[${client.commands.size}] Commands**`)
             .setDescription(
               `:gear: **[${client.categories.length}] Categories**`,
@@ -34,8 +37,11 @@ module.exports = {
       return message.reply({
         embeds: [
           new MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(`❌ ERROR | An error occurred`)
             .setDescription(
               `\`\`\`${

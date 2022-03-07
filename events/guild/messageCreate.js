@@ -1,6 +1,6 @@
 //Import Modules
 const config = require(`../../botconfig/config.json`)
-const ee = require(`../../botconfig/embed.json`)
+
 const settings = require(`../../botconfig/settings.json`)
 const { onCoolDown, replacemsg } = require('../../handlers/functions')
 const Discord = require('discord.js')
@@ -36,8 +36,11 @@ module.exports = async (client, message) => {
       message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setColor(ee.color)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('RANDOM')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(`:thumbsup: **My Prefix here, is __\`${prefix}\`__**`),
         ],
       })
@@ -51,8 +54,11 @@ module.exports = async (client, message) => {
       return message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(
               replacemsg(settings.messages.cooldown, {
                 prefix: prefix,
@@ -74,8 +80,11 @@ module.exports = async (client, message) => {
           .reply({
             embeds: [
               new Discord.MessageEmbed()
-                .setColor(ee.wrongcolor)
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+                .setColor('#e01e01')
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                })
                 .setTitle(
                   replacemsg(settings.messages.notallowed_to_exec_cmd.title),
                 )
@@ -115,8 +124,11 @@ module.exports = async (client, message) => {
           .reply({
             embeds: [
               new Discord.MessageEmbed()
-                .setColor(ee.wrongcolor)
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+                .setColor('#e01e01')
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                })
                 .setTitle(
                   replacemsg(settings.messages.notallowed_to_exec_cmd.title),
                 )
@@ -153,8 +165,11 @@ module.exports = async (client, message) => {
           .reply({
             embeds: [
               new Discord.MessageEmbed()
-                .setColor(ee.wrongcolor)
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+                .setColor('#e01e01')
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                })
                 .setTitle(
                   replacemsg(settings.messages.notallowed_to_exec_cmd.title),
                 )
@@ -191,8 +206,11 @@ module.exports = async (client, message) => {
           .reply({
             embeds: [
               new Discord.MessageEmbed()
-                .setColor(ee.wrongcolor)
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+                .setColor('#e01e01')
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                })
                 .setTitle(':x: Wrong Command Usage!')
                 .setDescription(
                   command.argsmissing_message &&
@@ -225,8 +243,11 @@ module.exports = async (client, message) => {
           .reply({
             embeds: [
               new Discord.MessageEmbed()
-                .setColor(ee.wrongcolor)
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+                .setColor('#e01e01')
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                })
                 .setTitle(':x: Wrong Command Usage!')
                 .setDescription(
                   command.argstoomany_message &&
@@ -260,8 +281,11 @@ module.exports = async (client, message) => {
           .reply({
             embeds: [
               new Discord.MessageEmbed()
-                .setColor(ee.wrongcolor)
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+                .setColor('#e01e01')
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                })
                 .setTitle(':x: Wrong Command Usage!')
                 .setDescription(
                   command.argsmissing_message &&
@@ -294,8 +318,11 @@ module.exports = async (client, message) => {
           .reply({
             embeds: [
               new Discord.MessageEmbed()
-                .setColor(ee.wrongcolor)
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+                .setColor('#e01e01')
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                })
                 .setTitle(':x: Wrong Command Usage!')
                 .setDescription(
                   command.argstoomany_message &&
@@ -332,7 +359,10 @@ module.exports = async (client, message) => {
       if (process.env.EVENT_LOG_CHANNEL) {
         const eventlogembed = new Discord.MessageEmbed()
           .setColor('#22bb33')
-          .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+          .setFooter({
+            text: `Requested by ${message.author.tag}`,
+            iconURL: `${client.user.displayAvatarURL()}`,
+          })
           .setTitle(':white_check_mark: Command Executed!')
           .addFields(
             {
@@ -371,8 +401,11 @@ module.exports = async (client, message) => {
           .reply({
             embeds: [
               new Discord.MessageEmbed()
-                .setColor(ee.wrongcolor)
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+                .setColor('#e01e01')
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                })
                 .setTitle(
                   replacemsg(settings.messages.somethingwentwrong_cmd.title, {
                     prefix: prefix,
@@ -409,8 +442,11 @@ module.exports = async (client, message) => {
       .reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(
               replacemsg(settings.messages.unknown_cmd, {
                 prefix: prefix,

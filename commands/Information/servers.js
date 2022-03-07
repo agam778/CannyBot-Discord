@@ -1,5 +1,5 @@
 const { MessageActionRow, MessageButton, MessageEmbed } = require('discord.js')
-var ee = require('../../botconfig/embed.json')
+
 module.exports = {
   name: 'servers',
   category: 'Information',
@@ -58,8 +58,8 @@ module.exports = {
                 await guild.fetchOwner()
               ).user.tag
             }`,
-            footertext: ee.footertext,
-            footericon: ee.xfootericon,
+            footertext: `Requested by ${message.author.tag}`,
+            footericon: `${message.author.displayAvatarURL()}`,
           })),
         ),
       })

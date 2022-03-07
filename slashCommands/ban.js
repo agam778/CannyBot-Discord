@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../botconfig/embed.json')
+
 module.exports = {
   name: 'ban',
   description: 'Ban a user', //the command description for Slash Command Overview
@@ -97,7 +97,10 @@ module.exports = {
         .setDescription(
           `**${Target.user.username}** has been banned for - ${Reason}`,
         )
-        .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+        .setFooter({
+          text: `Requested by ${message.author.tag}`,
+          iconURL: `${client.user.displayAvatarURL()}`,
+        })
 
       interaction.reply({ embeds: [embed] })
     } catch (e) {

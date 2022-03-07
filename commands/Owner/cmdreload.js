@@ -1,5 +1,5 @@
 var { MessageEmbed } = require(`discord.js`)
-var ee = require(`../../botconfig/embed.json`)
+
 module.exports = {
   name: `cmdreload`,
   category: `Owner`,
@@ -33,8 +33,11 @@ module.exports = {
           return message.reply({
             embeds: [
               new MessageEmbed()
-                .setColor(ee.color)
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+                .setColor('RANDOM')
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                })
                 .setTitle(`Reloaded: \`${args[0]}\``),
             ],
           })
@@ -42,8 +45,11 @@ module.exports = {
           return message.reply({
             embeds: [
               new MessageEmbed()
-                .setColor(ee.color)
-                .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+                .setColor('RANDOM')
+                .setFooter({
+                  text: `Requested by ${message.author.tag}`,
+                  iconURL: `${client.user.displayAvatarURL()}`,
+                })
                 .setTitle(`:x: Could not reload: \`${args[0]}\``)
                 .setDescription(
                   `\`\`\`${
@@ -61,8 +67,11 @@ module.exports = {
         return message.reply({
           embeds: [
             new MessageEmbed()
-              .setColor(ee.wrongcolor)
-              .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+              .setColor('#e01e01')
+              .setFooter({
+                text: `Requested by ${message.author.tag}`,
+                iconURL: `${client.user.displayAvatarURL()}`,
+              })
               .setTitle(`:x: Could not find: \`${args[0]}\``),
           ],
         })
@@ -72,8 +81,11 @@ module.exports = {
       return message.reply({
         embeds: [
           new MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(`❌ ERROR | An error occurred`)
             .setDescription(
               `\`\`\`${

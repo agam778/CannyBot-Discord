@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const ee = require('../../botconfig/embed.json')
+
 const axios = require('axios')
 
 module.exports = {
@@ -22,10 +22,13 @@ module.exports = {
     axios.get(`https://some-random-api.ml/img/fox`).then(async (response) => {
       json = response.data
       const embed = new MessageEmbed()
-        .setColor(ee.color)
+        .setColor('RANDOM')
         .setTitle(`Here is a Fox!`)
         .setImage(json.link)
-        .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+        .setFooter({
+          text: `Requested by ${message.author.tag}`,
+          iconURL: `${client.user.displayAvatarURL()}`,
+        })
       message.reply({ embeds: [embed] })
     })
   },

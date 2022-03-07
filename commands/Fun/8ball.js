@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js')
 const axios = require('axios')
-const ee = require('../../botconfig/embed.json')
+
 const Thumbnail = [
   'https://www.lcmb.co.uk/wp-content/uploads/Crystal-ball.png',
   'https://emojipedia-us.s3.amazonaws.com/source/skype/289/crystal-ball_1f52e.png',
@@ -50,7 +50,10 @@ module.exports = {
             { name: 'Type:', value: `${json.magic.type}`, inline: true },
           )
           .setThumbnail(randomThumbnail)
-          .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+          .setFooter({
+            text: `Requested by ${message.author.tag}`,
+            iconURL: `${client.user.displayAvatarURL()}`,
+          })
         await msg.edit({ content: '​', embeds: [embed] })
       })
     })

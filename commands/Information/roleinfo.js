@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-var ee = require('../../botconfig/embed.json')
+
 const moment = require('moment')
 const { GetRole } = require('../../handlers/functions')
 module.exports = {
@@ -83,7 +83,10 @@ module.exports = {
           .join(', ')}`,
       )
       embeduserinfo.setColor(role.hexColor)
-      embeduserinfo.setFooter({ text: ee.footertext, iconURL: ee.footericon })
+      embeduserinfo.setFooter({
+        text: `Requested by ${message.author.tag}`,
+        iconURL: `${client.user.displayAvatarURL()}`,
+      })
       //send the EMBED
       message.reply({ embeds: [embeduserinfo] })
     } catch (e) {
@@ -91,8 +94,11 @@ module.exports = {
       return message.reply({
         embeds: [
           new MessageEmbed()
-            .setColor(ee.wrongcolor)
-            .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+            .setColor('#e01e01')
+            .setFooter({
+              text: `Requested by ${message.author.tag}`,
+              iconURL: `${client.user.displayAvatarURL()}`,
+            })
             .setTitle(`❌ ERROR | An error occurred`)
             .setDescription(
               `\`\`\`${

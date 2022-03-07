@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js')
 const config = require('../botconfig/config.json')
-const ee = require('../botconfig/embed.json')
+
 const settings = require('../botconfig/settings.json')
 module.exports = {
   name: 'ping',
@@ -58,7 +58,10 @@ module.exports = {
           value: `\`${client.ws.ping}ms\``,
           inline: true,
         })
-        .setFooter({ text: ee.footertext, iconURL: ee.footericon })
+        .setFooter({
+          text: `Requested by ${message.author.tag}`,
+          iconURL: `${client.user.displayAvatarURL()}`,
+        })
 
       interaction.reply({ embeds: [pingEmbed] })
     } catch (e) {
