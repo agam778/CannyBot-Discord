@@ -339,12 +339,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.26.0":
-  version: 0.26.0
-  resolution: "axios@npm:0.26.0"
+"axios@npm:^0.26.1":
+  version: 0.26.1
+  resolution: "axios@npm:0.26.1"
   dependencies:
     follow-redirects: ^1.14.8
-  checksum: d7a8b898f4157bedeb2e06c03b16133b91b354c041205bea732ce58b7a21f373d22057b0eea0d482838145ce6ff482b359750d9bcb8dd19d45e3928e3c65c280
+  checksum: d9eb58ff4bc0b36a04783fc9ff760e9245c829a5a1052ee7ca6013410d427036b1d10d04e7380c02f3508c5eaf3485b1ae67bd2adbfec3683704745c8d7a6e1a
   languageName: node
   linkType: hard
 
@@ -538,7 +538,7 @@ __metadata:
   dependencies:
     "@discordjs/builders": 0.12.0
     "@vitalets/google-translate-api": 7.0.0
-    axios: ^0.26.0
+    axios: ^0.26.1
     deepai: ^1.0.21
     discord-together: ^1.3.3
     discord.js: ^13.6.0
@@ -549,7 +549,7 @@ __metadata:
     google-translate-tts: ^0.4.0-dev
     he: ^1.2.0
     moment: ^2.29.1
-    mongoose: ^6.2.4
+    mongoose: ^6.2.5
     ms: ^2.1.3
     nekobot-api: ^2.1.0
     node-tesseract-ocr: ^2.2.1
@@ -2069,7 +2069,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongoose@npm:^6.0.13, mongoose@npm:^6.2.4":
+"mongoose@npm:^6.0.13":
   version: 6.2.4
   resolution: "mongoose@npm:6.2.4"
   dependencies:
@@ -2081,6 +2081,21 @@ __metadata:
     ms: 2.1.3
     sift: 16.0.0
   checksum: 7f163e4cedf7b6cbc19c41501f644db036b8b5272051ecb77b3dd9727fee4b595b6e17e4fd83a012b27eb72d8c1026864fc354fd39ec5830173f7a9b0fbad58a
+  languageName: node
+  linkType: hard
+
+"mongoose@npm:^6.2.5":
+  version: 6.2.5
+  resolution: "mongoose@npm:6.2.5"
+  dependencies:
+    bson: ^4.2.2
+    kareem: 2.3.4
+    mongodb: 4.3.1
+    mpath: 0.8.4
+    mquery: 4.0.2
+    ms: 2.1.3
+    sift: 16.0.0
+  checksum: ab88608ee915ee2206da708081d267ea8ec99a230df650e0e2321a9d88f6bd8386e50f951d83b805438546f3a5798d548139c2de97ca79afe631aaba02fa9245
   languageName: node
   linkType: hard
 
