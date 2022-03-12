@@ -46,7 +46,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
             ["moment", "npm:2.29.1"],\
-            ["mongoose", "npm:6.2.5"],\
+            ["mongoose", "npm:6.2.6"],\
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
@@ -672,7 +672,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
             ["moment", "npm:2.29.1"],\
-            ["mongoose", "npm:6.2.5"],\
+            ["mongoose", "npm:6.2.6"],\
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
@@ -2451,10 +2451,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:6.2.5", {\
-          "packageLocation": "./.yarn/cache/mongoose-npm-6.2.5-379f9d3fc2-ab88608ee9.zip/node_modules/mongoose/",\
+        ["npm:6.2.6", {\
+          "packageLocation": "./.yarn/cache/mongoose-npm-6.2.6-294729ebcb-95ea67a2c6.zip/node_modules/mongoose/",\
           "packageDependencies": [\
-            ["mongoose", "npm:6.2.5"],\
+            ["mongoose", "npm:6.2.6"],\
             ["bson", "npm:4.6.1"],\
             ["kareem", "npm:2.3.4"],\
             ["mongodb", "npm:4.3.1"],\
