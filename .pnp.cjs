@@ -52,7 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-tesseract-ocr", "npm:2.2.1"],\
             ["nodemon", "npm:2.0.15"],\
             ["popcat-wrapper", "npm:1.5.1"],\
-            ["prettier", "npm:2.5.1"],\
+            ["prettier", "npm:2.6.0"],\
             ["qrcode", "npm:1.5.0"],\
             ["randomstring", "npm:1.2.2"],\
             ["validate-image-type", "npm:1.1.1"],\
@@ -678,7 +678,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-tesseract-ocr", "npm:2.2.1"],\
             ["nodemon", "npm:2.0.15"],\
             ["popcat-wrapper", "npm:1.5.1"],\
-            ["prettier", "npm:2.5.1"],\
+            ["prettier", "npm:2.6.0"],\
             ["qrcode", "npm:1.5.0"],\
             ["randomstring", "npm:1.2.2"],\
             ["validate-image-type", "npm:1.1.1"],\
@@ -2862,10 +2862,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier", [\
-        ["npm:2.5.1", {\
-          "packageLocation": "./.yarn/cache/prettier-npm-2.5.1-58b195b509-21b9408476.zip/node_modules/prettier/",\
+        ["npm:2.6.0", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-2.6.0-fb29989f51-3e527ad622.zip/node_modules/prettier/",\
           "packageDependencies": [\
-            ["prettier", "npm:2.5.1"]\
+            ["prettier", "npm:2.6.0"]\
           ],\
           "linkType": "HARD"\
         }]\
