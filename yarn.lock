@@ -545,7 +545,7 @@ __metadata:
     dotenv: ^16.0.0
     express: ^4.17.3
     figlet: ^1.5.2
-    genius-lyrics: ^4.3.5
+    genius-lyrics: ^4.3.6
     google-translate-tts: ^0.4.0-dev
     he: ^1.2.0
     moment: ^2.29.1
@@ -1294,13 +1294,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"genius-lyrics@npm:^4.3.5":
-  version: 4.3.5
-  resolution: "genius-lyrics@npm:4.3.5"
+"genius-lyrics@npm:^4.3.6":
+  version: 4.3.6
+  resolution: "genius-lyrics@npm:4.3.6"
   dependencies:
     cheerio: ^1.0.0-rc.9
     got: ^11.8.2
-  checksum: fb98e0917c489cb0ce707e2398fe716feeaa6a73c303c5c3d0b85aff1cce81ca02c315e80a427471761775db9a1bce1c6a8e817ae4a9ee456b2f5a174caa3e26
+  checksum: 42741f2d8b03ed03bcac2ebee7c1050536e541863b77fdf733384d5165caa44234138c84e7bb5a002227d72e04b81f36aa2fb87ed77bc6f75101f9678bca9534
   languageName: node
   linkType: hard
 
