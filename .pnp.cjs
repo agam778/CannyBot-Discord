@@ -42,7 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["dotenv", "npm:16.0.0"],\
             ["express", "npm:4.17.3"],\
             ["figlet", "npm:1.5.2"],\
-            ["genius-lyrics", "npm:4.3.5"],\
+            ["genius-lyrics", "npm:4.3.6"],\
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
             ["moment", "npm:2.29.1"],\
@@ -668,7 +668,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["dotenv", "npm:16.0.0"],\
             ["express", "npm:4.17.3"],\
             ["figlet", "npm:1.5.2"],\
-            ["genius-lyrics", "npm:4.3.5"],\
+            ["genius-lyrics", "npm:4.3.6"],\
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
             ["moment", "npm:2.29.1"],\
@@ -1559,10 +1559,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["genius-lyrics", [\
-        ["npm:4.3.5", {\
-          "packageLocation": "./.yarn/cache/genius-lyrics-npm-4.3.5-da234e5561-fb98e0917c.zip/node_modules/genius-lyrics/",\
+        ["npm:4.3.6", {\
+          "packageLocation": "./.yarn/cache/genius-lyrics-npm-4.3.6-5b6361df89-42741f2d8b.zip/node_modules/genius-lyrics/",\
           "packageDependencies": [\
-            ["genius-lyrics", "npm:4.3.5"],\
+            ["genius-lyrics", "npm:4.3.6"],\
             ["cheerio", "npm:1.0.0-rc.10"],\
             ["got", "npm:11.8.3"]\
           ],\

@@ -29,7 +29,7 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "figlet": "^1.5.2",
-    "genius-lyrics": "^4.3.5",
+    "genius-lyrics": "^4.3.6",
     "google-translate-tts": "^0.4.0-dev",
     "he": "^1.2.0",
     "moment": "^2.29.1",
