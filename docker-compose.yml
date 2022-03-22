@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  worker:
+    build: .
+    environment:
+      BOT_TOKEN: $BOT_TOKEN
+      PREFIX: $PREFIX
+      MONGO_URL: $MONGO_URL
+      ownerID: $ownerID
+      GENIUS_TOKEN: $GENIUS_TOKEN
+      YOUTUBE_TOKEN: $YOUTUBE_TOKEN
+      DEEPAI_TOKEN: $DEEPAI_TOKEN
+      EVENT_LOG_CHANNEL: $EVENT_LOG_CHANNEL
+      PORT: $PORT
