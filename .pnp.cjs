@@ -46,13 +46,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
             ["moment", "npm:2.29.1"],\
-            ["mongoose", "npm:6.2.7"],\
+            ["mongoose", "npm:6.2.8"],\
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
             ["nodemon", "npm:2.0.15"],\
             ["popcat-wrapper", "npm:1.5.1"],\
-            ["prettier", "npm:2.6.0"],\
+            ["prettier", "npm:2.6.1"],\
             ["qrcode", "npm:1.5.0"],\
             ["randomstring", "npm:1.2.2"],\
             ["validate-image-type", "npm:1.1.1"],\
@@ -672,13 +672,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
             ["moment", "npm:2.29.1"],\
-            ["mongoose", "npm:6.2.7"],\
+            ["mongoose", "npm:6.2.8"],\
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
             ["nodemon", "npm:2.0.15"],\
             ["popcat-wrapper", "npm:1.5.1"],\
-            ["prettier", "npm:2.6.0"],\
+            ["prettier", "npm:2.6.1"],\
             ["qrcode", "npm:1.5.0"],\
             ["randomstring", "npm:1.2.2"],\
             ["validate-image-type", "npm:1.1.1"],\
@@ -2451,10 +2451,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:6.2.7", {\
-          "packageLocation": "./.yarn/cache/mongoose-npm-6.2.7-09cb498f35-01258cd437.zip/node_modules/mongoose/",\
+        ["npm:6.2.8", {\
+          "packageLocation": "./.yarn/cache/mongoose-npm-6.2.8-191394e884-238fab1829.zip/node_modules/mongoose/",\
           "packageDependencies": [\
-            ["mongoose", "npm:6.2.7"],\
+            ["mongoose", "npm:6.2.8"],\
             ["bson", "npm:4.6.1"],\
             ["kareem", "npm:2.3.4"],\
             ["mongodb", "npm:4.3.1"],\
@@ -2862,10 +2862,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier", [\
-        ["npm:2.6.0", {\
-          "packageLocation": "./.yarn/cache/prettier-npm-2.6.0-fb29989f51-3e527ad622.zip/node_modules/prettier/",\
+        ["npm:2.6.1", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-2.6.1-94a3731152-78be1f8a3d.zip/node_modules/prettier/",\
           "packageDependencies": [\
-            ["prettier", "npm:2.6.0"]\
+            ["prettier", "npm:2.6.1"]\
           ],\
           "linkType": "HARD"\
         }]\
