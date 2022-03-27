@@ -549,13 +549,13 @@ __metadata:
     google-translate-tts: ^0.4.0-dev
     he: ^1.2.0
     moment: ^2.29.1
-    mongoose: ^6.2.7
+    mongoose: ^6.2.8
     ms: ^2.1.3
     nekobot-api: ^2.1.0
     node-tesseract-ocr: ^2.2.1
     nodemon: ^2.0.15
     popcat-wrapper: ^1.5.1
-    prettier: ^2.6.0
+    prettier: ^2.6.1
     qrcode: ^1.5.0
     randomstring: ^1.2.2
     validate-image-type: ^1.1.1
@@ -2084,9 +2084,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongoose@npm:^6.2.7":
-  version: 6.2.7
-  resolution: "mongoose@npm:6.2.7"
+"mongoose@npm:^6.2.8":
+  version: 6.2.8
+  resolution: "mongoose@npm:6.2.8"
   dependencies:
     bson: ^4.2.2
     kareem: 2.3.4
@@ -2095,7 +2095,7 @@ __metadata:
     mquery: 4.0.2
     ms: 2.1.3
     sift: 16.0.0
-  checksum: 01258cd4371a290077bb3b653c0fc42b846a247367aea0be5f25c32711e94b314d620d81525121a06d93ea86315a7a764517401b92c3a81de8bfcb0249c958b6
+  checksum: 238fab1829d220d9fae8c8b5c923fabbbeaf0a9784bc6ae2c79241a11b1a8d9707702758939359f5096d1e005bfa1afa61db0d063a3d365cf41b31eaa4080daf
   languageName: node
   linkType: hard
 
@@ -2442,12 +2442,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.6.0":
-  version: 2.6.0
-  resolution: "prettier@npm:2.6.0"
+"prettier@npm:^2.6.1":
+  version: 2.6.1
+  resolution: "prettier@npm:2.6.1"
   bin:
     prettier: bin-prettier.js
-  checksum: 3e527ad62279676778a8404d18174d7ca2365ada4caba6eebbcdd9907d1187afd3bc6ade5b4e5f5d4549bb9fb71e45ca8930d71500017635524f8fc05bc52e93
+  checksum: 78be1f8a3ddfad7c3d8a854b6c8941a3bb1ddfca4225c38d778e0fe1029a55368f71b3bbefff82c689015fbb4d391ec44add957f01308ad2725e01a7c1f37cb6
   languageName: node
   linkType: hard
 
