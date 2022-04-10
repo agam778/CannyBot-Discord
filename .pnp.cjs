@@ -45,8 +45,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["genius-lyrics", "npm:4.3.6"],\
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
-            ["moment", "npm:2.29.1"],\
-            ["mongoose", "npm:6.2.9"],\
+            ["moment", "npm:2.29.2"],\
+            ["mongoose", "npm:6.2.10"],\
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
@@ -671,8 +671,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["genius-lyrics", "npm:4.3.6"],\
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
-            ["moment", "npm:2.29.1"],\
-            ["mongoose", "npm:6.2.9"],\
+            ["moment", "npm:2.29.2"],\
+            ["mongoose", "npm:6.2.10"],\
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
@@ -2410,10 +2410,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["moment", [\
-        ["npm:2.29.1", {\
-          "packageLocation": "./.yarn/cache/moment-npm-2.29.1-787d9fdafd-1e14d5f422.zip/node_modules/moment/",\
+        ["npm:2.29.2", {\
+          "packageLocation": "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/",\
           "packageDependencies": [\
-            ["moment", "npm:2.29.1"]\
+            ["moment", "npm:2.29.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2444,12 +2444,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["mongoose", [\
-        ["npm:6.2.4", {\
-          "packageLocation": "./.yarn/cache/mongoose-npm-6.2.4-307303f5b8-7f163e4ced.zip/node_modules/mongoose/",\
+        ["npm:6.2.10", {\
+          "packageLocation": "./.yarn/cache/mongoose-npm-6.2.10-7a721f7014-60bcab8d5f.zip/node_modules/mongoose/",\
           "packageDependencies": [\
-            ["mongoose", "npm:6.2.4"],\
+            ["mongoose", "npm:6.2.10"],\
             ["bson", "npm:4.6.1"],\
-            ["kareem", "npm:2.3.4"],\
+            ["kareem", "npm:2.3.5"],\
             ["mongodb", "npm:4.3.1"],\
             ["mpath", "npm:0.8.4"],\
             ["mquery", "npm:4.0.2"],\
@@ -2458,12 +2458,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:6.2.9", {\
-          "packageLocation": "./.yarn/cache/mongoose-npm-6.2.9-81f9e9d151-e5769926a3.zip/node_modules/mongoose/",\
+        ["npm:6.2.4", {\
+          "packageLocation": "./.yarn/cache/mongoose-npm-6.2.4-307303f5b8-7f163e4ced.zip/node_modules/mongoose/",\
           "packageDependencies": [\
-            ["mongoose", "npm:6.2.9"],\
+            ["mongoose", "npm:6.2.4"],\
             ["bson", "npm:4.6.1"],\
-            ["kareem", "npm:2.3.5"],\
+            ["kareem", "npm:2.3.4"],\
             ["mongodb", "npm:4.3.1"],\
             ["mpath", "npm:0.8.4"],\
             ["mquery", "npm:4.0.2"],\
