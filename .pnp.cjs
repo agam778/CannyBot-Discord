@@ -46,7 +46,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
             ["moment", "npm:2.29.2"],\
-            ["mongoose", "npm:6.2.10"],\
+            ["mongoose", "npm:6.3.0"],\
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
@@ -550,6 +550,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["buffer", "npm:5.7.1"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:4.6.2", {\
+          "packageLocation": "./.yarn/cache/bson-npm-4.6.2-205304363c-f4072d059a.zip/node_modules/bson/",\
+          "packageDependencies": [\
+            ["bson", "npm:4.6.2"],\
+            ["buffer", "npm:5.7.1"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["buffer", [\
@@ -672,7 +680,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
             ["moment", "npm:2.29.2"],\
-            ["mongoose", "npm:6.2.10"],\
+            ["mongoose", "npm:6.3.0"],\
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
@@ -2430,6 +2438,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["socks", "npm:2.6.2"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:4.5.0", {\
+          "packageLocation": "./.yarn/cache/mongodb-npm-4.5.0-a0f17b822d-423974a663.zip/node_modules/mongodb/",\
+          "packageDependencies": [\
+            ["mongodb", "npm:4.5.0"],\
+            ["bson", "npm:4.6.2"],\
+            ["denque", "npm:2.0.1"],\
+            ["mongodb-connection-string-url", "npm:2.5.2"],\
+            ["saslprep", "npm:1.0.3"],\
+            ["socks", "npm:2.6.2"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["mongodb-connection-string-url", [\
@@ -2444,12 +2464,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["mongoose", [\
-        ["npm:6.2.10", {\
-          "packageLocation": "./.yarn/cache/mongoose-npm-6.2.10-7a721f7014-60bcab8d5f.zip/node_modules/mongoose/",\
+        ["npm:6.2.4", {\
+          "packageLocation": "./.yarn/cache/mongoose-npm-6.2.4-307303f5b8-7f163e4ced.zip/node_modules/mongoose/",\
           "packageDependencies": [\
-            ["mongoose", "npm:6.2.10"],\
+            ["mongoose", "npm:6.2.4"],\
             ["bson", "npm:4.6.1"],\
-            ["kareem", "npm:2.3.5"],\
+            ["kareem", "npm:2.3.4"],\
             ["mongodb", "npm:4.3.1"],\
             ["mpath", "npm:0.8.4"],\
             ["mquery", "npm:4.0.2"],\
@@ -2458,13 +2478,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:6.2.4", {\
-          "packageLocation": "./.yarn/cache/mongoose-npm-6.2.4-307303f5b8-7f163e4ced.zip/node_modules/mongoose/",\
+        ["npm:6.3.0", {\
+          "packageLocation": "./.yarn/cache/mongoose-npm-6.3.0-04a666a998-b5e239f76e.zip/node_modules/mongoose/",\
           "packageDependencies": [\
-            ["mongoose", "npm:6.2.4"],\
+            ["mongoose", "npm:6.3.0"],\
             ["bson", "npm:4.6.1"],\
-            ["kareem", "npm:2.3.4"],\
-            ["mongodb", "npm:4.3.1"],\
+            ["kareem", "npm:2.3.5"],\
+            ["mongodb", "npm:4.5.0"],\
             ["mpath", "npm:0.8.4"],\
             ["mquery", "npm:4.0.2"],\
             ["ms", "npm:2.1.3"],\
