@@ -42,7 +42,7 @@
     "randomstring": "^1.2.2",
     "validate-image-type": "^1.1.1",
     "ws": "^8.5.0",
-    "youtube-search": "^1.1.6"
+
   },
   "devDependencies": {
     "nodemon": "^2.0.15",
