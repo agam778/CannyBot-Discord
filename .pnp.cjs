@@ -45,8 +45,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["genius-lyrics", "npm:4.3.6"],\
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
-            ["moment", "npm:2.29.2"],\
-            ["mongoose", "npm:6.3.0"],\
+            ["moment", "npm:2.29.3"],\
+            ["mongoose", "npm:6.3.1"],\
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
@@ -56,8 +56,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["qrcode", "npm:1.5.0"],\
             ["randomstring", "npm:1.2.2"],\
             ["validate-image-type", "npm:1.1.1"],\
-            ["ws", "virtual:16615f7fc361427eac573d69be41603e0935a3985d1ea3627fcb8d6c900c39e68871725ae1b0ae54fdda9881d6d52cfb805e1d1d6a2e4a9560a23556e11086a1#npm:8.5.0"],\
-            ["youtube-search", "npm:1.1.6"]\
+            ["ws", "virtual:16615f7fc361427eac573d69be41603e0935a3985d1ea3627fcb8d6c900c39e68871725ae1b0ae54fdda9881d6d52cfb805e1d1d6a2e4a9560a23556e11086a1#npm:8.5.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -424,14 +423,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["axios", [\
-        ["npm:0.21.4", {\
-          "packageLocation": "./.yarn/cache/axios-npm-0.21.4-e278873748-44245f24ac.zip/node_modules/axios/",\
-          "packageDependencies": [\
-            ["axios", "npm:0.21.4"],\
-            ["follow-redirects", "virtual:a6641ce4e3bdcc0997f8f53d9481b67c5d38e21276de8eeee7bf92881685b3ad5600bae416c2af904ceab8132bac649e7efd0af93f18e158e0e65ee05a263d72#npm:1.14.9"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:0.25.0", {\
           "packageLocation": "./.yarn/cache/axios-npm-0.25.0-a1c287d287-2a8a3787c0.zip/node_modules/axios/",\
           "packageDependencies": [\
@@ -679,8 +670,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["genius-lyrics", "npm:4.3.6"],\
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
-            ["moment", "npm:2.29.2"],\
-            ["mongoose", "npm:6.3.0"],\
+            ["moment", "npm:2.29.3"],\
+            ["mongoose", "npm:6.3.1"],\
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
@@ -690,8 +681,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["qrcode", "npm:1.5.0"],\
             ["randomstring", "npm:1.2.2"],\
             ["validate-image-type", "npm:1.1.1"],\
-            ["ws", "virtual:16615f7fc361427eac573d69be41603e0935a3985d1ea3627fcb8d6c900c39e68871725ae1b0ae54fdda9881d6d52cfb805e1d1d6a2e4a9560a23556e11086a1#npm:8.5.0"],\
-            ["youtube-search", "npm:1.1.6"]\
+            ["ws", "virtual:16615f7fc361427eac573d69be41603e0935a3985d1ea3627fcb8d6c900c39e68871725ae1b0ae54fdda9881d6d52cfb805e1d1d6a2e4a9560a23556e11086a1#npm:8.5.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2418,10 +2408,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["moment", [\
-        ["npm:2.29.2", {\
-          "packageLocation": "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/",\
+        ["npm:2.29.3", {\
+          "packageLocation": "./.yarn/cache/moment-npm-2.29.3-fe4ba99bae-2e780e36d9.zip/node_modules/moment/",\
           "packageDependencies": [\
-            ["moment", "npm:2.29.2"]\
+            ["moment", "npm:2.29.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2478,11 +2468,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:6.3.0", {\
-          "packageLocation": "./.yarn/cache/mongoose-npm-6.3.0-04a666a998-b5e239f76e.zip/node_modules/mongoose/",\
+        ["npm:6.3.1", {\
+          "packageLocation": "./.yarn/cache/mongoose-npm-6.3.1-dc057e5e41-5a9da91a79.zip/node_modules/mongoose/",\
           "packageDependencies": [\
-            ["mongoose", "npm:6.3.0"],\
-            ["bson", "npm:4.6.1"],\
+            ["mongoose", "npm:6.3.1"],\
+            ["bson", "npm:4.6.2"],\
             ["kareem", "npm:2.3.5"],\
             ["mongodb", "npm:4.5.0"],\
             ["mpath", "npm:0.8.4"],\
@@ -3211,15 +3201,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["sax", [\
-        ["npm:0.5.8", {\
-          "packageLocation": "./.yarn/cache/sax-npm-0.5.8-b9ee878454-03cc053e70.zip/node_modules/sax/",\
-          "packageDependencies": [\
-            ["sax", "npm:0.5.8"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["semver", [\
         ["npm:5.7.1", {\
           "packageLocation": "./.yarn/cache/semver-npm-5.7.1-40bcea106b-57fd0acfd0.zip/node_modules/semver/",\
@@ -3858,16 +3839,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["xml2js", [\
-        ["npm:0.2.8", {\
-          "packageLocation": "./.yarn/cache/xml2js-npm-0.2.8-31fa876797-b766411244.zip/node_modules/xml2js/",\
-          "packageDependencies": [\
-            ["xml2js", "npm:0.2.8"],\
-            ["sax", "npm:0.5.8"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["y18n", [\
         ["npm:4.0.3", {\
           "packageLocation": "./.yarn/cache/y18n-npm-4.0.3-ced95acdbc-014dfcd9b5.zip/node_modules/y18n/",\
@@ -3913,17 +3884,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["yargs-parser", "npm:18.1.3"],\
             ["camelcase", "npm:5.3.1"],\
             ["decamelize", "npm:1.2.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["youtube-search", [\
-        ["npm:1.1.6", {\
-          "packageLocation": "./.yarn/cache/youtube-search-npm-1.1.6-db13aabfb4-ddcd433d5e.zip/node_modules/youtube-search/",\
-          "packageDependencies": [\
-            ["youtube-search", "npm:1.1.6"],\
-            ["axios", "npm:0.21.4"],\
-            ["xml2js", "npm:0.2.8"]\
           ],\
           "linkType": "HARD"\
         }]\
