@@ -41,7 +41,7 @@
     "qrcode": "^1.5.0",
     "randomstring": "^1.2.2",
     "validate-image-type": "^1.1.1",
-    "ws": "^8.5.0",
+    "ws": "^8.5.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15",
