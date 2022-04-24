@@ -330,15 +330,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.21.1":
-  version: 0.21.4
-  resolution: "axios@npm:0.21.4"
-  dependencies:
-    follow-redirects: ^1.14.0
-  checksum: 44245f24ac971e7458f3120c92f9d66d1fc695e8b97019139de5b0cc65d9b8104647db01e5f46917728edfc0cfd88eb30fc4c55e6053eef4ace76768ce95ff3c
-  languageName: node
-  linkType: hard
-
 "axios@npm:^0.26.1":
   version: 0.26.1
   resolution: "axios@npm:0.26.1"
@@ -557,8 +548,8 @@ __metadata:
     genius-lyrics: ^4.3.6
     google-translate-tts: ^0.4.0-dev
     he: ^1.2.0
-    moment: ^2.29.2
-    mongoose: ^6.3.0
+    moment: ^2.29.3
+    mongoose: ^6.3.1
     ms: ^2.1.3
     nekobot-api: ^2.1.0
     node-tesseract-ocr: ^2.2.1
@@ -569,7 +560,6 @@ __metadata:
     randomstring: ^1.2.2
     validate-image-type: ^1.1.1
     ws: ^8.5.0
-    youtube-search: ^1.1.6
   languageName: unknown
   linkType: soft
 
@@ -1205,7 +1195,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.14.0, follow-redirects@npm:^1.14.7, follow-redirects@npm:^1.14.8":
+"follow-redirects@npm:^1.14.7, follow-redirects@npm:^1.14.8":
   version: 1.14.9
   resolution: "follow-redirects@npm:1.14.9"
   peerDependenciesMeta:
@@ -2052,10 +2042,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moment@npm:^2.29.2":
-  version: 2.29.2
-  resolution: "moment@npm:2.29.2"
-  checksum: ee850b5776485e2af0775ceb3cfebaa7d7638f0a750fe0678fcae24c310749f96c1938808384bd422a55e5703834a71fcb09c8a1d36d9cf847f6ed0205d7a3e5
+"moment@npm:^2.29.3":
+  version: 2.29.3
+  resolution: "moment@npm:2.29.3"
+  checksum: 2e780e36d9a1823c08a1b6313cbb08bd01ecbb2a9062095820a34f42c878991ccba53abaa6abb103fd5c01e763724f295162a8c50b7e95b4f1c992ef0772d3f0
   languageName: node
   linkType: hard
 
@@ -2116,18 +2106,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongoose@npm:^6.3.0":
-  version: 6.3.0
-  resolution: "mongoose@npm:6.3.0"
+"mongoose@npm:^6.3.1":
+  version: 6.3.1
+  resolution: "mongoose@npm:6.3.1"
   dependencies:
-    bson: ^4.2.2
+    bson: ^4.6.2
     kareem: 2.3.5
     mongodb: 4.5.0
     mpath: 0.8.4
     mquery: 4.0.2
     ms: 2.1.3
     sift: 16.0.0
-  checksum: b5e239f76ecca8a31cc28cb7f8ba556d53e51cb7a23ff5e353d144056f128d8e77efba1067d2e984d46b1660c0e41316f5747811fdb7c4523af5c052f8358756
+  checksum: 5a9da91a79b0443c2c787c93cb1f06c1f8ee20a81330116a104730b1e1c5b2b378c89848b50d039c0dbe366a2d67650bcb48c0690aa28176d5c0c8b3f38048ec
   languageName: node
   linkType: hard
 
@@ -2751,13 +2741,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sax@npm:0.5.x":
-  version: 0.5.8
-  resolution: "sax@npm:0.5.8"
-  checksum: 03cc053e706114e721ff88fd7c8beef286a2ad7fd73d873eee602c010e6053b58964abfa93f3436363e94e8d273e680ad8b851ed27a18899f605cf3dffefaa77
-  languageName: node
-  linkType: hard
-
 "semver-diff@npm:^3.1.1":
   version: 3.1.1
   resolution: "semver-diff@npm:3.1.1"
@@ -3323,15 +3306,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xml2js@npm:~0.2.8":
-  version: 0.2.8
-  resolution: "xml2js@npm:0.2.8"
-  dependencies:
-    sax: 0.5.x
-  checksum: b766411244acbf6acca7b66f3efc07e0c7baf2afe221a7edc10a3db9d3948a800aa249cf7a529f439b487a6ca6f34849bb49ad9a05db9f4047efc9f643640bad
-  languageName: node
-  linkType: hard
-
 "y18n@npm:^4.0.0":
   version: 4.0.3
   resolution: "y18n@npm:4.0.3"
@@ -3372,16 +3346,6 @@ __metadata:
     y18n: ^4.0.0
     yargs-parser: ^18.1.2
   checksum: 40b974f508d8aed28598087720e086ecd32a5fd3e945e95ea4457da04ee9bdb8bdd17fd91acff36dc5b7f0595a735929c514c40c402416bbb87c03f6fb782373
-  languageName: node
-  linkType: hard
-
-"youtube-search@npm:^1.1.6":
-  version: 1.1.6
-  resolution: "youtube-search@npm:1.1.6"
-  dependencies:
-    axios: ^0.21.1
-    xml2js: ~0.2.8
-  checksum: ddcd433d5ecd5d8509e08c944bf7a8035b21f4e1e9dbe52b874b9074c62e5c7493f97eca2d0aa61032107ab97c165f473e7aee6014301507caa363a5a2a7cb7c
   languageName: node
   linkType: hard
 
