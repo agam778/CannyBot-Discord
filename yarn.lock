@@ -562,7 +562,7 @@ __metadata:
     google-translate-tts: ^0.4.0-dev
     he: ^1.2.0
     moment: ^2.29.3
-    mongoose: ^6.3.1
+    mongoose: ^6.3.2
     ms: ^2.1.3
     nekobot-api: ^2.1.0
     node-tesseract-ocr: ^2.2.1
@@ -572,7 +572,7 @@ __metadata:
     qrcode: ^1.5.0
     randomstring: ^1.2.2
     validate-image-type: ^1.1.1
-    ws: ^8.5.0
+    ws: ^8.6.0
   languageName: unknown
   linkType: soft
 
@@ -2161,18 +2161,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongoose@npm:^6.3.1":
-  version: 6.3.1
-  resolution: "mongoose@npm:6.3.1"
+"mongoose@npm:^6.3.2":
+  version: 6.3.2
+  resolution: "mongoose@npm:6.3.2"
   dependencies:
     bson: ^4.6.2
     kareem: 2.3.5
     mongodb: 4.5.0
-    mpath: 0.8.4
+    mpath: 0.9.0
     mquery: 4.0.2
     ms: 2.1.3
     sift: 16.0.0
-  checksum: 5a9da91a79b0443c2c787c93cb1f06c1f8ee20a81330116a104730b1e1c5b2b378c89848b50d039c0dbe366a2d67650bcb48c0690aa28176d5c0c8b3f38048ec
+  checksum: dcd4819f011d4f433109ecd3d4c6e135b99e255458a185b43821fe451f971a0ece6c758765c2b4ce5dc10c2d2363d0e134b38893a869cef980864ccb8e41a0bc
   languageName: node
   linkType: hard
 
@@ -2180,6 +2180,13 @@ __metadata:
   version: 0.8.4
   resolution: "mpath@npm:0.8.4"
   checksum: 06ad1d443766626fa361b67a4eca9cd4c36a71e475e92e8a5c242dbbc9a911adac00ce971177843b48475356df609f847342548da7701a976a2ab4116135caf0
+  languageName: node
+  linkType: hard
+
+"mpath@npm:0.9.0":
+  version: 0.9.0
+  resolution: "mpath@npm:0.9.0"
+  checksum: 1052f1f926db04502440f76164ae16ed53aa41f3ce34e7e64e3ed451b7d91ede295c3b600801c5f9eb862f03d9d59b7aa5aaf690c341fc521bef025d0f5cd773
   languageName: node
   linkType: hard
 
@@ -3359,7 +3366,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.4.0, ws@npm:^8.5.0":
+"ws@npm:^8.4.0":
   version: 8.5.0
   resolution: "ws@npm:8.5.0"
   peerDependencies:
@@ -3371,6 +3378,21 @@ __metadata:
     utf-8-validate:
       optional: true
   checksum: 76f2f90e40344bf18fd544194e7067812fb1372b2a37865678d8f12afe4b478ff2ebc0c7c0aff82cd5e6b66fc43d889eec0f1865c2365d8f7a66d92da7744a77
+  languageName: node
+  linkType: hard
+
+"ws@npm:^8.6.0":
+  version: 8.6.0
+  resolution: "ws@npm:8.6.0"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ^5.0.2
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: e2fca82059f1e087d0c78e2f37135e1b8332bc804fce46f83c2db1cb8571685abf9d2c99b964bab3752536ad90b99b46fb8d1428899aed3e560684ab4641bffd
   languageName: node
   linkType: hard
 
