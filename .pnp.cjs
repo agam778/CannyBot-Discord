@@ -46,7 +46,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
             ["moment", "npm:2.29.3"],\
-            ["mongoose", "npm:6.3.3"],\
+            ["mongoose", "npm:6.3.4"],\
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
@@ -351,7 +351,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/agent-base-npm-6.0.2-428f325a93-f52b6872cc.zip/node_modules/agent-base/",\
           "packageDependencies": [\
             ["agent-base", "npm:6.0.2"],\
-            ["debug", "virtual:72896d581b79f60cab4f4385e42c2501d270c2f2299bdd8e4aff4d8d9a14cacc49ae898de11740f944fa2e8bde9074ea0e846fa0eda4dc9cb6324af21b0c72e0#npm:4.3.3"]\
+            ["debug", "virtual:993368e4d5b99ecbd76d0bd2c43aca0cecadb2a241ef3dc8dc18085b2d79167d5195671fbb701c9e6312177b2cac6e3d058c4aa296d48c4e02c788163cdcab10#npm:4.3.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -361,7 +361,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/agentkeepalive-npm-4.2.1-b86a9fb343-39cb49ed8c.zip/node_modules/agentkeepalive/",\
           "packageDependencies": [\
             ["agentkeepalive", "npm:4.2.1"],\
-            ["debug", "virtual:72896d581b79f60cab4f4385e42c2501d270c2f2299bdd8e4aff4d8d9a14cacc49ae898de11740f944fa2e8bde9074ea0e846fa0eda4dc9cb6324af21b0c72e0#npm:4.3.3"],\
+            ["debug", "virtual:993368e4d5b99ecbd76d0bd2c43aca0cecadb2a241ef3dc8dc18085b2d79167d5195671fbb701c9e6312177b2cac6e3d058c4aa296d48c4e02c788163cdcab10#npm:4.3.3"],\
             ["depd", "npm:1.1.2"],\
             ["humanize-ms", "npm:1.2.1"]\
           ],\
@@ -729,7 +729,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
             ["moment", "npm:2.29.3"],\
-            ["mongoose", "npm:6.3.3"],\
+            ["mongoose", "npm:6.3.4"],\
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
@@ -1036,10 +1036,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:72896d581b79f60cab4f4385e42c2501d270c2f2299bdd8e4aff4d8d9a14cacc49ae898de11740f944fa2e8bde9074ea0e846fa0eda4dc9cb6324af21b0c72e0#npm:4.3.3", {\
-          "packageLocation": "./.yarn/__virtual__/debug-virtual-86c9832a1f/0/cache/debug-npm-4.3.3-710fd4cc7f-14472d56fe.zip/node_modules/debug/",\
+        ["virtual:993368e4d5b99ecbd76d0bd2c43aca0cecadb2a241ef3dc8dc18085b2d79167d5195671fbb701c9e6312177b2cac6e3d058c4aa296d48c4e02c788163cdcab10#npm:4.3.3", {\
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-d9282eda2c/0/cache/debug-npm-4.3.3-710fd4cc7f-14472d56fe.zip/node_modules/debug/",\
           "packageDependencies": [\
-            ["debug", "virtual:72896d581b79f60cab4f4385e42c2501d270c2f2299bdd8e4aff4d8d9a14cacc49ae898de11740f944fa2e8bde9074ea0e846fa0eda4dc9cb6324af21b0c72e0#npm:4.3.3"],\
+            ["debug", "virtual:993368e4d5b99ecbd76d0bd2c43aca0cecadb2a241ef3dc8dc18085b2d79167d5195671fbb701c9e6312177b2cac6e3d058c4aa296d48c4e02c788163cdcab10#npm:4.3.3"],\
             ["@types/supports-color", null],\
             ["ms", "npm:2.1.2"],\
             ["supports-color", null]\
@@ -1918,7 +1918,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["http-proxy-agent", "npm:5.0.0"],\
             ["@tootallnate/once", "npm:2.0.0"],\
             ["agent-base", "npm:6.0.2"],\
-            ["debug", "virtual:72896d581b79f60cab4f4385e42c2501d270c2f2299bdd8e4aff4d8d9a14cacc49ae898de11740f944fa2e8bde9074ea0e846fa0eda4dc9cb6324af21b0c72e0#npm:4.3.3"]\
+            ["debug", "virtual:993368e4d5b99ecbd76d0bd2c43aca0cecadb2a241ef3dc8dc18085b2d79167d5195671fbb701c9e6312177b2cac6e3d058c4aa296d48c4e02c788163cdcab10#npm:4.3.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1940,7 +1940,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["https-proxy-agent", "npm:5.0.0"],\
             ["agent-base", "npm:6.0.2"],\
-            ["debug", "virtual:72896d581b79f60cab4f4385e42c2501d270c2f2299bdd8e4aff4d8d9a14cacc49ae898de11740f944fa2e8bde9074ea0e846fa0eda4dc9cb6324af21b0c72e0#npm:4.3.3"]\
+            ["debug", "virtual:993368e4d5b99ecbd76d0bd2c43aca0cecadb2a241ef3dc8dc18085b2d79167d5195671fbb701c9e6312177b2cac6e3d058c4aa296d48c4e02c788163cdcab10#npm:4.3.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2613,15 +2613,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:6.3.3", {\
-          "packageLocation": "./.yarn/cache/mongoose-npm-6.3.3-6cfe7772d9-19ee22ed30.zip/node_modules/mongoose/",\
+        ["npm:6.3.4", {\
+          "packageLocation": "./.yarn/cache/mongoose-npm-6.3.4-0686807324-dc68f4d16f.zip/node_modules/mongoose/",\
           "packageDependencies": [\
-            ["mongoose", "npm:6.3.3"],\
+            ["mongoose", "npm:6.3.4"],\
             ["bson", "npm:4.6.2"],\
             ["kareem", "npm:2.3.5"],\
             ["mongodb", "npm:4.5.0"],\
             ["mpath", "npm:0.9.0"],\
-            ["mquery", "npm:4.0.2"],\
+            ["mquery", "npm:4.0.3"],\
             ["ms", "npm:2.1.3"],\
             ["sift", "npm:16.0.0"]\
           ],\
@@ -2649,7 +2649,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/mquery-npm-4.0.2-72896d581b-39ac308294.zip/node_modules/mquery/",\
           "packageDependencies": [\
             ["mquery", "npm:4.0.2"],\
-            ["debug", "virtual:72896d581b79f60cab4f4385e42c2501d270c2f2299bdd8e4aff4d8d9a14cacc49ae898de11740f944fa2e8bde9074ea0e846fa0eda4dc9cb6324af21b0c72e0#npm:4.3.3"]\
+            ["debug", "virtual:993368e4d5b99ecbd76d0bd2c43aca0cecadb2a241ef3dc8dc18085b2d79167d5195671fbb701c9e6312177b2cac6e3d058c4aa296d48c4e02c788163cdcab10#npm:4.3.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:4.0.3", {\
+          "packageLocation": "./.yarn/cache/mquery-npm-4.0.3-993368e4d5-16a6887ba7.zip/node_modules/mquery/",\
+          "packageDependencies": [\
+            ["mquery", "npm:4.0.3"],\
+            ["debug", "virtual:993368e4d5b99ecbd76d0bd2c43aca0cecadb2a241ef3dc8dc18085b2d79167d5195671fbb701c9e6312177b2cac6e3d058c4aa296d48c4e02c788163cdcab10#npm:4.3.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3506,7 +3514,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["socks-proxy-agent", "npm:6.1.1"],\
             ["agent-base", "npm:6.0.2"],\
-            ["debug", "virtual:72896d581b79f60cab4f4385e42c2501d270c2f2299bdd8e4aff4d8d9a14cacc49ae898de11740f944fa2e8bde9074ea0e846fa0eda4dc9cb6324af21b0c72e0#npm:4.3.3"],\
+            ["debug", "virtual:993368e4d5b99ecbd76d0bd2c43aca0cecadb2a241ef3dc8dc18085b2d79167d5195671fbb701c9e6312177b2cac6e3d058c4aa296d48c4e02c788163cdcab10#npm:4.3.3"],\
             ["socks", "npm:2.6.2"]\
           ],\
           "linkType": "HARD"\
