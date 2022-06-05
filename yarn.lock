@@ -606,7 +606,7 @@ __metadata:
     google-translate-tts: ^0.4.0-dev
     he: ^1.2.0
     moment: ^2.29.3
-    mongoose: ^6.3.4
+    mongoose: ^6.3.5
     ms: ^2.1.3
     nekobot-api: ^2.1.0
     node-tesseract-ocr: ^2.2.1
@@ -616,7 +616,7 @@ __metadata:
     qrcode: ^1.5.0
     randomstring: ^1.2.2
     validate-image-type: ^1.1.1
-    ws: ^8.6.0
+    ws: ^8.7.0
   languageName: unknown
   linkType: soft
 
@@ -2243,9 +2243,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongoose@npm:^6.3.4":
-  version: 6.3.4
-  resolution: "mongoose@npm:6.3.4"
+"mongoose@npm:^6.3.5":
+  version: 6.3.5
+  resolution: "mongoose@npm:6.3.5"
   dependencies:
     bson: ^4.6.2
     kareem: 2.3.5
@@ -2254,7 +2254,7 @@ __metadata:
     mquery: 4.0.3
     ms: 2.1.3
     sift: 16.0.0
-  checksum: dc68f4d16fb1eb40439d8464f1a0cdc7588f5eccc73b6d315eba19a85a837bf15d4a2210dc52a9c501483e09c4c480f4cc784f2830898f28913de50424113dd0
+  checksum: 1094ffb50311968710a7cad36cc497729be1f9fd1f3d32df44d59190fe8537c400a672e4589c799ea9c7acf113eb465219647aac1884743d1777be3bd89e5448
   languageName: node
   linkType: hard
 
@@ -3491,6 +3491,21 @@ __metadata:
     utf-8-validate:
       optional: true
   checksum: e2fca82059f1e087d0c78e2f37135e1b8332bc804fce46f83c2db1cb8571685abf9d2c99b964bab3752536ad90b99b46fb8d1428899aed3e560684ab4641bffd
+  languageName: node
+  linkType: hard
+
+"ws@npm:^8.7.0":
+  version: 8.7.0
+  resolution: "ws@npm:8.7.0"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ^5.0.2
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 078fa2dbc06b31a45e0057b19e2930d26c222622e355955afe019c9b9b25f62eb2a8eff7cceabdad04910ecd2bd6ef4fa48e6f3673f2fdddff02a6e4c2459584
   languageName: node
   linkType: hard
 

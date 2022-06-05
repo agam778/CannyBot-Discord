@@ -46,7 +46,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
             ["moment", "npm:2.29.3"],\
-            ["mongoose", "npm:6.3.4"],\
+            ["mongoose", "npm:6.3.5"],\
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
@@ -56,7 +56,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["qrcode", "npm:1.5.0"],\
             ["randomstring", "npm:1.2.2"],\
             ["validate-image-type", "npm:1.1.1"],\
-            ["ws", "virtual:60e8f8c9ab0010977ac6183262b9234c83d1ee96491e8f1f0534de290c6ae7428bc6f0e584d1178083222b71c14ec1583c3a97f5986241ebc8dd647f8aa63230#npm:8.6.0"]\
+            ["ws", "virtual:c98e78b93fca499aaab4216f181a14d3a09adafce7285119cc4c397668e975448487767e1426964436990b24e11cc657d85ac73ea05502f8ef1de1b0d43bdfe2#npm:8.7.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -729,7 +729,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["google-translate-tts", "npm:0.4.0-dev"],\
             ["he", "npm:1.2.0"],\
             ["moment", "npm:2.29.3"],\
-            ["mongoose", "npm:6.3.4"],\
+            ["mongoose", "npm:6.3.5"],\
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
@@ -739,7 +739,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["qrcode", "npm:1.5.0"],\
             ["randomstring", "npm:1.2.2"],\
             ["validate-image-type", "npm:1.1.1"],\
-            ["ws", "virtual:60e8f8c9ab0010977ac6183262b9234c83d1ee96491e8f1f0534de290c6ae7428bc6f0e584d1178083222b71c14ec1583c3a97f5986241ebc8dd647f8aa63230#npm:8.6.0"]\
+            ["ws", "virtual:c98e78b93fca499aaab4216f181a14d3a09adafce7285119cc4c397668e975448487767e1426964436990b24e11cc657d85ac73ea05502f8ef1de1b0d43bdfe2#npm:8.7.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2613,10 +2613,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:6.3.4", {\
-          "packageLocation": "./.yarn/cache/mongoose-npm-6.3.4-0686807324-dc68f4d16f.zip/node_modules/mongoose/",\
+        ["npm:6.3.5", {\
+          "packageLocation": "./.yarn/cache/mongoose-npm-6.3.5-84bfa0bcbe-1094ffb503.zip/node_modules/mongoose/",\
           "packageDependencies": [\
-            ["mongoose", "npm:6.3.4"],\
+            ["mongoose", "npm:6.3.5"],\
             ["bson", "npm:4.6.2"],\
             ["kareem", "npm:2.3.5"],\
             ["mongodb", "npm:4.5.0"],\
@@ -4008,6 +4008,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
+        ["npm:8.7.0", {\
+          "packageLocation": "./.yarn/cache/ws-npm-8.7.0-880cfc8423-078fa2dbc0.zip/node_modules/ws/",\
+          "packageDependencies": [\
+            ["ws", "npm:8.7.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
         ["virtual:16615f7fc361427eac573d69be41603e0935a3985d1ea3627fcb8d6c900c39e68871725ae1b0ae54fdda9881d6d52cfb805e1d1d6a2e4a9560a23556e11086a1#npm:8.5.0", {\
           "packageLocation": "./.yarn/__virtual__/ws-virtual-300595924a/0/cache/ws-npm-8.5.0-8e99728c84-76f2f90e40.zip/node_modules/ws/",\
           "packageDependencies": [\
@@ -4029,6 +4036,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/ws-virtual-6d89170aa5/0/cache/ws-npm-8.6.0-c92b4da32f-e2fca82059.zip/node_modules/ws/",\
           "packageDependencies": [\
             ["ws", "virtual:60e8f8c9ab0010977ac6183262b9234c83d1ee96491e8f1f0534de290c6ae7428bc6f0e584d1178083222b71c14ec1583c3a97f5986241ebc8dd647f8aa63230#npm:8.6.0"],\
+            ["@types/bufferutil", null],\
+            ["@types/utf-8-validate", null],\
+            ["bufferutil", null],\
+            ["utf-8-validate", null]\
+          ],\
+          "packagePeers": [\
+            "@types/bufferutil",\
+            "@types/utf-8-validate",\
+            "bufferutil",\
+            "utf-8-validate"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:c98e78b93fca499aaab4216f181a14d3a09adafce7285119cc4c397668e975448487767e1426964436990b24e11cc657d85ac73ea05502f8ef1de1b0d43bdfe2#npm:8.7.0", {\
+          "packageLocation": "./.yarn/__virtual__/ws-virtual-f56c07b7e3/0/cache/ws-npm-8.7.0-880cfc8423-078fa2dbc0.zip/node_modules/ws/",\
+          "packageDependencies": [\
+            ["ws", "virtual:c98e78b93fca499aaab4216f181a14d3a09adafce7285119cc4c397668e975448487767e1426964436990b24e11cc657d85ac73ea05502f8ef1de1b0d43bdfe2#npm:8.7.0"],\
             ["@types/bufferutil", null],\
             ["@types/utf-8-validate", null],\
             ["bufferutil", null],\

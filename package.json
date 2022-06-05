@@ -33,7 +33,7 @@
     "google-translate-tts": "^0.4.0-dev",
     "he": "^1.2.0",
     "moment": "^2.29.3",
-    "mongoose": "^6.3.4",
+    "mongoose": "^6.3.5",
     "ms": "^2.1.3",
     "nekobot-api": "^2.1.0",
     "node-tesseract-ocr": "^2.2.1",
@@ -41,7 +41,7 @@
     "qrcode": "^1.5.0",
     "randomstring": "^1.2.2",
     "validate-image-type": "^1.1.1",
-    "ws": "^8.6.0"
+    "ws": "^8.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.16",
