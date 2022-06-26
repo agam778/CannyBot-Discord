@@ -38,7 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["axios", "npm:0.27.2"],\
             ["deepai", "npm:1.0.21"],\
             ["discord-together", "npm:1.3.25"],\
-            ["discord.js", "npm:13.8.0"],\
+            ["discord.js", "npm:13.8.1"],\
             ["dotenv", "npm:16.0.1"],\
             ["express", "npm:4.18.1"],\
             ["figlet", "npm:1.5.2"],\
@@ -50,7 +50,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
-            ["nodemon", "npm:2.0.16"],\
+            ["nodemon", "npm:2.0.18"],\
             ["popcat-wrapper", "npm:1.5.1"],\
             ["prettier", "npm:2.7.1"],\
             ["qrcode", "npm:1.5.0"],\
@@ -729,7 +729,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["axios", "npm:0.27.2"],\
             ["deepai", "npm:1.0.21"],\
             ["discord-together", "npm:1.3.25"],\
-            ["discord.js", "npm:13.8.0"],\
+            ["discord.js", "npm:13.8.1"],\
             ["dotenv", "npm:16.0.1"],\
             ["express", "npm:4.18.1"],\
             ["figlet", "npm:1.5.2"],\
@@ -741,7 +741,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ms", "npm:2.1.3"],\
             ["nekobot-api", "npm:2.1.0"],\
             ["node-tesseract-ocr", "npm:2.2.1"],\
-            ["nodemon", "npm:2.0.16"],\
+            ["nodemon", "npm:2.0.18"],\
             ["popcat-wrapper", "npm:1.5.1"],\
             ["prettier", "npm:2.7.1"],\
             ["qrcode", "npm:1.5.0"],\
@@ -1058,10 +1058,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:f564cd587f82296d3fd6026dfab3e339413babae6e81b9c38de9addd7cd419ff4ad05c2c7d821d4792f5d97254f1f8a10edadcbab7fc3eef777350e5087c47c4#npm:3.2.7", {\
-          "packageLocation": "./.yarn/__virtual__/debug-virtual-66717e1c5e/0/cache/debug-npm-3.2.7-754e818c7a-b3d8c59407.zip/node_modules/debug/",\
+        ["virtual:cd006a755ea70f3f9cbf1d2edf1952db655a43c09ca7755e2b8d91d03eafad2180ce17d417160c4a6b625a8290dd906d3cab2a8bc0bc611cadccdb0eebe862b1#npm:3.2.7", {\
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-f10f88594a/0/cache/debug-npm-3.2.7-754e818c7a-b3d8c59407.zip/node_modules/debug/",\
           "packageDependencies": [\
-            ["debug", "virtual:f564cd587f82296d3fd6026dfab3e339413babae6e81b9c38de9addd7cd419ff4ad05c2c7d821d4792f5d97254f1f8a10edadcbab7fc3eef777350e5087c47c4#npm:3.2.7"],\
+            ["debug", "virtual:cd006a755ea70f3f9cbf1d2edf1952db655a43c09ca7755e2b8d91d03eafad2180ce17d417160c4a6b625a8290dd906d3cab2a8bc0bc611cadccdb0eebe862b1#npm:3.2.7"],\
             ["@types/supports-color", null],\
             ["ms", "npm:2.1.3"],\
             ["supports-color", "npm:5.5.0"]\
@@ -1241,10 +1241,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:13.8.0", {\
-          "packageLocation": "./.yarn/cache/discord.js-npm-13.8.0-39d0b3429d-9fb026f5d2.zip/node_modules/discord.js/",\
+        ["npm:13.8.1", {\
+          "packageLocation": "./.yarn/cache/discord.js-npm-13.8.1-f93190cd66-1311aa3be7.zip/node_modules/discord.js/",\
           "packageDependencies": [\
-            ["discord.js", "npm:13.8.0"],\
+            ["discord.js", "npm:13.8.1"],\
             ["@discordjs/builders", "npm:0.14.0"],\
             ["@discordjs/collection", "npm:0.7.0"],\
             ["@sapphire/async-queue", "npm:1.3.1"],\
@@ -1253,7 +1253,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["discord-api-types", "npm:0.33.5"],\
             ["form-data", "npm:4.0.0"],\
             ["node-fetch", "virtual:16615f7fc361427eac573d69be41603e0935a3985d1ea3627fcb8d6c900c39e68871725ae1b0ae54fdda9881d6d52cfb805e1d1d6a2e4a9560a23556e11086a1#npm:2.6.7"],\
-            ["ws", "virtual:39d0b3429d493513b1f5e1aad7e37e108d80b3d00c37010a0fd1a6c0dc78f7302b645fcae86d3dfd3c94cbad23f456bfe8a4dbda3a0efb33b7a278f1826828c0#npm:8.7.0"]\
+            ["ws", "virtual:f93190cd66e7db48d4befca4103220c586e3868f37c96637f881356d80ee864fac4dbc4ee6d3433ba27338667b5a12dd57483214b2505e3564ace14eeb5e44e4#npm:8.7.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2756,12 +2756,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["nodemon", [\
-        ["npm:2.0.16", {\
-          "packageLocation": "./.yarn/unplugged/nodemon-npm-2.0.16-f564cd587f/node_modules/nodemon/",\
+        ["npm:2.0.18", {\
+          "packageLocation": "./.yarn/unplugged/nodemon-npm-2.0.18-cd006a755e/node_modules/nodemon/",\
           "packageDependencies": [\
-            ["nodemon", "npm:2.0.16"],\
+            ["nodemon", "npm:2.0.18"],\
             ["chokidar", "npm:3.5.3"],\
-            ["debug", "virtual:f564cd587f82296d3fd6026dfab3e339413babae6e81b9c38de9addd7cd419ff4ad05c2c7d821d4792f5d97254f1f8a10edadcbab7fc3eef777350e5087c47c4#npm:3.2.7"],\
+            ["debug", "virtual:cd006a755ea70f3f9cbf1d2edf1952db655a43c09ca7755e2b8d91d03eafad2180ce17d417160c4a6b625a8290dd906d3cab2a8bc0bc611cadccdb0eebe862b1#npm:3.2.7"],\
             ["ignore-by-default", "npm:1.0.1"],\
             ["minimatch", "npm:3.1.2"],\
             ["pstree.remy", "npm:1.1.8"],\
@@ -4040,10 +4040,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:39d0b3429d493513b1f5e1aad7e37e108d80b3d00c37010a0fd1a6c0dc78f7302b645fcae86d3dfd3c94cbad23f456bfe8a4dbda3a0efb33b7a278f1826828c0#npm:8.7.0", {\
-          "packageLocation": "./.yarn/__virtual__/ws-virtual-64434af5ff/0/cache/ws-npm-8.7.0-880cfc8423-078fa2dbc0.zip/node_modules/ws/",\
+        ["virtual:c98e78b93fca499aaab4216f181a14d3a09adafce7285119cc4c397668e975448487767e1426964436990b24e11cc657d85ac73ea05502f8ef1de1b0d43bdfe2#npm:8.8.0", {\
+          "packageLocation": "./.yarn/__virtual__/ws-virtual-d381f93522/0/cache/ws-npm-8.8.0-89e1c83090-6ceed1ca1c.zip/node_modules/ws/",\
           "packageDependencies": [\
-            ["ws", "virtual:39d0b3429d493513b1f5e1aad7e37e108d80b3d00c37010a0fd1a6c0dc78f7302b645fcae86d3dfd3c94cbad23f456bfe8a4dbda3a0efb33b7a278f1826828c0#npm:8.7.0"],\
+            ["ws", "virtual:c98e78b93fca499aaab4216f181a14d3a09adafce7285119cc4c397668e975448487767e1426964436990b24e11cc657d85ac73ea05502f8ef1de1b0d43bdfe2#npm:8.8.0"],\
             ["@types/bufferutil", null],\
             ["@types/utf-8-validate", null],\
             ["bufferutil", null],\
@@ -4057,10 +4057,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:c98e78b93fca499aaab4216f181a14d3a09adafce7285119cc4c397668e975448487767e1426964436990b24e11cc657d85ac73ea05502f8ef1de1b0d43bdfe2#npm:8.8.0", {\
-          "packageLocation": "./.yarn/__virtual__/ws-virtual-d381f93522/0/cache/ws-npm-8.8.0-89e1c83090-6ceed1ca1c.zip/node_modules/ws/",\
+        ["virtual:f93190cd66e7db48d4befca4103220c586e3868f37c96637f881356d80ee864fac4dbc4ee6d3433ba27338667b5a12dd57483214b2505e3564ace14eeb5e44e4#npm:8.7.0", {\
+          "packageLocation": "./.yarn/__virtual__/ws-virtual-cfbe9d1408/0/cache/ws-npm-8.7.0-880cfc8423-078fa2dbc0.zip/node_modules/ws/",\
           "packageDependencies": [\
-            ["ws", "virtual:c98e78b93fca499aaab4216f181a14d3a09adafce7285119cc4c397668e975448487767e1426964436990b24e11cc657d85ac73ea05502f8ef1de1b0d43bdfe2#npm:8.8.0"],\
+            ["ws", "virtual:f93190cd66e7db48d4befca4103220c586e3868f37c96637f881356d80ee864fac4dbc4ee6d3433ba27338667b5a12dd57483214b2505e3564ace14eeb5e44e4#npm:8.7.0"],\
             ["@types/bufferutil", null],\
             ["@types/utf-8-validate", null],\
             ["bufferutil", null],\
